@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Source_Sans_3 } from "next/font/google";
+import { Newsreader, Inter } from "next/font/google";
 import "./globals.css";
 import { APP_CONFIG } from "@/lib/app-config";
 
-const displayFont = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const displayFont = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
-const bodyFont = Source_Sans_3({
-  variable: "--font-source-sans",
+const bodyFont = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 

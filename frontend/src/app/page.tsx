@@ -10,21 +10,6 @@ interface Suggestion {
   lng: number;
 }
 
-function getRaceLevel(race: string): "federal" | "state" | "local" {
-  if (race.startsWith("US ")) return "federal";
-  if (race.startsWith("State ")) return "state";
-  if (["Governor", "Attorney General", "Secretary of State", "Comptroller", "Treasurer"].includes(race)) {
-    return "state";
-  }
-  return "local";
-}
-
-const LEVEL_COLORS: Record<string, string> = {
-  federal: "bg-ink",
-  state: "bg-accent-sky",
-  local: "bg-accent-coral",
-};
-
 function Spinner() {
   return (
     <span
@@ -353,52 +338,33 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-ink text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-        <div className="relative max-w-3xl mx-auto px-4 py-14 md:py-20 text-center">
-          <div className="flex items-center justify-center gap-3 md:gap-4 mb-2">
-            <span className="text-accent-sky text-xl md:text-2xl">✶</span>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight uppercase leading-none">
-              {APP_CONFIG.branding.orgName}
-            </h1>
-            <span className="text-accent-sky text-xl md:text-2xl">✶</span>
-          </div>
-          <p className="text-white/50 text-base md:text-lg font-body tracking-wide">
+      <header className="bg-ink text-white">
+        <div className="max-w-xl mx-auto px-4 py-10 md:py-14 text-center">
+          <p className="text-xs uppercase tracking-widest text-white/50 mb-3">
+            {APP_CONFIG.branding.electionLabel}
+          </p>
+          <h1 className="font-display text-3xl md:text-5xl font-medium leading-tight">
+            {APP_CONFIG.branding.orgName}
+          </h1>
+          <p className="text-white/50 text-sm md:text-base font-body mt-2">
             {APP_CONFIG.branding.headerSubtitle}
           </p>
-          <div
-            className="inline-flex items-center gap-1.5 mt-4 px-4 py-1.5 bg-white/10 border border-white/20 text-accent-sky font-display text-sm font-bold uppercase tracking-wider"
-            style={{ animation: "fadeInUp 0.6s ease-out 0.2s both" }}
-          >
-            <span>◉</span> {APP_CONFIG.branding.electionLabel} <span>◉</span>
-          </div>
         </div>
-        <div className="h-1.5 bg-accent-coral" />
       </header>
 
-      <main className="flex-1 w-full max-w-2xl mx-auto px-4 py-10 md:py-14">
-        <div
-          className="bg-surface border-l-4 border-accent-coral shadow-lg p-6 md:p-8"
-          style={{ animation: "fadeInUp 0.5s ease-out" }}
-        >
-          <h2 className="font-display text-2xl md:text-3xl font-bold uppercase tracking-wide text-ink mb-6">
-            Find Your Ballot
+      <main className="flex-1 w-full max-w-xl mx-auto px-4 py-8 md:py-10">
+        <div className="bg-surface border border-border rounded-sm p-5 md:p-6">
+          <h2 className="font-display text-xl md:text-2xl font-medium text-ink mb-5">
+            Find your ballot
           </h2>
 
           <button
             onClick={handleUseLocation}
             disabled={loading}
-            className="w-full bg-accent-sky text-white py-3.5 px-4 font-body font-semibold text-base
+            className="w-full bg-brand text-white py-3 px-4 font-body font-semibold text-sm rounded-sm
                        hover:brightness-110 active:brightness-95 transition-all duration-150
                        disabled:opacity-50 disabled:cursor-not-allowed
-                       focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-sky
+                       focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand
                        flex items-center justify-center gap-2"
           >
             {loading ? (
@@ -409,7 +375,7 @@ export default function Home() {
             ) : (
               <>
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -426,17 +392,17 @@ export default function Home() {
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0Z"
                   />
                 </svg>
-                Use My Current Location
+                Use my current location
               </>
             )}
           </button>
 
-          <div className="flex items-center gap-4 my-6">
-            <div className="flex-1 h-px bg-concrete" />
-            <span className="text-xs font-display uppercase tracking-[0.2em] text-steel-light font-semibold">
+          <div className="flex items-center gap-4 my-5">
+            <div className="flex-1 h-px bg-border" />
+            <span className="text-xs text-steel-light">
               or enter address
             </span>
-            <div className="flex-1 h-px bg-concrete" />
+            <div className="flex-1 h-px bg-border" />
           </div>
 
           <form onSubmit={handleAddressSubmit}>
@@ -452,9 +418,9 @@ export default function Home() {
                   suggestions.length > 0 && setShowSuggestions(true)
                 }
                 placeholder="Start typing your address..."
-                className="w-full border-2 border-concrete px-4 py-3.5
+                className="w-full border border-border rounded-sm px-3 py-2.5
                            focus:border-ink focus:outline-none
-                           text-ink placeholder:text-steel-light font-body text-base
+                           text-ink placeholder:text-steel-light font-body text-sm
                            transition-colors duration-150"
                 disabled={loading}
                 autoComplete="off"
@@ -463,7 +429,7 @@ export default function Home() {
               {showSuggestions && suggestions.length > 0 && (
                 <div
                   ref={suggestionsRef}
-                  className="absolute z-20 w-full bg-surface border-2 border-ink/10 shadow-xl mt-0.5 max-h-64 overflow-y-auto"
+                  className="absolute z-20 w-full bg-surface border border-border rounded-sm shadow-md mt-0.5 max-h-64 overflow-y-auto"
                   style={{ animation: "slideDown 0.15s ease-out" }}
                 >
                   {suggestions.map((suggestion, index) => (
@@ -471,7 +437,7 @@ export default function Home() {
                       key={`${suggestion.address}-${index}`}
                       type="button"
                       onClick={() => selectSuggestion(suggestion)}
-                      className={`w-full text-left px-4 py-3 border-b border-concrete/60 last:border-b-0
+                      className={`w-full text-left px-3 py-2.5 border-b border-border/60 last:border-b-0
                                   transition-colors duration-75
                                   ${
                                     index === selectedIndex
@@ -479,7 +445,7 @@ export default function Home() {
                                       : "hover:bg-warm text-ink"
                                   }`}
                     >
-                      <div className="font-medium text-sm">{suggestion.address}</div>
+                      <div className="text-sm">{suggestion.address}</div>
                     </button>
                   ))}
                 </div>
@@ -489,7 +455,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={loading || !address.trim()}
-              className="w-full bg-ink text-white py-3.5 px-4 font-body font-semibold text-base mt-3
+              className="w-full bg-ink text-white py-3 px-4 font-body font-semibold text-sm mt-3 rounded-sm
                          hover:bg-ink-soft active:brightness-95 transition-colors duration-150
                          disabled:opacity-30 disabled:cursor-not-allowed
                          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
@@ -500,7 +466,7 @@ export default function Home() {
                   Looking up...
                 </span>
               ) : (
-                "Look Up My Ballot"
+                "Look up my ballot"
               )}
             </button>
 
@@ -508,7 +474,7 @@ export default function Home() {
               type="button"
               onClick={handleClearLocation}
               disabled={loading}
-              className="w-full border border-ink/20 text-ink py-3 px-4 font-body font-semibold text-sm mt-2
+              className="w-full border border-border text-ink py-2.5 px-4 font-body text-sm mt-2 rounded-sm
                          hover:bg-warm transition-colors duration-150
                          disabled:opacity-50 disabled:cursor-not-allowed
                          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
@@ -519,99 +485,63 @@ export default function Home() {
         </div>
 
         {error && (
-          <div
-            className="mt-6 bg-accent-coral/10 border-l-4 border-accent-coral p-4"
-            style={{ animation: "fadeInUp 0.3s ease-out" }}
-          >
-            <p className="text-accent-coral font-medium text-sm">{error}</p>
+          <div className="mt-5 bg-brand-light border border-brand/20 rounded-sm p-4">
+            <p className="text-brand text-sm">{error}</p>
           </div>
         )}
 
         {result && (
-          <div
-            className="mt-8 space-y-6"
-            style={{ animation: "fadeInUp 0.5s ease-out" }}
-          >
+          <div className="mt-6">
             {result.address_used && (
-              <div className="flex items-center gap-2 text-sm text-steel">
-                <svg
-                  className="w-4 h-4 text-accent-sky flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0 1 15 0Z"
-                  />
-                </svg>
-                <span>{result.address_used}</span>
-              </div>
+              <p className="text-xs text-steel mb-3">
+                {result.address_used}
+              </p>
             )}
 
-            <div className="bg-surface p-5 md:p-6 shadow-lg">
-              <h3 className="font-display text-sm uppercase tracking-[0.15em] text-steel mb-4 font-bold">
+            <div className="bg-surface border border-border rounded-sm p-4 md:p-5">
+              <h3 className="font-display text-base font-medium text-ink mb-3">
                 Endorsed Slate
               </h3>
 
               {result.endorsements.length > 0 ? (
-                <div className="border border-concrete overflow-hidden">
+                <div className="border border-border rounded-sm overflow-hidden">
                   <table className="w-full table-fixed border-collapse">
                     <thead>
-                      <tr className="bg-warm border-b border-concrete">
-                        <th className="text-left px-3 py-2 font-display text-[11px] uppercase tracking-[0.12em] text-steel w-[42%]">
+                      <tr className="bg-warm border-b border-border">
+                        <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[42%]">
                           Candidate
                         </th>
-                        <th className="text-left px-3 py-2 font-display text-[11px] uppercase tracking-[0.12em] text-steel w-[46%]">
+                        <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[46%]">
                           Race
                         </th>
-                        <th className="text-center px-2 py-2 font-display text-[11px] uppercase tracking-[0.12em] text-steel w-[12%]">
+                        <th className="text-center px-2 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[12%]">
                           Party
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      {result.endorsements.map((endorsement, index) => {
-                        const level = getRaceLevel(endorsement.race);
-                        return (
-                          <tr
-                            key={`${endorsement.race}-${endorsement.candidate}`}
-                            className="border-b border-concrete/80 last:border-b-0"
-                            style={{
-                              animation: `fadeInUp 0.35s ease-out ${index * 0.05}s both`,
-                            }}
-                          >
-                            <td className="px-3 py-2 align-top">
-                              <div className="flex items-start gap-2">
-                                <span
-                                  className={`mt-1.5 h-2 w-2 flex-shrink-0 ${LEVEL_COLORS[level]}`}
-                                  aria-hidden="true"
-                                />
-                                <span className="font-display text-[15px] md:text-base leading-tight text-ink uppercase tracking-wide">
-                                  {endorsement.candidate}
-                                </span>
-                              </div>
-                            </td>
-                            <td className="px-3 py-2 align-top">
-                              <span className="text-xs md:text-sm text-steel leading-tight">
-                                {endorsement.race}
-                              </span>
-                            </td>
-                            <td className="px-2 py-2 align-top text-center">
-                              <span className="inline-block text-[11px] font-display font-bold uppercase tracking-wider bg-warm text-steel px-2 py-0.5">
-                                {endorsement.party}
-                              </span>
-                            </td>
-                          </tr>
-                        );
-                      })}
+                      {result.endorsements.map((endorsement) => (
+                        <tr
+                          key={`${endorsement.race}-${endorsement.candidate}`}
+                          className="border-b border-border/80 last:border-b-0"
+                        >
+                          <td className="px-3 py-1.5 align-top">
+                            <span className="text-sm leading-tight text-ink">
+                              {endorsement.candidate}
+                            </span>
+                          </td>
+                          <td className="px-3 py-1.5 align-top">
+                            <span className="text-xs text-steel leading-tight">
+                              {endorsement.race}
+                            </span>
+                          </td>
+                          <td className="px-2 py-1.5 align-top text-center">
+                            <span className="text-[11px] text-steel-light">
+                              {endorsement.party}
+                            </span>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -625,26 +555,29 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="bg-ink text-white/40 py-8 mt-auto">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-3 text-accent-sky/50 text-sm">
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-            <span>◆</span>
-          </div>
-          <p className="text-xs font-body tracking-wide">
+      <footer className="bg-ink text-white/40 py-6 mt-auto">
+        <div className="max-w-xl mx-auto px-4 text-center">
+          <p className="text-xs font-body">
             {APP_CONFIG.branding.orgName} &mdash; {APP_CONFIG.branding.footerBlurb}
           </p>
-          <p className="text-xs font-body tracking-wide mt-2">
+          <p className="text-xs font-body mt-1.5">
             Maintained by{" "}
             <a
               href={APP_CONFIG.branding.attributionUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent-sky/70 hover:text-accent-sky transition-colors duration-150 underline underline-offset-2"
+              className="text-white/70 hover:text-white transition-colors duration-150 underline underline-offset-2"
             >
               {APP_CONFIG.branding.attributionName}
+            </a>
+            {" "}&middot;{" "}
+            <a
+              href="https://github.com/MisterClean/ballot-endorsement-guide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white transition-colors duration-150 underline underline-offset-2"
+            >
+              Create your own
             </a>
           </p>
         </div>
