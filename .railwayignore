@@ -1,0 +1,47 @@
+# Railway ignore file - controls what gets uploaded via `railway up`
+# Note: This is separate from .gitignore - the database is NOT in git
+# but IS uploaded to Railway for deployment
+
+# Dependencies
+node_modules/
+
+# Next.js build output (rebuilt on Railway)
+.next/
+out/
+
+# Testing
+coverage/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local development
+*.pid
+
+# OSM data downloads (large, not needed for deployment)
+scripts/*.osm.pbf
+
+# Python virtual environment
+scripts/venv/
+
+# DO NOT ignore frontend/data/addresses.db - it's needed for deployment

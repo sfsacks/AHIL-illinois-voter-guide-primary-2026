@@ -1,0 +1,1507 @@
+endorsements:
+  # Statewide
+  - race: "US Senate"
+    candidate: "Jacinda Ardern"
+    party: D
+
+  - race: "Governor"
+    candidate: "Nelson Mandela"
+    party: D
+
+  - race: "Attorney General"
+    candidate: "Angela Merkel"
+    party: D
+
+  - race: "Secretary of State"
+    candidate: "Václav Havel"
+    party: D
+
+  - race: "Comptroller"
+    candidate: "Ellen Johnson Sirleaf"
+    party: D
+
+  - race: "Treasurer"
+    candidate: "José Mujica"
+    party: D
+
+  # Congressional
+  - race: "US House IL-1"
+    district:
+      layer: congressional
+      number: 1
+    candidate: "Nelson Mandela"
+    party: D
+
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Angela Merkel"
+    party: D
+
+  - race: "US House IL-3"
+    district:
+      layer: congressional
+      number: 3
+    candidate: "Jacinda Ardern"
+    party: D
+
+  - race: "US House IL-4"
+    district:
+      layer: congressional
+      number: 4
+    candidate: "Václav Havel"
+    party: D
+
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Ellen Johnson Sirleaf"
+    party: D
+
+  - race: "US House IL-6"
+    district:
+      layer: congressional
+      number: 6
+    candidate: "José Mujica"
+    party: D
+
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Volodymyr Zelenskyy"
+    party: D
+
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Corazón Aquino"
+    party: D
+
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Lee Kuan Yew"
+    party: D
+
+  - race: "US House IL-10"
+    district:
+      layer: congressional
+      number: 10
+    candidate: "Michelle Bachelet"
+    party: D
+
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Kofi Annan"
+    party: D
+
+  - race: "US House IL-12"
+    district:
+      layer: congressional
+      number: 12
+    candidate: "Willy Brandt"
+    party: D
+
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Olof Palme"
+    party: D
+
+  - race: "US House IL-14"
+    district:
+      layer: congressional
+      number: 14
+    candidate: "Lech Wałęsa"
+    party: D
+
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Mikhail Gorbachev"
+    party: D
+
+  - race: "US House IL-16"
+    district:
+      layer: congressional
+      number: 16
+    candidate: "Benazir Bhutto"
+    party: D
+
+  - race: "US House IL-17"
+    district:
+      layer: congressional
+      number: 17
+    candidate: "Aung San Suu Kyi"
+    party: D
+
+  # State Senate
+  - race: "State Senate District 1"
+    district:
+      layer: state_senate
+      number: 1
+    candidate: "Dag Hammarskjöld"
+    party: D
+
+  - race: "State Senate District 2"
+    district:
+      layer: state_senate
+      number: 2
+    candidate: "Golda Meir"
+    party: D
+
+  - race: "State Senate District 3"
+    district:
+      layer: state_senate
+      number: 3
+    candidate: "Indira Gandhi"
+    party: D
+
+  - race: "State Senate District 4"
+    district:
+      layer: state_senate
+      number: 4
+    candidate: "Margaret Thatcher"
+    party: D
+
+  - race: "State Senate District 5"
+    district:
+      layer: state_senate
+      number: 5
+    candidate: "Jawaharlal Nehru"
+    party: D
+
+  - race: "State Senate District 6"
+    district:
+      layer: state_senate
+      number: 6
+    candidate: "Winston Churchill"
+    party: D
+
+  - race: "State Senate District 7"
+    district:
+      layer: state_senate
+      number: 7
+    candidate: "Charles de Gaulle"
+    party: D
+
+  - race: "State Senate District 8"
+    district:
+      layer: state_senate
+      number: 8
+    candidate: "Konrad Adenauer"
+    party: D
+
+  - race: "State Senate District 9"
+    district:
+      layer: state_senate
+      number: 9
+    candidate: "Helmut Schmidt"
+    party: D
+
+  - race: "State Senate District 10"
+    district:
+      layer: state_senate
+      number: 10
+    candidate: "Helmut Kohl"
+    party: D
+
+  - race: "State Senate District 11"
+    district:
+      layer: state_senate
+      number: 11
+    candidate: "François Mitterrand"
+    party: D
+
+  - race: "State Senate District 12"
+    district:
+      layer: state_senate
+      number: 12
+    candidate: "Pierre Trudeau"
+    party: D
+
+  - race: "State Senate District 13"
+    district:
+      layer: state_senate
+      number: 13
+    candidate: "Gro Harlem Brundtland"
+    party: D
+
+  - race: "State Senate District 14"
+    district:
+      layer: state_senate
+      number: 14
+    candidate: "Tarja Halonen"
+    party: D
+
+  - race: "State Senate District 15"
+    district:
+      layer: state_senate
+      number: 15
+    candidate: "Mary Robinson"
+    party: D
+
+  - race: "State Senate District 16"
+    district:
+      layer: state_senate
+      number: 16
+    candidate: "Vigdís Finnbogadóttir"
+    party: D
+
+  - race: "State Senate District 17"
+    district:
+      layer: state_senate
+      number: 17
+    candidate: "Megawati Sukarnoputri"
+    party: D
+
+  - race: "State Senate District 18"
+    district:
+      layer: state_senate
+      number: 18
+    candidate: "Gloria Macapagal Arroyo"
+    party: D
+
+  - race: "State Senate District 19"
+    district:
+      layer: state_senate
+      number: 19
+    candidate: "Park Geun-hye"
+    party: D
+
+  - race: "State Senate District 20"
+    district:
+      layer: state_senate
+      number: 20
+    candidate: "Tsai Ing-wen"
+    party: D
+
+  - race: "State Senate District 21"
+    district:
+      layer: state_senate
+      number: 21
+    candidate: "Dilma Rousseff"
+    party: D
+
+  - race: "State Senate District 22"
+    district:
+      layer: state_senate
+      number: 22
+    candidate: "Cristina Fernández"
+    party: D
+
+  - race: "State Senate District 23"
+    district:
+      layer: state_senate
+      number: 23
+    candidate: "Violeta Chamorro"
+    party: D
+
+  - race: "State Senate District 24"
+    district:
+      layer: state_senate
+      number: 24
+    candidate: "Sirimavo Bandaranaike"
+    party: D
+
+  - race: "State Senate District 25"
+    district:
+      layer: state_senate
+      number: 25
+    candidate: "Isabel Perón"
+    party: D
+
+  - race: "State Senate District 26"
+    district:
+      layer: state_senate
+      number: 26
+    candidate: "Olusegun Obasanjo"
+    party: D
+
+  - race: "State Senate District 27"
+    district:
+      layer: state_senate
+      number: 27
+    candidate: "Julius Nyerere"
+    party: D
+
+  - race: "State Senate District 28"
+    district:
+      layer: state_senate
+      number: 28
+    candidate: "Kwame Nkrumah"
+    party: D
+
+  - race: "State Senate District 29"
+    district:
+      layer: state_senate
+      number: 29
+    candidate: "Jomo Kenyatta"
+    party: D
+
+  - race: "State Senate District 30"
+    district:
+      layer: state_senate
+      number: 30
+    candidate: "Leopold Senghor"
+    party: D
+
+  - race: "State Senate District 31"
+    district:
+      layer: state_senate
+      number: 31
+    candidate: "Thomas Sankara"
+    party: D
+
+  - race: "State Senate District 32"
+    district:
+      layer: state_senate
+      number: 32
+    candidate: "Patrice Lumumba"
+    party: D
+
+  - race: "State Senate District 33"
+    district:
+      layer: state_senate
+      number: 33
+    candidate: "Haile Selassie"
+    party: D
+
+  - race: "State Senate District 34"
+    district:
+      layer: state_senate
+      number: 34
+    candidate: "Sukarno"
+    party: D
+
+  - race: "State Senate District 35"
+    district:
+      layer: state_senate
+      number: 35
+    candidate: "Ho Chi Minh"
+    party: D
+
+  - race: "State Senate District 36"
+    district:
+      layer: state_senate
+      number: 36
+    candidate: "Mahatma Gandhi"
+    party: D
+
+  - race: "State Senate District 37"
+    district:
+      layer: state_senate
+      number: 37
+    candidate: "Sun Yat-sen"
+    party: D
+
+  - race: "State Senate District 38"
+    district:
+      layer: state_senate
+      number: 38
+    candidate: "Kemal Atatürk"
+    party: D
+
+  - race: "State Senate District 39"
+    district:
+      layer: state_senate
+      number: 39
+    candidate: "David Ben-Gurion"
+    party: D
+
+  - race: "State Senate District 40"
+    district:
+      layer: state_senate
+      number: 40
+    candidate: "Yitzhak Rabin"
+    party: D
+
+  - race: "State Senate District 41"
+    district:
+      layer: state_senate
+      number: 41
+    candidate: "Anwar Sadat"
+    party: D
+
+  - race: "State Senate District 42"
+    district:
+      layer: state_senate
+      number: 42
+    candidate: "King Hussein"
+    party: D
+
+  - race: "State Senate District 43"
+    district:
+      layer: state_senate
+      number: 43
+    candidate: "Tunku Abdul Rahman"
+    party: D
+
+  - race: "State Senate District 44"
+    district:
+      layer: state_senate
+      number: 44
+    candidate: "Sheikh Mujibur Rahman"
+    party: D
+
+  - race: "State Senate District 45"
+    district:
+      layer: state_senate
+      number: 45
+    candidate: "Abubakar Tafawa Balewa"
+    party: D
+
+  - race: "State Senate District 46"
+    district:
+      layer: state_senate
+      number: 46
+    candidate: "Kenneth Kaunda"
+    party: D
+
+  - race: "State Senate District 47"
+    district:
+      layer: state_senate
+      number: 47
+    candidate: "Robert Mugabe"
+    party: D
+
+  - race: "State Senate District 48"
+    district:
+      layer: state_senate
+      number: 48
+    candidate: "Samora Machel"
+    party: D
+
+  - race: "State Senate District 49"
+    district:
+      layer: state_senate
+      number: 49
+    candidate: "Agostinho Neto"
+    party: D
+
+  - race: "State Senate District 50"
+    district:
+      layer: state_senate
+      number: 50
+    candidate: "Fidel Castro"
+    party: D
+
+  - race: "State Senate District 51"
+    district:
+      layer: state_senate
+      number: 51
+    candidate: "Salvador Allende"
+    party: D
+
+  - race: "State Senate District 52"
+    district:
+      layer: state_senate
+      number: 52
+    candidate: "João Goulart"
+    party: D
+
+  - race: "State Senate District 53"
+    district:
+      layer: state_senate
+      number: 53
+    candidate: "Getúlio Vargas"
+    party: D
+
+  - race: "State Senate District 54"
+    district:
+      layer: state_senate
+      number: 54
+    candidate: "Lázaro Cárdenas"
+    party: D
+
+  - race: "State Senate District 55"
+    district:
+      layer: state_senate
+      number: 55
+    candidate: "Jacobo Árbenz"
+    party: D
+
+  - race: "State Senate District 56"
+    district:
+      layer: state_senate
+      number: 56
+    candidate: "Omar Torrijos"
+    party: D
+
+  - race: "State Senate District 57"
+    district:
+      layer: state_senate
+      number: 57
+    candidate: "Juan Perón"
+    party: D
+
+  - race: "State Senate District 58"
+    district:
+      layer: state_senate
+      number: 58
+    candidate: "Bernardo OHiggins"
+    party: D
+
+  - race: "State Senate District 59"
+    district:
+      layer: state_senate
+      number: 59
+    candidate: "Simón Bolívar"
+    party: D
+
+  # State House
+  - race: "State House District 1"
+    district:
+      layer: state_house
+      number: 1
+    candidate: "José de San Martín"
+    party: D
+
+  - race: "State House District 2"
+    district:
+      layer: state_house
+      number: 2
+    candidate: "Toussaint Louverture"
+    party: D
+
+  - race: "State House District 3"
+    district:
+      layer: state_house
+      number: 3
+    candidate: "Michael Manley"
+    party: D
+
+  - race: "State House District 4"
+    district:
+      layer: state_house
+      number: 4
+    candidate: "Eric Williams"
+    party: D
+
+  - race: "State House District 5"
+    district:
+      layer: state_house
+      number: 5
+    candidate: "Forbes Burnham"
+    party: D
+
+  - race: "State House District 6"
+    district:
+      layer: state_house
+      number: 6
+    candidate: "Errol Barrow"
+    party: D
+
+  - race: "State House District 7"
+    district:
+      layer: state_house
+      number: 7
+    candidate: "Pedro Castillo"
+    party: D
+
+  - race: "State House District 8"
+    district:
+      layer: state_house
+      number: 8
+    candidate: "Evo Morales"
+    party: D
+
+  - race: "State House District 9"
+    district:
+      layer: state_house
+      number: 9
+    candidate: "Rafael Correa"
+    party: D
+
+  - race: "State House District 10"
+    district:
+      layer: state_house
+      number: 10
+    candidate: "Luiz Inácio Lula da Silva"
+    party: D
+
+  - race: "State House District 11"
+    district:
+      layer: state_house
+      number: 11
+    candidate: "Abel Muzorewa"
+    party: D
+
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Hastings Banda"
+    party: D
+
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Felix Houphouët-Boigny"
+    party: D
+
+  - race: "State House District 14"
+    district:
+      layer: state_house
+      number: 14
+    candidate: "Sékou Touré"
+    party: D
+
+  - race: "State House District 15"
+    district:
+      layer: state_house
+      number: 15
+    candidate: "Modibo Keïta"
+    party: D
+
+  - race: "State House District 16"
+    district:
+      layer: state_house
+      number: 16
+    candidate: "Ahmed Ben Bella"
+    party: D
+
+  - race: "State House District 17"
+    district:
+      layer: state_house
+      number: 17
+    candidate: "Habib Bourguiba"
+    party: D
+
+  - race: "State House District 18"
+    district:
+      layer: state_house
+      number: 18
+    candidate: "King Mohammed V"
+    party: D
+
+  - race: "State House District 19"
+    district:
+      layer: state_house
+      number: 19
+    candidate: "Gamal Abdel Nasser"
+    party: D
+
+  - race: "State House District 20"
+    district:
+      layer: state_house
+      number: 20
+    candidate: "Hafez al-Assad"
+    party: D
+
+  - race: "State House District 21"
+    district:
+      layer: state_house
+      number: 21
+    candidate: "Saddam Hussein"
+    party: D
+
+  - race: "State House District 22"
+    district:
+      layer: state_house
+      number: 22
+    candidate: "Ruhollah Khomeini"
+    party: D
+
+  - race: "State House District 23"
+    district:
+      layer: state_house
+      number: 23
+    candidate: "Mohammad Mosaddegh"
+    party: D
+
+  - race: "State House District 24"
+    district:
+      layer: state_house
+      number: 24
+    candidate: "Zulfikar Ali Bhutto"
+    party: D
+
+  - race: "State House District 25"
+    district:
+      layer: state_house
+      number: 25
+    candidate: "Rajiv Gandhi"
+    party: D
+
+  - race: "State House District 26"
+    district:
+      layer: state_house
+      number: 26
+    candidate: "Manmohan Singh"
+    party: D
+
+  - race: "State House District 27"
+    district:
+      layer: state_house
+      number: 27
+    candidate: "Narendra Modi"
+    party: D
+
+  - race: "State House District 28"
+    district:
+      layer: state_house
+      number: 28
+    candidate: "Shinzo Abe"
+    party: D
+
+  - race: "State House District 29"
+    district:
+      layer: state_house
+      number: 29
+    candidate: "Park Chung-hee"
+    party: D
+
+  - race: "State House District 30"
+    district:
+      layer: state_house
+      number: 30
+    candidate: "Kim Dae-jung"
+    party: D
+
+  - race: "State House District 31"
+    district:
+      layer: state_house
+      number: 31
+    candidate: "Roh Moo-hyun"
+    party: D
+
+  - race: "State House District 32"
+    district:
+      layer: state_house
+      number: 32
+    candidate: "Lee Myung-bak"
+    party: D
+
+  - race: "State House District 33"
+    district:
+      layer: state_house
+      number: 33
+    candidate: "Deng Xiaoping"
+    party: D
+
+  - race: "State House District 34"
+    district:
+      layer: state_house
+      number: 34
+    candidate: "Zhou Enlai"
+    party: D
+
+  - race: "State House District 35"
+    district:
+      layer: state_house
+      number: 35
+    candidate: "Mao Zedong"
+    party: D
+
+  - race: "State House District 36"
+    district:
+      layer: state_house
+      number: 36
+    candidate: "Chiang Kai-shek"
+    party: D
+
+  - race: "State House District 37"
+    district:
+      layer: state_house
+      number: 37
+    candidate: "Lee Teng-hui"
+    party: D
+
+  - race: "State House District 38"
+    district:
+      layer: state_house
+      number: 38
+    candidate: "Chen Shui-bian"
+    party: D
+
+  - race: "State House District 39"
+    district:
+      layer: state_house
+      number: 39
+    candidate: "Mahathir Mohamad"
+    party: D
+
+  - race: "State House District 40"
+    district:
+      layer: state_house
+      number: 40
+    candidate: "Thaksin Shinawatra"
+    party: D
+
+  - race: "State House District 41"
+    district:
+      layer: state_house
+      number: 41
+    candidate: "Aung San"
+    party: D
+
+  - race: "State House District 42"
+    district:
+      layer: state_house
+      number: 42
+    candidate: "Norodom Sihanouk"
+    party: D
+
+  - race: "State House District 43"
+    district:
+      layer: state_house
+      number: 43
+    candidate: "Sukarnoputri"
+    party: D
+
+  - race: "State House District 44"
+    district:
+      layer: state_house
+      number: 44
+    candidate: "José Ramos-Horta"
+    party: D
+
+  - race: "State House District 45"
+    district:
+      layer: state_house
+      number: 45
+    candidate: "Xanana Gusmão"
+    party: D
+
+  - race: "State House District 46"
+    district:
+      layer: state_house
+      number: 46
+    candidate: "Paul Kagame"
+    party: D
+
+  - race: "State House District 47"
+    district:
+      layer: state_house
+      number: 47
+    candidate: "Ellen Sirleaf"
+    party: D
+
+  - race: "State House District 48"
+    district:
+      layer: state_house
+      number: 48
+    candidate: "Joyce Banda"
+    party: D
+
+  - race: "State House District 49"
+    district:
+      layer: state_house
+      number: 49
+    candidate: "Sahle-Work Zewde"
+    party: D
+
+  - race: "State House District 50"
+    district:
+      layer: state_house
+      number: 50
+    candidate: "Samia Suluhu Hassan"
+    party: D
+
+  - race: "State House District 51"
+    district:
+      layer: state_house
+      number: 51
+    candidate: "Nelson Mandela"
+    party: D
+
+  - race: "State House District 52"
+    district:
+      layer: state_house
+      number: 52
+    candidate: "Angela Merkel"
+    party: D
+
+  - race: "State House District 53"
+    district:
+      layer: state_house
+      number: 53
+    candidate: "Jacinda Ardern"
+    party: D
+
+  - race: "State House District 54"
+    district:
+      layer: state_house
+      number: 54
+    candidate: "Václav Havel"
+    party: D
+
+  - race: "State House District 55"
+    district:
+      layer: state_house
+      number: 55
+    candidate: "Ellen Johnson Sirleaf"
+    party: D
+
+  - race: "State House District 56"
+    district:
+      layer: state_house
+      number: 56
+    candidate: "José Mujica"
+    party: D
+
+  - race: "State House District 57"
+    district:
+      layer: state_house
+      number: 57
+    candidate: "Volodymyr Zelenskyy"
+    party: D
+
+  - race: "State House District 58"
+    district:
+      layer: state_house
+      number: 58
+    candidate: "Corazón Aquino"
+    party: D
+
+  - race: "State House District 59"
+    district:
+      layer: state_house
+      number: 59
+    candidate: "Lee Kuan Yew"
+    party: D
+
+  - race: "State House District 60"
+    district:
+      layer: state_house
+      number: 60
+    candidate: "Michelle Bachelet"
+    party: D
+
+  - race: "State House District 61"
+    district:
+      layer: state_house
+      number: 61
+    candidate: "Kofi Annan"
+    party: D
+
+  - race: "State House District 62"
+    district:
+      layer: state_house
+      number: 62
+    candidate: "Willy Brandt"
+    party: D
+
+  - race: "State House District 63"
+    district:
+      layer: state_house
+      number: 63
+    candidate: "Olof Palme"
+    party: D
+
+  - race: "State House District 64"
+    district:
+      layer: state_house
+      number: 64
+    candidate: "Lech Wałęsa"
+    party: D
+
+  - race: "State House District 65"
+    district:
+      layer: state_house
+      number: 65
+    candidate: "Mikhail Gorbachev"
+    party: D
+
+  - race: "State House District 66"
+    district:
+      layer: state_house
+      number: 66
+    candidate: "Benazir Bhutto"
+    party: D
+
+  - race: "State House District 67"
+    district:
+      layer: state_house
+      number: 67
+    candidate: "Aung San Suu Kyi"
+    party: D
+
+  - race: "State House District 68"
+    district:
+      layer: state_house
+      number: 68
+    candidate: "Dag Hammarskjöld"
+    party: D
+
+  - race: "State House District 69"
+    district:
+      layer: state_house
+      number: 69
+    candidate: "Golda Meir"
+    party: D
+
+  - race: "State House District 70"
+    district:
+      layer: state_house
+      number: 70
+    candidate: "Indira Gandhi"
+    party: D
+
+  - race: "State House District 71"
+    district:
+      layer: state_house
+      number: 71
+    candidate: "Margaret Thatcher"
+    party: D
+
+  - race: "State House District 72"
+    district:
+      layer: state_house
+      number: 72
+    candidate: "Jawaharlal Nehru"
+    party: D
+
+  - race: "State House District 73"
+    district:
+      layer: state_house
+      number: 73
+    candidate: "Winston Churchill"
+    party: D
+
+  - race: "State House District 74"
+    district:
+      layer: state_house
+      number: 74
+    candidate: "Charles de Gaulle"
+    party: D
+
+  - race: "State House District 75"
+    district:
+      layer: state_house
+      number: 75
+    candidate: "Konrad Adenauer"
+    party: D
+
+  - race: "State House District 76"
+    district:
+      layer: state_house
+      number: 76
+    candidate: "Helmut Schmidt"
+    party: D
+
+  - race: "State House District 77"
+    district:
+      layer: state_house
+      number: 77
+    candidate: "Helmut Kohl"
+    party: D
+
+  - race: "State House District 78"
+    district:
+      layer: state_house
+      number: 78
+    candidate: "François Mitterrand"
+    party: D
+
+  - race: "State House District 79"
+    district:
+      layer: state_house
+      number: 79
+    candidate: "Pierre Trudeau"
+    party: D
+
+  - race: "State House District 80"
+    district:
+      layer: state_house
+      number: 80
+    candidate: "Gro Harlem Brundtland"
+    party: D
+
+  - race: "State House District 81"
+    district:
+      layer: state_house
+      number: 81
+    candidate: "Tarja Halonen"
+    party: D
+
+  - race: "State House District 82"
+    district:
+      layer: state_house
+      number: 82
+    candidate: "Mary Robinson"
+    party: D
+
+  - race: "State House District 83"
+    district:
+      layer: state_house
+      number: 83
+    candidate: "Vigdís Finnbogadóttir"
+    party: D
+
+  - race: "State House District 84"
+    district:
+      layer: state_house
+      number: 84
+    candidate: "Megawati Sukarnoputri"
+    party: D
+
+  - race: "State House District 85"
+    district:
+      layer: state_house
+      number: 85
+    candidate: "Gloria Macapagal Arroyo"
+    party: D
+
+  - race: "State House District 86"
+    district:
+      layer: state_house
+      number: 86
+    candidate: "Park Geun-hye"
+    party: D
+
+  - race: "State House District 87"
+    district:
+      layer: state_house
+      number: 87
+    candidate: "Tsai Ing-wen"
+    party: D
+
+  - race: "State House District 88"
+    district:
+      layer: state_house
+      number: 88
+    candidate: "Dilma Rousseff"
+    party: D
+
+  - race: "State House District 89"
+    district:
+      layer: state_house
+      number: 89
+    candidate: "Cristina Fernández"
+    party: D
+
+  - race: "State House District 90"
+    district:
+      layer: state_house
+      number: 90
+    candidate: "Violeta Chamorro"
+    party: D
+
+  - race: "State House District 91"
+    district:
+      layer: state_house
+      number: 91
+    candidate: "Sirimavo Bandaranaike"
+    party: D
+
+  - race: "State House District 92"
+    district:
+      layer: state_house
+      number: 92
+    candidate: "Isabel Perón"
+    party: D
+
+  - race: "State House District 93"
+    district:
+      layer: state_house
+      number: 93
+    candidate: "Olusegun Obasanjo"
+    party: D
+
+  - race: "State House District 94"
+    district:
+      layer: state_house
+      number: 94
+    candidate: "Julius Nyerere"
+    party: D
+
+  - race: "State House District 95"
+    district:
+      layer: state_house
+      number: 95
+    candidate: "Kwame Nkrumah"
+    party: D
+
+  - race: "State House District 96"
+    district:
+      layer: state_house
+      number: 96
+    candidate: "Jomo Kenyatta"
+    party: D
+
+  - race: "State House District 97"
+    district:
+      layer: state_house
+      number: 97
+    candidate: "Leopold Senghor"
+    party: D
+
+  - race: "State House District 98"
+    district:
+      layer: state_house
+      number: 98
+    candidate: "Thomas Sankara"
+    party: D
+
+  - race: "State House District 99"
+    district:
+      layer: state_house
+      number: 99
+    candidate: "Patrice Lumumba"
+    party: D
+
+  - race: "State House District 100"
+    district:
+      layer: state_house
+      number: 100
+    candidate: "Haile Selassie"
+    party: D
+
+  - race: "State House District 101"
+    district:
+      layer: state_house
+      number: 101
+    candidate: "Sukarno"
+    party: D
+
+  - race: "State House District 102"
+    district:
+      layer: state_house
+      number: 102
+    candidate: "Ho Chi Minh"
+    party: D
+
+  - race: "State House District 103"
+    district:
+      layer: state_house
+      number: 103
+    candidate: "Mahatma Gandhi"
+    party: D
+
+  - race: "State House District 104"
+    district:
+      layer: state_house
+      number: 104
+    candidate: "Sun Yat-sen"
+    party: D
+
+  - race: "State House District 105"
+    district:
+      layer: state_house
+      number: 105
+    candidate: "Kemal Atatürk"
+    party: D
+
+  - race: "State House District 106"
+    district:
+      layer: state_house
+      number: 106
+    candidate: "David Ben-Gurion"
+    party: D
+
+  - race: "State House District 107"
+    district:
+      layer: state_house
+      number: 107
+    candidate: "Yitzhak Rabin"
+    party: D
+
+  - race: "State House District 108"
+    district:
+      layer: state_house
+      number: 108
+    candidate: "Anwar Sadat"
+    party: D
+
+  - race: "State House District 109"
+    district:
+      layer: state_house
+      number: 109
+    candidate: "King Hussein"
+    party: D
+
+  - race: "State House District 110"
+    district:
+      layer: state_house
+      number: 110
+    candidate: "Tunku Abdul Rahman"
+    party: D
+
+  - race: "State House District 111"
+    district:
+      layer: state_house
+      number: 111
+    candidate: "Sheikh Mujibur Rahman"
+    party: D
+
+  - race: "State House District 112"
+    district:
+      layer: state_house
+      number: 112
+    candidate: "Abubakar Tafawa Balewa"
+    party: D
+
+  - race: "State House District 113"
+    district:
+      layer: state_house
+      number: 113
+    candidate: "Kenneth Kaunda"
+    party: D
+
+  - race: "State House District 114"
+    district:
+      layer: state_house
+      number: 114
+    candidate: "Robert Mugabe"
+    party: D
+
+  - race: "State House District 115"
+    district:
+      layer: state_house
+      number: 115
+    candidate: "Samora Machel"
+    party: D
+
+  - race: "State House District 116"
+    district:
+      layer: state_house
+      number: 116
+    candidate: "Agostinho Neto"
+    party: D
+
+  - race: "State House District 117"
+    district:
+      layer: state_house
+      number: 117
+    candidate: "Fidel Castro"
+    party: D
+
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Salvador Allende"
+    party: D
+
+  # Cook County Commissioner
+  - race: "Cook County Commissioner District 1"
+    district:
+      layer: cook_county
+      number: 1
+    candidate: "Clement Attlee"
+    party: D
+
+  - race: "Cook County Commissioner District 2"
+    district:
+      layer: cook_county
+      number: 2
+    candidate: "Tony Blair"
+    party: D
+
+  - race: "Cook County Commissioner District 3"
+    district:
+      layer: cook_county
+      number: 3
+    candidate: "Sanna Marin"
+    party: D
+
+  - race: "Cook County Commissioner District 4"
+    district:
+      layer: cook_county
+      number: 4
+    candidate: "Helen Clark"
+    party: D
+
+  - race: "Cook County Commissioner District 5"
+    district:
+      layer: cook_county
+      number: 5
+    candidate: "Gough Whitlam"
+    party: D
+
+  - race: "Cook County Commissioner District 6"
+    district:
+      layer: cook_county
+      number: 6
+    candidate: "Mette Frederiksen"
+    party: D
+
+  - race: "Cook County Commissioner District 7"
+    district:
+      layer: cook_county
+      number: 7
+    candidate: "Urho Kekkonen"
+    party: D
+
+  - race: "Cook County Commissioner District 8"
+    district:
+      layer: cook_county
+      number: 8
+    candidate: "Pedro Sánchez"
+    party: D
+
+  - race: "Cook County Commissioner District 9"
+    district:
+      layer: cook_county
+      number: 9
+    candidate: "Olaf Scholz"
+    party: D
+
+  - race: "Cook County Commissioner District 10"
+    district:
+      layer: cook_county
+      number: 10
+    candidate: "Emmanuel Macron"
+    party: D
+
+  - race: "Cook County Commissioner District 11"
+    district:
+      layer: cook_county
+      number: 11
+    candidate: "Justin Trudeau"
+    party: D
+
+  - race: "Cook County Commissioner District 12"
+    district:
+      layer: cook_county
+      number: 12
+    candidate: "Mia Mottley"
+    party: D
+
+  - race: "Cook County Commissioner District 13"
+    district:
+      layer: cook_county
+      number: 13
+    candidate: "Kaja Kallas"
+    party: D
+
+  - race: "Cook County Commissioner District 14"
+    district:
+      layer: cook_county
+      number: 14
+    candidate: "Erna Solberg"
+    party: D
+
+  - race: "Cook County Commissioner District 15"
+    district:
+      layer: cook_county
+      number: 15
+    candidate: "Helle Thorning-Schmidt"
+    party: D
+
+  - race: "Cook County Commissioner District 16"
+    district:
+      layer: cook_county
+      number: 16
+    candidate: "Giuseppe Conte"
+    party: D
+
+  - race: "Cook County Commissioner District 17"
+    district:
+      layer: cook_county
+      number: 17
+    candidate: "Sylvie Kinigi"
+    party: D
+
