@@ -37,9 +37,17 @@ npm run test:fast
 
 ## Deployment
 
-`railway.toml` and `Dockerfile` are configured for Railway-compatible Docker deploys.
+Deployed on [Railway](https://railway.com) via Docker.
 
-Healthcheck path: `/api/health`
+**Production:** https://abundant-housing-il-endorsements-production.up.railway.app
+
+Pushes to `main` trigger automatic deploys. The service builds from `Dockerfile` and health-checks at `/api/health`.
+
+Railway environment variables:
+
+- `GEOCODE_EARTH_API_KEY` — geocoding provider key
+- `PORT=3000`
+- `GITHUB_TOKEN` — PAT for private repo access
 
 ## License
 

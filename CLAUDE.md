@@ -46,4 +46,20 @@ Set exactly one based on the selected provider:
 
 ## Deployment
 
-`railway.toml` and `Dockerfile` are configured for Railway-compatible Docker deploys.
+Deployed on Railway as project `abundant-housing-il-endorsements`.
+
+**Production:** https://abundant-housing-il-endorsements-production.up.railway.app
+
+- GitHub repo `MisterClean/abundant-housing-endorsement-guide` is connected — pushes to `main` auto-deploy
+- `railway.toml` configures Dockerfile builder and health check at `/api/health`
+- `Dockerfile` builds the Next.js app on Node 20, serves on port 3000
+- Railway env vars: `GEOCODE_EARTH_API_KEY`, `PORT=3000`, `GITHUB_TOKEN`
+
+Useful commands:
+
+```bash
+railway status          # check project link
+railway logs            # view build/deploy logs
+railway variables --kv  # list env vars
+railway up              # manual deploy from local
+```
