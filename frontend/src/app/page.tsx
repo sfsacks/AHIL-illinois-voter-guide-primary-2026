@@ -570,6 +570,15 @@ export default function Home() {
             >
               {APP_CONFIG.branding.attributionName}
             </a>
+            {" "}&middot;{" "}
+            <a
+              href="https://github.com/MisterClean/ballot-endorsement-guide"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white transition-colors duration-150 underline underline-offset-2"
+            >
+              Create your own
+            </a>
           </p>
         </div>
       </footer>
