@@ -62,15 +62,15 @@ const DISTRICT_MAP_ROOT = `district-maps/${STATE_SLUG}`;
 
 export const APP_CONFIG: AppConfig = {
   branding: {
-    orgName: "Civic Atlas Labs",
-    headerSubtitle: "An open-source ballot endorsement guide starter for any jurisdiction",
-    electionLabel: "Boilerplate Community Edition",
-    footerBlurb: "Fork, customize, and ship your own public voter guide",
-    attributionName: "Civic Atlas Labs",
-    attributionUrl: "https://github.com/civic-atlas-labs",
+    orgName: "Abundant Housing Illinois",
+    headerSubtitle: "Your pro-housing voter guide for the 2026 Illinois primary",
+    electionLabel: "March 17, 2026 Illinois Primary",
+    footerBlurb: "Endorsing candidates who support building more homes across Illinois",
+    attributionName: "Abundant Housing Illinois",
+    attributionUrl: "https://abundanthousingillinois.org",
   },
   geography: {
-    jurisdictionName: "Illinois (Sample Pack)",
+    jurisdictionName: "Illinois",
     countryCode: "US",
     state: {
       code: "IL",

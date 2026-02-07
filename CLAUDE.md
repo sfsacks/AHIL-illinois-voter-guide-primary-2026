@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Developer notes for working in this repository.
+Developer notes for the Abundant Housing Illinois endorsement guide.
 
 ## Commands
 

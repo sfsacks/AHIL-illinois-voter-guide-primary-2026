@@ -51,8 +51,8 @@ describe("checkJurisdiction", () => {
 describe("getEndorsements", () => {
   const sampleDistricts: Districts = {
     congressional: 7,
-    state_senate: 3,
-    state_house: 6,
+    state_senate: 9,
+    state_house: 1,
     city_ward: 42,
     cook_county: 10,
   };
@@ -61,19 +61,14 @@ describe("getEndorsements", () => {
     const results = getEndorsements(sampleDistricts, endorsementsData);
     const races = results.map((e) => e.race);
     expect(races).toContain("US Senate");
-    expect(races).toContain("Governor");
-    expect(races).toContain("Attorney General");
-    expect(races).toContain("Secretary of State");
-    expect(races).toContain("Comptroller");
-    expect(races).toContain("Treasurer");
   });
 
   it("returns matching district-specific endorsements", () => {
     const results = getEndorsements(sampleDistricts, endorsementsData);
     const races = results.map((e) => e.race);
     expect(races).toContain("US House IL-7");
-    expect(races).toContain("State Senate District 3");
-    expect(races).toContain("State House District 6");
+    expect(races).toContain("State Senate District 9");
+    expect(races).toContain("State House District 1");
   });
 
   it("does NOT return endorsements for non-matching districts", () => {
@@ -81,6 +76,7 @@ describe("getEndorsements", () => {
     const races = results.map((e) => e.race);
     expect(races).not.toContain("US House IL-1");
     expect(races).not.toContain("State Senate District 10");
+    expect(races).not.toContain("State House District 6");
   });
 
   it("returns empty array when no endorsements match", () => {
@@ -105,7 +101,7 @@ describe("getEndorsements", () => {
   it("returns Cook County Commissioner endorsement for matching district", () => {
     const results = getEndorsements(sampleDistricts, endorsementsData);
     const races = results.map((e) => e.race);
-    expect(races).toContain("Cook County Commissioner District 10");
+    expect(races).toContain("Cook County Board District 10");
   });
 
   it("matches endorsement using modern district.layer schema", () => {
@@ -136,7 +132,7 @@ describe("getEndorsements", () => {
         candidate: "Compat Candidate",
         party: "D",
         district_layer: "state_senate",
-        district_number: 3,
+        district_number: 9,
       },
     ]);
 
@@ -157,9 +153,9 @@ describe("getEndorsements", () => {
         race: "Conflict Race",
         candidate: "Conflict Candidate",
         party: "D",
-        district: { layer: "state_house", number: 6 },
+        district: { layer: "state_house", number: 1 },
         district_type: "congressional",
-        district_number: 1,
+        district_number: 99,
       },
     ]);
 
