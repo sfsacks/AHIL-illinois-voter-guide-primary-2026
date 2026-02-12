@@ -1,0 +1,4713 @@
+candidates:
+  # ============================================
+  # US SENATE
+  # ============================================
+  - race: "US Senate"
+    candidate: "Juliana Stratton"
+    website: https://Julianastratton.com
+    party: D
+    endorsed: true
+  
+  - race: "US Senate"
+    candidate: "Robin Kelly"
+    website: https://www.robinforsenate.com
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Raja Krishnamoorthi"
+    website: https://rajaforIL.com
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: Steve Botsford Jr.
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Sean Brown"
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Awisi Bustos"
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Jonathan Dean"
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Bryan Maxwell"
+    website: https://maxwell4senate.com
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Kevin Ryan"
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Christopher Swann"
+    website: https://www.swannforsenate.com
+    party: D
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "R. Cary Capparelli"
+    party: R
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Casey Chlebek"
+    website: https://caseyforsenate.com
+    party: R
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Jeannie Evans"
+    party: R
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Pamela Denise Long"
+    website: https://www.longforsenate2026.com
+    party: R
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Jimmy Lee Tillman II"
+    party: R
+    endorsed: false
+  
+  - race: "US Senate"
+    candidate: "Don Tracy"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 1
+  # ============================================
+  - race: "US House IL-1"
+    district:
+      layer: congressional
+      number: 1
+    candidate: "Jonathan Jackson"
+    website: ""
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-1"
+    district:
+      layer: congressional
+      number: 1
+    candidate: "Jerico Brown"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-1"
+    district:
+      layer: congressional
+      number: 1
+    candidate: "Marcus Lewis"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-1"
+    district:
+      layer: congressional
+      number: 1
+    candidate: "Christian Maxwell"
+    website: https://www.christianmaxwellforcongress.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 2
+  # ============================================
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Robert Peters"
+    website: https://robertpetersforcongress.com
+    party: D
+    endorsed: true
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Donna Miller"
+    website: https://donnaforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Jesse L. Jackson, Jr."
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Willie Preston"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Toni Brown"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Yumeka Brown"
+    website: https://yumekaforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Eric France"
+    website: https://franceforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Patrick Keating"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Sidney Moore"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Adal Regis"
+    website: https://regisforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Jeremy Young"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-2"
+    district:
+      layer: congressional
+      number: 2
+    candidate: "Mike Noack"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 3
+  # ============================================
+  - race: "US House IL-3"
+    district:
+      layer: congressional
+      number: 3
+    candidate: "Delia Ramirez"
+    website: https://deliaramirez.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-3"
+    district:
+      layer: congressional
+      number: 3
+    candidate: "Mark Pasieka Sr."
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-3"
+    district:
+      layer: congressional
+      number: 3
+    candidate: "Angel Oakley"
+    website: https://www.libertyangel.us/
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 4
+  # ============================================
+  - race: "US House IL-4"
+    district:
+      layer: congressional
+      number: 4
+    candidate: "Patty Garcia"
+    website: https://pattycgarcia.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-4"
+    district:
+      layer: congressional
+      number: 4
+    candidate: "Lupe Castillo"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 5
+  # ============================================
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Mike Quigley"
+    website: https://mikequigleyforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Jonathan Bishop"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Matthew Conroy"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Ellen Corley"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Anthony Michael Tamez"
+    website: https://tamezforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Tom Hanson"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Kimball Ladien"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-5"
+    district:
+      layer: congressional
+      number: 5
+    candidate: "Barry Wicker"
+    website: https://www.wickerforcongressman.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 6
+  # ============================================
+  - race: "US House IL-6"
+    district:
+      layer: congressional
+      number: 6
+    candidate: "Sean Casten"
+    website: https://seancastenforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-6"
+    district:
+      layer: congressional
+      number: 6
+    candidate: "Joseph Ruzevich"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-6"
+    district:
+      layer: congressional
+      number: 6
+    candidate: "Niki Conforti"
+    website: https://www.conforti4congress.com
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-6"
+    district:
+      layer: congressional
+      number: 6
+    candidate: "Skylar Duensing"
+    website: https://www.voteskylar.com    
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 7
+  # ============================================
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Anthony Driver"
+    website: https://driverforchange.com/
+    party: D
+    endorsed: true
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Richard Boykin"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Kina Collins"
+    website: https://kinacollinsil.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Melissa Conyears-Ervin"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "David Ehrlich"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Thomas Fisher"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "La Shawn Ford"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Jason Friedman"
+    website: https://friedmanforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Rory Hoskins"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Anabel Mendoza"
+    website: https://anabelforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Jazmin Robinson"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Reed Showalter"
+    website: https://reed4congress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Felix Tello"
+    website: https://felixforcongress.org
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Patricia Easley"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-7"
+    district:
+      layer: congressional
+      number: 7
+    candidate: "Chad Koppie"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 8
+  # ============================================
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Junaid Ahmed"
+    website: https://junaidforus.com/
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Yasmeen Bankole"
+    website: https://yasmeenbankole.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Melissa Bean"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Sanjyot Dunung"
+    website: https://sanjyotforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Neil Khot"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Kevin Morrison"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Dan Tully"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Ryan Vetticad"
+    website: https://ryanforillinois.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Kevin Ake"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Jennifer Davis"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Herbert Hebein"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-8"
+    district:
+      layer: congressional
+      number: 8
+    candidate: "Mark Rice"
+    website: https://www.rice4congress.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 9
+  # ============================================
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Daniel Biss"
+    website: https://danielbiss.com
+    party: D
+    endorsed: true
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Kat Abughazaleh"
+    website: https://katforillinois.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Bushra Amiwala"
+    website: https://bushraforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Phil Andrew"
+    website: https://philandrewforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Natalie Angelo"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Patricia Brown"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Jeff Cohen"
+    website: https://jeffcohenforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Laura Fine"
+    website: https://laurafineforcongress.org
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Justin Ford"
+    website: https://www.votejustinford.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Mark Fredrickson"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Hoan Huynh"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Bethany Johnson"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Bruce Leon"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Sam Polan"
+    website: https://www.sampolan.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Nick Pyati"
+    website: https://NickPyati.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Howard Rosenblum"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Mike Simmons"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Rocio Cleveland"
+    website: https://rocioclevelandforcongress.com
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "John Elleson"
+    website: https://johnelleson.com
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Paul Friedman"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-9"
+    district:
+      layer: congressional
+      number: 9
+    candidate: "Mark Su"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 10
+  # ============================================
+  - race: "US House IL-10"
+    district:
+      layer: congressional
+      number: 10
+    candidate: "Brad Schneider"
+    website: https://bradschneiderforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-10"
+    district:
+      layer: congressional
+      number: 10
+    candidate: "Morgan Coghill"
+    website: https://coghillforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-10"
+    district:
+      layer: congressional
+      number: 10
+    candidate: "Carl Lambrecht"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 11
+  # ============================================
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Bill Foster"
+    website: https://billfosterforcongress.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Tedora Brown"
+    website: https://tedorabrown.com
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Charlie Kim"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Mike Pierce"
+    website: https://mikepierceforcongress.com
+    endorsed: false
+  
+  - race: "US House IL-11"
+    district:
+      layer: congressional
+      number: 11
+    candidate: "Jeffrey Walter"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 12
+  # ============================================
+  - race: "US House IL-12"
+    district:
+      layer: congressional
+      number: 12
+    candidate: "Mike Bost"
+    website: ""
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-12"
+    district:
+      layer: congressional
+      number: 12
+    candidate: "Julie Fortier"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 13
+  # ============================================
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Dylan Blaha"
+    website: https://dylanforillinois.com
+    party: D
+    endorsed: true
+  
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Nikki Budzinski"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Emily Lux"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Joshua Loyd"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-13"
+    district:
+      layer: congressional
+      number: 13
+    candidate: "Jeff Wilson"
+    website: https://wilsonforcongress.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 14
+  # ============================================
+  - race: "US House IL-14"
+    district:
+      layer: congressional
+      number: 14
+    candidate: "Lauren Underwood"
+    website: ""
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-14"
+    district:
+      layer: congressional
+      number: 14
+    candidate: "James Marter"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-14"
+    district:
+      layer: congressional
+      number: 14
+    candidate: "Gary Vician"
+    website: https://vicianforcongress.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 15
+  # ============================================
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Mary Miller"
+    website: ""
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Judy Bowlby"
+    website: https://www.bowlby2026.com
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Ryan Tebrugge"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Paul Davis"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Kyle Nudo"
+    website: https://kyleforillinois.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Randy Raley"
+    website: https://ElectRaley.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-15"
+    district:
+      layer: congressional
+      number: 15
+    candidate: "Jennifer Todd"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 16
+  # ============================================
+  - race: "US House IL-16"
+    district:
+      layer: congressional
+      number: 16
+    candidate: "Darin LaHood"
+    website: ""
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-16"
+    district:
+      layer: congressional
+      number: 16
+    candidate: "Paul Nolley"
+    website: https://nolleyforcongress.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # US HOUSE - CONGRESSIONAL DISTRICT 17
+  # ============================================
+  - race: "US House IL-17"
+    district:
+      layer: congressional
+      number: 17
+    candidate: "Eric Sorensen"
+    website: https://Ericforillinois.com
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-17"
+    district:
+      layer: congressional
+      number: 17
+    candidate: "Montez Soliz"
+    party: D
+    endorsed: false
+  
+  - race: "US House IL-17"
+    district:
+      layer: congressional
+      number: 17
+    candidate: "Julie Bickelhaupt"
+    party: R
+    endorsed: false
+  
+  - race: "US House IL-17"
+    district:
+      layer: congressional
+      number: 17
+    candidate: "Dillan Vancil"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATEWIDE OFFICES
+  # ============================================
+  - race: "Governor"
+    candidate: "J.B. Pritzker"
+    party: D
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Patricia L. Tillman"
+    party: D
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Darren Bailey"
+    website: https://baileyforillinois.com
+    party: R
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Ted Dabrowski"
+    website: https://tedforillinois.com
+    party: R
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Rick Heidner"
+    party: R
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "James Mendrick"
+    party: R
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Gregg Moore"
+    party: R
+    endorsed: false
+  
+  - race: "Governor"
+    candidate: "Joseph Severino"
+    party: R
+    endorsed: false
+  
+  - race: "Lieutenant Governor"
+    candidate: "Christian Mitchell"
+    party: D
+    endorsed: false
+  
+  - race: "Lieutenant Governor"
+    candidate: "Aaron Del Mar"
+    party: R
+    endorsed: false
+  
+  - race: "Lieutenant Governor"
+    candidate: "Carrie Mendoza"
+    website: https://tedforillinois.com
+    party: R
+    endorsed: false
+  
+  - race: "Lieutenant Governor"
+    candidate: "Christina Neitzke-Troike"
+    party: R
+    endorsed: false
+  
+  - race: "Lieutenant Governor"
+    candidate: "Robert Renteria"
+    party: R
+    endorsed: false
+
+  - race: "Attorney General"
+    candidate: "Kwame Raoul"
+    party: D
+    endorsed: false
+  
+  - race: "Attorney General"
+    candidate: "Bob Fioretti"
+    party: R
+    endorsed: false
+  
+  - race: "Attorney General"
+    candidate: "Andy Williams Jr."
+    party: R
+    endorsed: false
+  
+  - race: "Secretary of State"
+    candidate: "Alexi Giannoulias"
+    party: D
+    endorsed: false
+  
+  - race: "Secretary of State"
+    candidate: "Walter Adamczyk"
+    party: R
+    endorsed: false
+  
+  - race: "Secretary of State"
+    candidate: "Diane Harris"
+    party: R
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "Margaret Croke"
+    party: D
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "George Danos"
+    party: D
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "Stephanie Kifowit"
+    party: D
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "Holly Kim"
+    website: https://www.voteforhollykim.com
+    party: D
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "Karina Villa"
+    party: D
+    endorsed: false
+  
+  - race: "Comptroller"
+    candidate: "Bryan Drew"
+    party: R
+    endorsed: false
+  
+  - race: "Treasurer"
+    candidate: "Mike Frerichs"
+    party: D
+    endorsed: false
+  
+  - race: "Treasurer"
+    candidate: "Max Solomon"
+    party: R
+    endorsed: false
+  
+  - race: "Treasurer"
+    candidate: "Max Rice"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 2
+  # ============================================
+  - race: "State Senate District 2"
+    district:
+      layer: state_senate
+      number: 2
+    candidate: "Omar Aquino"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 3
+  # ============================================
+  - race: "State Senate District 3"
+    district:
+      layer: state_senate
+      number: 3
+    candidate: "Mattie Hunter"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 5
+  # ============================================
+  - race: "State Senate District 5"
+    district:
+      layer: state_senate
+      number: 5
+    candidate: "Lakesia Collins"
+    website: https://lakesiacollinsforsenate.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 5"
+    district:
+      layer: state_senate
+      number: 5
+    candidate: "Frederick Collins"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 6
+  # ============================================
+  - race: "State Senate District 6"
+    district:
+      layer: state_senate
+      number: 6
+    candidate: "Sara Feigenholtz"
+    website: https://sarafeigenholtz.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 6"
+    district:
+      layer: state_senate
+      number: 6
+    candidate: "Nick Uniejewski"
+    website: https://nickforillinois.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 8
+  # ============================================
+  - race: "State Senate District 8"
+    district:
+      layer: state_senate
+      number: 8
+    candidate: "Ram Villivalam"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 8"
+    district:
+      layer: state_senate
+      number: 8
+    candidate: "Vince Romano"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 9
+  # ============================================
+  - race: "State Senate District 9"
+    district:
+      layer: state_senate
+      number: 9
+    candidate: "Patrick Hanley"
+    website: https://hanleyforillinois.com
+    party: D
+    endorsed: true
+  
+  - race: "State Senate District 9"
+    district:
+      layer: state_senate
+      number: 9
+    candidate: "Rachel Ruttenberg"
+    website: https://rachelforillinois.com/
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 9"
+    district:
+      layer: state_senate
+      number: 9
+    candidate: "Tom Lally"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 11
+  # ============================================
+  - race: "State Senate District 11"
+    district:
+      layer: state_senate
+      number: 11
+    candidate: "Mike Porfirio"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 12
+  # ============================================
+  - race: "State Senate District 12"
+    district:
+      layer: state_senate
+      number: 12
+    candidate: "Celina Villanueva"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 14
+  # ============================================
+  - race: "State Senate District 14"
+    district:
+      layer: state_senate
+      number: 14
+    candidate: "Emil Jones"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 14"
+    district:
+      layer: state_senate
+      number: 14
+    candidate: "Ahmed Karrar"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 14"
+    district:
+      layer: state_senate
+      number: 14
+    candidate: "Kenneth Williams"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 14"
+    district:
+      layer: state_senate
+      number: 14
+    candidate: "Brian Skala"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 15
+  # ============================================
+  - race: "State Senate District 15"
+    district:
+      layer: state_senate
+      number: 15
+    candidate: "Napoleon Harris"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 17
+  # ============================================
+  - race: "State Senate District 17"
+    district:
+      layer: state_senate
+      number: 17
+    candidate: "Elgie R. Sims, Jr."
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 17"
+    district:
+      layer: state_senate
+      number: 17
+    candidate: "Frederick L. Walls"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 18
+  # ============================================
+  - race: "State Senate District 18"
+    district:
+      layer: state_senate
+      number: 18
+    candidate: "Frances Ann Hurley"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 18"
+    district:
+      layer: state_senate
+      number: 18
+    candidate: "Christine McGovern"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 20
+  # ============================================
+  - race: "State Senate District 20"
+    district:
+      layer: state_senate
+      number: 20
+    candidate: "Graciela Guzman"
+    website: https://gracielafor20.org
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 21
+  # ============================================
+  - race: "State Senate District 21"
+    district:
+      layer: state_senate
+      number: 21
+    candidate: "Laura Ellman"
+    website: https://ellmanforillinois.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 21"
+    district:
+      layer: state_senate
+      number: 21
+    candidate: "Julie Berkowicz"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 23
+  # ============================================
+  - race: "State Senate District 23"
+    district:
+      layer: state_senate
+      number: 23
+    candidate: "Suzanne Glowiak Hilton"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 23"
+    district:
+      layer: state_senate
+      number: 23
+    candidate: "Linda Polacek"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 24
+  # ============================================
+  - race: "State Senate District 24"
+    district:
+      layer: state_senate
+      number: 24
+    candidate: "Seth Lewis"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 24"
+    district:
+      layer: state_senate
+      number: 24
+    candidate: "Ben McAdams"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 26
+  # ============================================
+  - race: "State Senate District 26"
+    district:
+      layer: state_senate
+      number: 26
+    candidate: "Nabeela Syed"
+    website: https://nabeelasyed.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 26"
+    district:
+      layer: state_senate
+      number: 26
+    candidate: "Darby Hills"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 27
+  # ============================================
+  - race: "State Senate District 27"
+    district:
+      layer: state_senate
+      number: 27
+    candidate: "Carina Santa Maria"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 27"
+    district:
+      layer: state_senate
+      number: 27
+    candidate: "David Mathis"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 29
+  # ============================================
+  - race: "State Senate District 29"
+    district:
+      layer: state_senate
+      number: 29
+    candidate: "Julie Morrison"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 29"
+    district:
+      layer: state_senate
+      number: 29
+    candidate: "Kate McGrath"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 30
+  # ============================================
+  - race: "State Senate District 30"
+    district:
+      layer: state_senate
+      number: 30
+    candidate: "Adriane Johnson"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 32
+  # ============================================
+  - race: "State Senate District 32"
+    district:
+      layer: state_senate
+      number: 32
+    candidate: "Craig Wilcox"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 32"
+    district:
+      layer: state_senate
+      number: 32
+    candidate: "Karen Battaglia"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 33
+  # ============================================
+  - race: "State Senate District 33"
+    district:
+      layer: state_senate
+      number: 33
+    candidate: "Michele Clark"
+    website: https://micheleforilsenate.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 33"
+    district:
+      layer: state_senate
+      number: 33
+    candidate: "Jessica Breugelmans"
+    website: https://www.jessicaforillinois.com/
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 33"
+    district:
+      layer: state_senate
+      number: 33
+    candidate: "Danielle Penman"
+    website: https://daniellepenman.com
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 35
+  # ============================================
+  - race: "State Senate District 35"
+    district:
+      layer: state_senate
+      number: 35
+    candidate: "Dave Syverson"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 35"
+    district:
+      layer: state_senate
+      number: 35
+    candidate: "Sarah Mertens"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 36
+  # ============================================
+  - race: "State Senate District 36"
+    district:
+      layer: state_senate
+      number: 36
+    candidate: "Michael Halpin"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 36"
+    district:
+      layer: state_senate
+      number: 36
+    candidate: "Brad Beekman"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 36"
+    district:
+      layer: state_senate
+      number: 36
+    candidate: "Patrick Harlan"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 38
+  # ============================================
+  - race: "State Senate District 38"
+    district:
+      layer: state_senate
+      number: 38
+    candidate: "Sue Rezin"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 38"
+    district:
+      layer: state_senate
+      number: 38
+    candidate: "Ernie Marcelain"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 39
+  # ============================================
+  - race: "State Senate District 39"
+    district:
+      layer: state_senate
+      number: 39
+    candidate: "Don Harmon"
+    website: https://harmonforillinois.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 41
+  # ============================================
+  - race: "State Senate District 41"
+    district:
+      layer: state_senate
+      number: 41
+    candidate: "John Curran"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 42
+  # ============================================
+  - race: "State Senate District 42"
+    district:
+      layer: state_senate
+      number: 42
+    candidate: "Linda Holmes"
+    website: https://lindaholmesforil.com
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 42"
+    district:
+      layer: state_senate
+      number: 42
+    candidate: "Justin Breaux"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 42"
+    district:
+      layer: state_senate
+      number: 42
+    candidate: "Edgardo Perez"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 44
+  # ============================================
+  - race: "State Senate District 44"
+    district:
+      layer: state_senate
+      number: 44
+    candidate: "Sally Turner"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 45
+  # ============================================
+  - race: "State Senate District 45"
+    district:
+      layer: state_senate
+      number: 45
+    candidate: "Andrew Chesney"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 45"
+    district:
+      layer: state_senate
+      number: 45
+    candidate: "Joshua Atkinson"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 45"
+    district:
+      layer: state_senate
+      number: 45
+    candidate: "Joe Berning"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 47
+  # ============================================
+  - race: "State Senate District 47"
+    district:
+      layer: state_senate
+      number: 47
+    candidate: "Neil Anderson"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 48
+  # ============================================
+  - race: "State Senate District 48"
+    district:
+      layer: state_senate
+      number: 48
+    candidate: "Doris Turner"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 48"
+    district:
+      layer: state_senate
+      number: 48
+    candidate: "Frank Lesko"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 50
+  # ============================================
+  - race: "State Senate District 50"
+    district:
+      layer: state_senate
+      number: 50
+    candidate: "Jil Tracy"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 51
+  # ============================================
+  - race: "State Senate District 51"
+    district:
+      layer: state_senate
+      number: 51
+    candidate: "Chapin Rose"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 53
+  # ============================================
+  - race: "State Senate District 53"
+    district:
+      layer: state_senate
+      number: 53
+    candidate: "Chris Balkema"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 54
+  # ============================================
+  - race: "State Senate District 54"
+    district:
+      layer: state_senate
+      number: 54
+    candidate: "Steve McClure"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 56
+  # ============================================
+  - race: "State Senate District 56"
+    district:
+      layer: state_senate
+      number: 56
+    candidate: "Erica Harriss"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 56"
+    district:
+      layer: state_senate
+      number: 56
+    candidate: "Marsia Geldert-Murphey"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 56"
+    district:
+      layer: state_senate
+      number: 56
+    candidate: "Kevin Hall"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 57
+  # ============================================
+  - race: "State Senate District 57"
+    district:
+      layer: state_senate
+      number: 57
+    candidate: "Christopher Belt"
+    party: D
+    endorsed: false
+  
+  - race: "State Senate District 57"
+    district:
+      layer: state_senate
+      number: 57
+    candidate: "Daniel Rhyne"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE SENATE - DISTRICT 59
+  # ============================================
+  - race: "State Senate District 59"
+    district:
+      layer: state_senate
+      number: 59
+    candidate: "Paul Jacobs"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 59"
+    district:
+      layer: state_senate
+      number: 59
+    candidate: "Stephen Vercellino"
+    party: R
+    endorsed: false
+  
+  - race: "State Senate District 59"
+    district:
+      layer: state_senate
+      number: 59
+    candidate: "Tamiko Mueller"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 1
+  # ============================================
+  - race: "State House District 1"
+    district:
+      layer: state_house
+      number: 1
+    candidate: "Guadalupe Rivera"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 1"
+    district:
+      layer: state_house
+      number: 1
+    candidate: "Aaron Ortiz"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 2
+  # ============================================
+  - race: "State House District 2"
+    district:
+      layer: state_house
+      number: 2
+    candidate: "Elizabeth Hernandez"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 2"
+    district:
+      layer: state_house
+      number: 2
+    candidate: "Laura Hruska"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 3
+  # ============================================
+  - race: "State House District 3"
+    district:
+      layer: state_house
+      number: 3
+    candidate: "Eva-Dina Delgado"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 3"
+    district:
+      layer: state_house
+      number: 3
+    candidate: "Juvandy Rivera"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 4
+  # ============================================
+  - race: "State House District 4"
+    district:
+      layer: state_house
+      number: 4
+    candidate: "Lilian Jiménez"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 4"
+    district:
+      layer: state_house
+      number: 4
+    candidate: "Kirk Ortiz"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 5
+  # ============================================
+  - race: "State House District 5"
+    district:
+      layer: state_house
+      number: 5
+    candidate: "Kimberly du Buclet"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 6
+  # ============================================
+  - race: "State House District 6"
+    district:
+      layer: state_house
+      number: 6
+    candidate: "Sonya Harper"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 7
+  # ============================================
+  - race: "State House District 7"
+    district:
+      layer: state_house
+      number: 7
+    candidate: "Emanuel Welch"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 8
+  # ============================================
+  - race: "State House District 8"
+    district:
+      layer: state_house
+      number: 8
+    candidate: "Shantel Franklin"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 8"
+    district:
+      layer: state_house
+      number: 8
+    candidate: "Jill Bush"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 8"
+    district:
+      layer: state_house
+      number: 8
+    candidate: "John Harrell"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 8"
+    district:
+      layer: state_house
+      number: 8
+    candidate: "Latonya Mitts"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 9
+  # ============================================
+  - race: "State House District 9"
+    district:
+      layer: state_house
+      number: 9
+    candidate: "Yolonda Morris"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 10
+  # ============================================
+  - race: "State House District 10"
+    district:
+      layer: state_house
+      number: 10
+    candidate: "Jawaharial Williams"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 11
+  # ============================================
+  - race: "State House District 11"
+    district:
+      layer: state_house
+      number: 11
+    candidate: "Ann M. Williams"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 12
+  # ============================================
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Paul Kendrick"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Justin Kumar"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Litcy Kurisinkal"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Karim Lakhani"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 12"
+    district:
+      layer: state_house
+      number: 12
+    candidate: "Mac LeBuhn"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 13
+  # ============================================
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "James O'Brien"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Adam Braun"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Ridge Knapp"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Sunjay Kumar"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Demi Palecek"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 13"
+    district:
+      layer: state_house
+      number: 13
+    candidate: "Terry Le"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 14
+  # ============================================
+  - race: "State House District 14"
+    district:
+      layer: state_house
+      number: 14
+    candidate: "Kelly Cassidy"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 15
+  # ============================================
+  - race: "State House District 15"
+    district:
+      layer: state_house
+      number: 15
+    candidate: "Michael Kelly"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 16
+  # ============================================
+  - race: "State House District 16"
+    district:
+      layer: state_house
+      number: 16
+    candidate: "Kevin Olickal"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 16"
+    district:
+      layer: state_house
+      number: 16
+    candidate: "Naema Abraham"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 17
+  # ============================================
+  - race: "State House District 17"
+    district:
+      layer: state_house
+      number: 17
+    candidate: "Jennifer Gong-Gershowitz"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 17"
+    district:
+      layer: state_house
+      number: 17
+    candidate: "Jim Geldermann"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 18
+  # ============================================
+  - race: "State House District 18"
+    district:
+      layer: state_house
+      number: 18
+    candidate: "Robyn Gabel"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 18"
+    district:
+      layer: state_house
+      number: 18
+    candidate: "Pete Donaghue"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 19
+  # ============================================
+  - race: "State House District 19"
+    district:
+      layer: state_house
+      number: 19
+    candidate: "Lindsey LaPointe"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 19"
+    district:
+      layer: state_house
+      number: 19
+    candidate: "John Zimmers"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 20
+  # ============================================
+  - race: "State House District 20"
+    district:
+      layer: state_house
+      number: 20
+    candidate: "Brad Stephens"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 21
+  # ============================================
+  - race: "State House District 21"
+    district:
+      layer: state_house
+      number: 21
+    candidate: "Abdelnasser Rashid"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 21"
+    district:
+      layer: state_house
+      number: 21
+    candidate: "Eric Su"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 22
+  # ============================================
+  - race: "State House District 22"
+    district:
+      layer: state_house
+      number: 22
+    candidate: "Angelica Guerrero-Cuellar"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 22"
+    district:
+      layer: state_house
+      number: 22
+    candidate: "Charles Spizzirri"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 23
+  # ============================================
+  - race: "State House District 23"
+    district:
+      layer: state_house
+      number: 23
+    candidate: "Edgar Gonzalez Jr."
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 24
+  # ============================================
+  - race: "State House District 24"
+    district:
+      layer: state_house
+      number: 24
+    candidate: "Theresa Mah"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 24"
+    district:
+      layer: state_house
+      number: 24
+    candidate: "Francisco Rodriguez"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 25
+  # ============================================
+  - race: "State House District 25"
+    district:
+      layer: state_house
+      number: 25
+    candidate: "Curtis Tarver II"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 26
+  # ============================================
+  - race: "State House District 26"
+    district:
+      layer: state_house
+      number: 26
+    candidate: "Kambium Buckner"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 26"
+    district:
+      layer: state_house
+      number: 26
+    candidate: "Kenya Franklin"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 26"
+    district:
+      layer: state_house
+      number: 26
+    candidate: "Joan McGloin"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 27
+  # ============================================
+  - race: "State House District 27"
+    district:
+      layer: state_house
+      number: 27
+    candidate: "Justin Slaughter"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 28
+  # ============================================
+  - race: "State House District 28"
+    district:
+      layer: state_house
+      number: 28
+    candidate: "Robert Rita"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 28"
+    district:
+      layer: state_house
+      number: 28
+    candidate: "Dyvonna Moss"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 29
+  # ============================================
+  - race: "State House District 29"
+    district:
+      layer: state_house
+      number: 29
+    candidate: "Thaddeus Jones"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 30
+  # ============================================
+  - race: "State House District 30"
+    district:
+      layer: state_house
+      number: 30
+    candidate: "William Davis"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 31
+  # ============================================
+  - race: "State House District 31"
+    district:
+      layer: state_house
+      number: 31
+    candidate: "Michael Crawford"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 32
+  # ============================================
+  - race: "State House District 32"
+    district:
+      layer: state_house
+      number: 32
+    candidate: "Lisa Davis"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 33
+  # ============================================
+  - race: "State House District 33"
+    district:
+      layer: state_house
+      number: 33
+    candidate: "Marcus Evans"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 34
+  # ============================================
+  - race: "State House District 34"
+    district:
+      layer: state_house
+      number: 34
+    candidate: "Cleopatra Cowley"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 34"
+    district:
+      layer: state_house
+      number: 34
+    candidate: "Aja Kearney"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 34"
+    district:
+      layer: state_house
+      number: 34
+    candidate: "Antwon Russell"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 35
+  # ============================================
+  - race: "State House District 35"
+    district:
+      layer: state_house
+      number: 35
+    candidate: "Mary Gill"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 35"
+    district:
+      layer: state_house
+      number: 35
+    candidate: "David Dewar"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 35"
+    district:
+      layer: state_house
+      number: 35
+    candidate: "Charles Lay"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 36
+  # ============================================
+  - race: "State House District 36"
+    district:
+      layer: state_house
+      number: 36
+    candidate: "Rick Ryan"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 36"
+    district:
+      layer: state_house
+      number: 36
+    candidate: "David Sheppard"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 37
+  # ============================================
+  - race: "State House District 37"
+    district:
+      layer: state_house
+      number: 37
+    candidate: "Patrick Sheehan"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 38
+  # ============================================
+  - race: "State House District 38"
+    district:
+      layer: state_house
+      number: 38
+    candidate: "Debbie Meyers-Martin"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 39
+  # ============================================
+  - race: "State House District 39"
+    district:
+      layer: state_house
+      number: 39
+    candidate: "Will Guzzardi"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 39"
+    district:
+      layer: state_house
+      number: 39
+    candidate: "Cesar Guillen"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 40
+  # ============================================
+  - race: "State House District 40"
+    district:
+      layer: state_house
+      number: 40
+    candidate: "Jaime Andrade"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 40"
+    district:
+      layer: state_house
+      number: 40
+    candidate: "Miguel Alvelo-Rivera"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 41
+  # ============================================
+  - race: "State House District 41"
+    district:
+      layer: state_house
+      number: 41
+    candidate: "Janet Yang Rohr"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 41"
+    district:
+      layer: state_house
+      number: 41
+    candidate: "Ajay Gupta"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 42
+  # ============================================
+  - race: "State House District 42"
+    district:
+      layer: state_house
+      number: 42
+    candidate: "Margaret DeLaRosa"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 42"
+    district:
+      layer: state_house
+      number: 42
+    candidate: "Lynn LaPlante"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 42"
+    district:
+      layer: state_house
+      number: 42
+    candidate: "Stephanie Trussell"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 43
+  # ============================================
+  - race: "State House District 43"
+    district:
+      layer: state_house
+      number: 43
+    candidate: "Anna Moeller"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 44
+  # ============================================
+  - race: "State House District 44"
+    district:
+      layer: state_house
+      number: 44
+    candidate: "Fred Crespo"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 44"
+    district:
+      layer: state_house
+      number: 44
+    candidate: "Ralph Black"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 45
+  # ============================================
+  - race: "State House District 45"
+    district:
+      layer: state_house
+      number: 45
+    candidate: "Martha Deuter"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 45"
+    district:
+      layer: state_house
+      number: 45
+    candidate: "Gina Parrilli"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 46
+  # ============================================
+  - race: "State House District 46"
+    district:
+      layer: state_house
+      number: 46
+    candidate: "Diane Blair-Sherlock"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 46"
+    district:
+      layer: state_house
+      number: 46
+    candidate: "Tedora Brown"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 46"
+    district:
+      layer: state_house
+      number: 46
+    candidate: "Pedro Mendoza"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 47
+  # ============================================
+  - race: "State House District 47"
+    district:
+      layer: state_house
+      number: 47
+    candidate: "Erica Bray-Parker"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 47"
+    district:
+      layer: state_house
+      number: 47
+    candidate: "Robert Vrankovich"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 48
+  # ============================================
+  - race: "State House District 48"
+    district:
+      layer: state_house
+      number: 48
+    candidate: "Jennifer Sanalitro"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 48"
+    district:
+      layer: state_house
+      number: 48
+    candidate: "Amanda Zahorak"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 49
+  # ============================================
+  - race: "State House District 49"
+    district:
+      layer: state_house
+      number: 49
+    candidate: "Maura Hirschauer"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 49"
+    district:
+      layer: state_house
+      number: 49
+    candidate: "John Paul Augustynowicz"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 50
+  # ============================================
+  - race: "State House District 50"
+    district:
+      layer: state_house
+      number: 50
+    candidate: "Barbara Hernandez"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 51
+  # ============================================
+  - race: "State House District 51"
+    district:
+      layer: state_house
+      number: 51
+    candidate: "Jenny Levin"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 51"
+    district:
+      layer: state_house
+      number: 51
+    candidate: "Lori Smith"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 52
+  # ============================================
+  - race: "State House District 52"
+    district:
+      layer: state_house
+      number: 52
+    candidate: "Martin McLaughlin"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 52"
+    district:
+      layer: state_house
+      number: 52
+    candidate: "Erin Chan Ding"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 52"
+    district:
+      layer: state_house
+      number: 52
+    candidate: "Maria Peterson"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 53
+  # ============================================
+  - race: "State House District 53"
+    district:
+      layer: state_house
+      number: 53
+    candidate: "Nicolle Grasse"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 53"
+    district:
+      layer: state_house
+      number: 53
+    candidate: "Elizabeth Bauer"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 54
+  # ============================================
+  - race: "State House District 54"
+    district:
+      layer: state_house
+      number: 54
+    candidate: "Mary Beth Canty"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 54"
+    district:
+      layer: state_house
+      number: 54
+    candidate: "Wayne Keen"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 55
+  # ============================================
+  - race: "State House District 55"
+    district:
+      layer: state_house
+      number: 55
+    candidate: "Justin Cochran"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 55"
+    district:
+      layer: state_house
+      number: 55
+    candidate: "Joseph Johnson"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 56
+  # ============================================
+  - race: "State House District 56"
+    district:
+      layer: state_house
+      number: 56
+    candidate: "Michelle Mussman"
+    party: D
+    endorsed: true
+  
+  - race: "State House District 56"
+    district:
+      layer: state_house
+      number: 56
+    candidate: "Edward Lapinski"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 57
+  # ============================================
+  - race: "State House District 57"
+    district:
+      layer: state_house
+      number: 57
+    candidate: "Tracy Katz Muhl"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 57"
+    district:
+      layer: state_house
+      number: 57
+    candidate: "Daniel Behr"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 58
+  # ============================================
+  - race: "State House District 58"
+    district:
+      layer: state_house
+      number: 58
+    candidate: "Bob Morgan"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 59
+  # ============================================
+  - race: "State House District 59"
+    district:
+      layer: state_house
+      number: 59
+    candidate: "Daniel Didech"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 60
+  # ============================================
+  - race: "State House District 60"
+    district:
+      layer: state_house
+      number: 60
+    candidate: "Rita Mayfield"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 61
+  # ============================================
+  - race: "State House District 61"
+    district:
+      layer: state_house
+      number: 61
+    candidate: "Joyce Mason"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 61"
+    district:
+      layer: state_house
+      number: 61
+    candidate: "Tina Durrant"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 62
+  # ============================================
+  - race: "State House District 62"
+    district:
+      layer: state_house
+      number: 62
+    candidate: "Laura Dias"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 63
+  # ============================================
+  - race: "State House District 63"
+    district:
+      layer: state_house
+      number: 63
+    candidate: "Steven Reick"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 63"
+    district:
+      layer: state_house
+      number: 63
+    candidate: "Brian Meyers"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 64
+  # ============================================
+  - race: "State House District 64"
+    district:
+      layer: state_house
+      number: 64
+    candidate: "Tom Weber"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 64"
+    district:
+      layer: state_house
+      number: 64
+    candidate: "AJ Johnson"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 65
+  # ============================================
+  - race: "State House District 65"
+    district:
+      layer: state_house
+      number: 65
+    candidate: "Dan Ugaste"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 65"
+    district:
+      layer: state_house
+      number: 65
+    candidate: "Ricky Rivard"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 66
+  # ============================================
+  - race: "State House District 66"
+    district:
+      layer: state_house
+      number: 66
+    candidate: "Suzanne Ness"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 66"
+    district:
+      layer: state_house
+      number: 66
+    candidate: "Laurie Parman"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 67
+  # ============================================
+  - race: "State House District 67"
+    district:
+      layer: state_house
+      number: 67
+    candidate: "Maurice West"
+    party: D
+    endorsed: true
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 68
+  # ============================================
+  - race: "State House District 68"
+    district:
+      layer: state_house
+      number: 68
+    candidate: "Dave Vella"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 68"
+    district:
+      layer: state_house
+      number: 68
+    candidate: "Kathy Easton"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 69
+  # ============================================
+  - race: "State House District 69"
+    district:
+      layer: state_house
+      number: 69
+    candidate: "Joe Sosnowski"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 69"
+    district:
+      layer: state_house
+      number: 69
+    candidate: "Peter Janko"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 70
+  # ============================================
+  - race: "State House District 70"
+    district:
+      layer: state_house
+      number: 70
+    candidate: "Jeff Keicher"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 70"
+    district:
+      layer: state_house
+      number: 70
+    candidate: "Veronica Garcia-Martinez"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 71
+  # ============================================
+  - race: "State House District 71"
+    district:
+      layer: state_house
+      number: 71
+    candidate: "Daniel Swanson"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 71"
+    district:
+      layer: state_house
+      number: 71
+    candidate: "Kermit Thomas"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 72
+  # ============================================
+  - race: "State House District 72"
+    district:
+      layer: state_house
+      number: 72
+    candidate: "Gregg Johnson"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 73
+  # ============================================
+  - race: "State House District 73"
+    district:
+      layer: state_house
+      number: 73
+    candidate: "Ryan Spain"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 73"
+    district:
+      layer: state_house
+      number: 73
+    candidate: "Nicole Dopler"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 74
+  # ============================================
+  - race: "State House District 74"
+    district:
+      layer: state_house
+      number: 74
+    candidate: "Brad Fritts"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 74"
+    district:
+      layer: state_house
+      number: 74
+    candidate: "Nolan Kemp"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 75
+  # ============================================
+  - race: "State House District 75"
+    district:
+      layer: state_house
+      number: 75
+    candidate: "Jed Davis"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 75"
+    district:
+      layer: state_house
+      number: 75
+    candidate: "Caroline McCree"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 76
+  # ============================================
+  - race: "State House District 76"
+    district:
+      layer: state_house
+      number: 76
+    candidate: "Amy Murri Briel"
+    party: D
+    endorsed: false
+    
+  - race: "State House District 76"
+    district:
+      layer: state_house
+      number: 76
+    candidate: "Liz Bishop"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 76"
+    district:
+      layer: state_house
+      number: 76
+    candidate: "Crystal Loughran"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 77
+  # ============================================
+  - race: "State House District 77"
+    district:
+      layer: state_house
+      number: 77
+    candidate: "Norma Hernandez"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 77"
+    district:
+      layer: state_house
+      number: 77
+    candidate: "Anthony Airdo"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 78
+  # ============================================
+  - race: "State House District 78"
+    district:
+      layer: state_house
+      number: 78
+    candidate: "Camille Y. Lilly"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 78"
+    district:
+      layer: state_house
+      number: 78
+    candidate: "Julian-Jahleel Jemison"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 79
+  # ============================================
+  - race: "State House District 79"
+    district:
+      layer: state_house
+      number: 79
+    candidate: "Robert Ellington-Snipes"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 79"
+    district:
+      layer: state_house
+      number: 79
+    candidate: "Jackie Haas"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 80
+  # ============================================
+  - race: "State House District 80"
+    district:
+      layer: state_house
+      number: 80
+    candidate: "Anthony DeLuca"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 80"
+    district:
+      layer: state_house
+      number: 80
+    candidate: "Adam Beaty"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 81
+  # ============================================
+  - race: "State House District 81"
+    district:
+      layer: state_house
+      number: 81
+    candidate: "Anne Stava"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 81"
+    district:
+      layer: state_house
+      number: 81
+    candidate: "Laura Hois"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 82
+  # ============================================
+  - race: "State House District 82"
+    district:
+      layer: state_house
+      number: 82
+    candidate: "Nicole La Ha"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 83
+  # ============================================
+  - race: "State House District 83"
+    district:
+      layer: state_house
+      number: 83
+    candidate: "Matt Hanson"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 83"
+    district:
+      layer: state_house
+      number: 83
+    candidate: "Jesse Rodriguez"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 84
+  # ============================================
+  - race: "State House District 84"
+    district:
+      layer: state_house
+      number: 84
+    candidate: "Saba Haider"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 84"
+    district:
+      layer: state_house
+      number: 84
+    candidate: "Jared Ploger"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 84"
+    district:
+      layer: state_house
+      number: 84
+    candidate: "Brian Scopa"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 85
+  # ============================================
+  - race: "State House District 85"
+    district:
+      layer: state_house
+      number: 85
+    candidate: "Dagmara Avelar"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 85"
+    district:
+      layer: state_house
+      number: 85
+    candidate: "Chris Metcalfe"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 86
+  # ============================================
+  - race: "State House District 86"
+    district:
+      layer: state_house
+      number: 86
+    candidate: "Lawrence Walsh, Jr."
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 87
+  # ============================================
+  - race: "State House District 87"
+    district:
+      layer: state_house
+      number: 87
+    candidate: "Bill Hauter"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 88
+  # ============================================
+  - race: "State House District 88"
+    district:
+      layer: state_house
+      number: 88
+    candidate: "Regan Deering"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 89
+  # ============================================
+  - race: "State House District 89"
+    district:
+      layer: state_house
+      number: 89
+    candidate: "Tony McCombie"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 89"
+    district:
+      layer: state_house
+      number: 89
+    candidate: "Victoria Onorato"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 90
+  # ============================================
+  - race: "State House District 90"
+    district:
+      layer: state_house
+      number: 90
+    candidate: "John Ping"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 90"
+    district:
+      layer: state_house
+      number: 90
+    candidate: "John M. Cabello"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 90"
+    district:
+      layer: state_house
+      number: 90
+    candidate: "Nancy Edwardsen"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 91
+  # ============================================
+  - race: "State House District 91"
+    district:
+      layer: state_house
+      number: 91
+    candidate: "Sharon Chung"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 92
+  # ============================================
+  - race: "State House District 92"
+    district:
+      layer: state_house
+      number: 92
+    candidate: "Jehan Gordon-Booth"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 93
+  # ============================================
+  - race: "State House District 93"
+    district:
+      layer: state_house
+      number: 93
+    candidate: "Zoey Carter"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 93"
+    district:
+      layer: state_house
+      number: 93
+    candidate: "Travis Weaver"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 94
+  # ============================================
+  - race: "State House District 94"
+    district:
+      layer: state_house
+      number: 94
+    candidate: "Norine Hammond"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 94"
+    district:
+      layer: state_house
+      number: 94
+    candidate: "Joshua Higgins"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 95
+  # ============================================
+  - race: "State House District 95"
+    district:
+      layer: state_house
+      number: 95
+    candidate: "Mike Coffey"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 96
+  # ============================================
+  - race: "State House District 96"
+    district:
+      layer: state_house
+      number: 96
+    candidate: "Sue Scherer"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 97
+  # ============================================
+  - race: "State House District 97"
+    district:
+      layer: state_house
+      number: 97
+    candidate: "Harry Benton"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 97"
+    district:
+      layer: state_house
+      number: 97
+    candidate: "Gabby Shanahan"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 98
+  # ============================================
+  - race: "State House District 98"
+    district:
+      layer: state_house
+      number: 98
+    candidate: "Natalie Manley"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 98"
+    district:
+      layer: state_house
+      number: 98
+    candidate: "Nona Parker"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 99
+  # ============================================
+  - race: "State House District 99"
+    district:
+      layer: state_house
+      number: 99
+    candidate: "Kyle Moore"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 100
+  # ============================================
+  - race: "State House District 100"
+    district:
+      layer: state_house
+      number: 100
+    candidate: "C.D. Davidsmeyer"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 101
+  # ============================================
+  - race: "State House District 101"
+    district:
+      layer: state_house
+      number: 101
+    candidate: "Douglas Fagan"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 101"
+    district:
+      layer: state_house
+      number: 101
+    candidate: "Chris Miller"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 102
+  # ============================================
+  - race: "State House District 102"
+    district:
+      layer: state_house
+      number: 102
+    candidate: "Adam Niemerg"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 103
+  # ============================================
+  - race: "State House District 103"
+    district:
+      layer: state_house
+      number: 103
+    candidate: "Carol Ammons"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 104
+  # ============================================
+  - race: "State House District 104"
+    district:
+      layer: state_house
+      number: 104
+    candidate: "Mary Catherine Roberson"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 104"
+    district:
+      layer: state_house
+      number: 104
+    candidate: "Brandun Schweizer"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 105
+  # ============================================
+  - race: "State House District 105"
+    district:
+      layer: state_house
+      number: 105
+    candidate: "Tim Ruestman"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 106
+  # ============================================
+  - race: "State House District 106"
+    district:
+      layer: state_house
+      number: 106
+    candidate: "Jason Bunting"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 107
+  # ============================================
+  - race: "State House District 107"
+    district:
+      layer: state_house
+      number: 107
+    candidate: "Brad Halbrook"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 107"
+    district:
+      layer: state_house
+      number: 107
+    candidate: "John Hauge"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 108
+  # ============================================
+  - race: "State House District 108"
+    district:
+      layer: state_house
+      number: 108
+    candidate: "Wayne Arthur Rosenthal"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 109
+  # ============================================
+  - race: "State House District 109"
+    district:
+      layer: state_house
+      number: 109
+    candidate: "Charles E. Meier"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 109"
+    district:
+      layer: state_house
+      number: 109
+    candidate: "Zachary Meyer"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 110
+  # ============================================
+  - race: "State House District 110"
+    district:
+      layer: state_house
+      number: 110
+    candidate: "Blaine Wilhour"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 111
+  # ============================================
+  - race: "State House District 111"
+    district:
+      layer: state_house
+      number: 111
+    candidate: "Rosetta Brown"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 111"
+    district:
+      layer: state_house
+      number: 111
+    candidate: "Amy Elik"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 112
+  # ============================================
+  - race: "State House District 112"
+    district:
+      layer: state_house
+      number: 112
+    candidate: "Katie Stuart"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 112"
+    district:
+      layer: state_house
+      number: 112
+    candidate: "Jimmy Ford"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 113
+  # ============================================
+  - race: "State House District 113"
+    district:
+      layer: state_house
+      number: 113
+    candidate: "Jay C. Hoffman"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 114
+  # ============================================
+  - race: "State House District 114"
+    district:
+      layer: state_house
+      number: 114
+    candidate: "Kevin Schmidt"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 115
+  # ============================================
+  - race: "State House District 115"
+    district:
+      layer: state_house
+      number: 115
+    candidate: "David Friess"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 116
+  # ============================================
+  - race: "State House District 116"
+    district:
+      layer: state_house
+      number: 116
+    candidate: "Dave Severin"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 116"
+    district:
+      layer: state_house
+      number: 116
+    candidate: "Angela Evans"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 117
+  # ============================================
+  - race: "State House District 117"
+    district:
+      layer: state_house
+      number: 117
+    candidate: "Patrick Windhorst"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # STATE HOUSE - DISTRICT 118
+  # ============================================
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Homer Markel"
+    party: D
+    endorsed: false
+  
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Joe DeBose"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Scott Doody"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Dayton Loyd"
+    party: R
+    endorsed: false
+  
+  - race: "State House District 118"
+    district:
+      layer: state_house
+      number: 118
+    candidate: "Harold Visser"
+    party: R
+    endorsed: false
+  
+  # ============================================
+  # COOK COUNTY - BOARD PRESIDENT
+  # ============================================
+  - race: "Cook County Board President"
+    candidate: "Toni Preckwinkle"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board President"
+    candidate: "Brendan Reilly"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board President"
+    candidate: "Michael Murphy"
+    party: L
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - ASSESSOR
+  # ============================================
+  - race: "Cook County Assessor"
+    candidate: "Frederick Kaegi"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Assessor"
+    candidate: "Pat Hynes"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Assessor"
+    candidate: "Nico Tsatsoulis"
+    party: L
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - CLERK
+  # ============================================
+  - race: "Cook County Clerk"
+    candidate: "Monica Gordon"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Clerk"
+    candidate: "Hontas Farmer"
+    party: L
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - SHERIFF
+  # ============================================
+  - race: "Cook County Sheriff"
+    candidate: "Thomas Dart"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Sheriff"
+    candidate: "Brad Sandefur"
+    party: L
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - TREASURER
+  # ============================================
+  - race: "Cook County Treasurer"
+    candidate: "Maria Pappas"
+    party: D
+    endorsed: false
+  
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 1
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 1"
+    district:
+      layer: cook_county
+      number: 1
+    candidate: "Tara Stamps"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 2
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 2"
+    district:
+      layer: cook_county
+      number: 2
+    candidate: "Michael Scott Jr."
+    party: D
+    endorsed: false
+
+  - race: "Cook County Board Of Commissioners District 2"
+    district:
+      layer: cook_county
+      number: 2
+    candidate: "Andre Smith"
+    party: D
+    endorsed: false
+
+   # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 3
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 3"
+    district:
+      layer: cook_county
+      number: 3
+    candidate: "Bill Lowry"
+    party: D
+    endorsed: true
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 4
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 4"
+    district:
+      layer: cook_county
+      number: 4
+    candidate: "Stanley S. Moore"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 5
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 5"
+    district:
+      layer: cook_county
+      number: 5
+    candidate: "Kisha E. McCaskill"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board Of Commissioners District 5"
+    district:
+      layer: cook_county
+      number: 5
+    candidate: "Kiana Belcher"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board Of Commissioners District 5"
+    district:
+      layer: cook_county
+      number: 5
+    candidate: "Richard Nolan"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 6
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 6"
+    district:
+      layer: cook_county
+      number: 6
+    candidate: "Patricia Joan Murphy"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board Of Commissioners District 6"
+    district:
+      layer: cook_county
+      number: 6
+    candidate: "Wesam J. Shahed"
+    party: D
+    endorsed: false
+
+  - race: "Cook County Board Of Commissioners District 6"
+    district:
+      layer: cook_county
+      number: 6
+    candidate: "Antoine Bass"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board Of Commissioners District 6"
+    district:
+      layer: cook_county
+      number: 6
+    candidate: "Sylvester Fulcher"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 7
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 7"
+    district:
+      layer: cook_county
+      number: 7
+    candidate: "Alma E. Anaya"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 8
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 8"
+    district:
+      layer: cook_county
+      number: 8
+    candidate: "Nicholas Cade"
+    party: D
+    endorsed: true
+  
+  - race: "Cook County Board Of Commissioners District 8"
+    district:
+      layer: cook_county
+      number: 8
+    candidate: "Jessica Vasquez"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 9
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 9"
+    district:
+      layer: cook_county
+      number: 9
+    candidate: "Maggie Trevor"
+    party: D
+    endorsed: false
+
+  - race: "Cook County Board Of Commissioners District 9"
+    district:
+      layer: cook_county
+      number: 9
+    candidate: "Ammie Kessem"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 10
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 10"
+    district:
+      layer: cook_county
+      number: 10
+    candidate: "Drake Warren"
+    party: D
+    endorsed: true
+  
+  - race: "Cook County Board Of Commissioners District 10"
+    district:
+      layer: cook_county
+      number: 10
+    candidate: "Bridget Gainer"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 11
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 11"
+    district:
+      layer: cook_county
+      number: 11
+    candidate: "John P. Daley"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 12
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 12"
+    district:
+      layer: cook_county
+      number: 12
+    candidate: "Isaiah White"
+    party: D
+    endorsed: true
+  
+  - race: "Cook County Board Of Commissioners District 12"
+    district:
+      layer: cook_county
+      number: 12
+    candidate: "Elizabeth Granato"
+    party: D
+    endorsed: false
+  
+  
+  - race: "Cook County Board Of Commissioners District 12"
+    district:
+      layer: cook_county
+      number: 12
+    candidate: "José Wilson"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board Of Commissioners District 12"
+    district:
+      layer: cook_county
+      number: 12
+    candidate: "Xiaoli Hu"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 13
+  # ============================================
+  - race: "Cook County Board Of Commissioners District 13"
+    district:
+      layer: cook_county
+      number: 13
+    candidate: "Josina Morita"
+    party: D
+    endorsed: false
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 14
+  # ============================================
+  - race: "Cook County Board of Commissioners District 14"
+    district:
+      layer: cook_county
+      number: 14
+    candidate: "Scott Britton"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 15
+  # ============================================
+  - race: "Cook County Board of Commissioners District 15"
+    district:
+      layer: cook_county
+      number: 15
+    candidate: "Ted Mason"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board of Commissioners District 15"
+    district:
+      layer: cook_county
+      number: 15
+    candidate: "Gabriella Hoxie"
+    party: R
+    endorsed: false
+  
+  - race: "Cook County Board of Commissioners District 15"
+    district:
+      layer: cook_county
+      number: 15
+    candidate: "Daniel Lee"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 16
+  # ============================================
+  - race: "Cook County Board of Commissioners District 16"
+    district:
+      layer: cook_county
+      number: 16
+    candidate: "Frank J. Aguilar"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board of Commissioners District 16"
+    district:
+      layer: cook_county
+      number: 16
+    candidate: "Miranda E. Hernandez"
+    party: D
+    endorsed: false
+ 
+  - race: "Cook County Board of Commissioners District 16"
+    district:
+      layer: cook_county
+      number: 16
+    candidate: "Leticia Garcia"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 17
+  # ============================================
+
+  - race: "Cook County Board of Commissioners District 17"
+    district:
+      layer: cook_county
+      number: 17
+    candidate: "Elyse Hoffenberg"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board of Commissioners District 17"
+    district:
+      layer: cook_county
+      number: 17
+    candidate: "Elizabeth Doody Gorman"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - BOARD OF REVIEW DISTRICT 1
+  # ============================================
+  - race: "Cook County Board of Review District 1"
+    district:
+      layer: cook_county_board_of_review
+      number: 1
+    candidate: "George Cardenas"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board of Review District 1"
+    district:
+      layer: cook_county_board_of_review
+      number: 1
+    candidate: "Juanita Irizarry"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY - BOARD OF REVIEW DISTRICT 2
+  # ============================================
+  - race: "Cook County Board of Review District 2"
+    district:
+      layer: cook_county_board_of_review
+      number: 2
+    candidate: "Samantha Steele"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Board of Review District 2"
+    district:
+      layer: cook_county_board_of_review
+      number: 2
+    candidate: "Elizabeth Nicholson"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # METROPOLITAN WATER RECLAMATION DISTRICT
+  # ============================================
+  - race: "Metropolitan Water Reclamation District (2-year term)"
+    candidate: "Cameron Davis"
+    party: D
+    endorsed: false
+  
+  - race: "Metropolitan Water Reclamation District (6-year term)"
+    candidate: "Precious Brady-Davis"
+    party: D
+    endorsed: false
+  
+  - race: "Metropolitan Water Reclamation District (6-year term)"
+    candidate: "Eira Corral Sepulveda"
+    party: D
+    endorsed: false
+  
+  - race: "Metropolitan Water Reclamation District (6-year term)"
+    candidate: "Beth McElroy Kirkwood"
+    party: D
+    endorsed: false
+  
+  - race: "Metropolitan Water Reclamation District (6-year term)"
+    candidate: "Sarah Bury"
+    party: D
+    endorsed: false
+  
+  - race: "Metropolitan Water Reclamation District (6-year term)"
+    candidate: "Frank Rowder"
+    party: R
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT (Countywide)
+  # ============================================
+  - race: "Cook County Circuit Court - Cynthia Cobbs vacancy"
+    candidate: "Linda Sackey"
+    party: D
+    website: https://www.judgelindasackey.com
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - Cynthia Cobbs vacancy"
+    candidate: "Luz Maria Toledo"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - Kathleen Burke vacancy"
+    candidate: "Steven McKenzie"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - Mary Ellen Coghlan vacancy"
+    candidate: "Michael Cabonargi"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - Mary Ellen Coghlan vacancy"
+    candidate: "Ashonta Rice"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - Paul Karkula vacancy"
+    candidate: "D'Anthony Thedford"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court - William Hooks vacancy"
+    candidate: "Ava George Stewart"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 1
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    candidate: "Ginger Odom"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    candidate: "Tiffany Brooks"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    candidate: "Ashley Greer Shambley"
+    website: https://ashleygreershambleyforjudge.com
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 1 - Robert Balanoff vacancy"
+    candidate: "Natalie Howse"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 1 - Robert Balanoff vacancy"
+    candidate: "Radiance Ward"
+    website: https://radiancewardforjudge.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 3
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 3 - Patrick Sherlock vacancy"
+    candidate: "Rachel Marrello"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 3 - Patrick Sherlock vacancy"
+    candidate: "Martin Reggi"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 3 - Thomas Murphy vacancy"
+    candidate: "John Carroll"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 5
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 5 - Dominique Ross vacancy"
+    candidate: "Stephanie Kelly"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 8
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    candidate: "Kathleen Cunniff Ori"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    candidate: "Elizabeth Dibler"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    candidate: "Garson Fischer"
+    website: https://garsonforjudge.com
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    candidate: "Lester Finkle"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    candidate: "Dan Balanoff"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    candidate: "Katherine Morrison"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 11
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 11 - Mary Roberts vacancy"
+    candidate: "Kim Przekota"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 11 - Pamela McLean Meyerson vacancy"
+    candidate: "John Carrozza"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 11 - Pamela McLean Meyerson vacancy"
+    candidate: "Jarrett Knox"
+    website: https://knoxforjudge.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 13
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 13 - John Curry Jr. vacancy"
+    candidate: "Robert Groebner"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 13 - Martin Kelley vacancy"
+    candidate: "Brittany Pedersen"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 13 - Shannon O'Malley vacancy"
+    candidate: "Dan Naranjo"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 13 - Thomas Kelley vacancy"
+    candidate: "William Kelley"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 16
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 16 - Callie Baird vacancy"
+    candidate: "Julian Sanchez Crozier"
+    website: https://jscforjudge.com
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 16 - Patricia Mendoza vacancy"
+    candidate: "Jessica Velez"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 17
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    candidate: "Bianca Brown"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    candidate: "Amari Dawson"
+    website: https://amari4judge.com
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    candidate: "Andre Thapedi"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 17 - Lloyd Brooks vacancy"
+    candidate: "Natalia Moore"
+    website: https://Natalia4judge.com
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 17 - Lloyd Brooks vacancy"
+    candidate: "Meridth Vanae Hammer"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 18
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 18 - Frank Andreou vacancy"
+    candidate: "Samuel Bae"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 18 - Jeffrey Chrones vacancy"
+    candidate: "Juan Ponce de Leon"
+    website: https://juan4judge.com
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 19
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 19 - John Fairman vacancy"
+    candidate: "Sara McGann"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    candidate: "Dave Condron"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    candidate: "John Harkins"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    candidate: "Monica Somerville"
+    party: D
+    endorsed: false
+
+  # ============================================
+  # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 20
+  # ============================================
+  - race: "Cook County Circuit Court Subcircuit 20 - David Haracz vacancy"
+    candidate: "Michael Zink"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 20 - Stephanie Miller vacancy"
+    candidate: "Belle Katubig"
+    party: D
+    endorsed: false
+  
+  - race: "Cook County Circuit Court Subcircuit 20 - Stephanie Miller vacancy"
+    candidate: "Jon Stromsta"
+    party: D
+    endorsed: false

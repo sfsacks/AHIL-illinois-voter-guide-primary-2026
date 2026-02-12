@@ -10,8 +10,6 @@ interface Suggestion {
   lng: number;
 }
 
-type Party = 'D' | 'R' | 'L' | 'all';
-
 function Spinner() {
   return (
     <span
@@ -26,7 +24,6 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<LookupResponse | null>(null);
-  const [selectedParty, setSelectedParty] = useState<Party>('all');
 
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -68,7 +65,6 @@ export default function Home() {
     setSelectedIndex(-1);
     setError(null);
     setResult(null);
-    setSelectedParty('all');
     clearShareCoordinates();
   }
 
@@ -233,10 +229,9 @@ export default function Home() {
         throw new Error(data.error || "Lookup failed");
       }
 
+      data.address_used = addressLabel;
       setResult(data);
-      skipAutocomplete.current = true;
-      setAddress(addressLabel);
-      setShareCoordinates(lat, lng);
+      setShareCoordinates(data.coordinates.lat, data.coordinates.lng);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
     } finally {
@@ -244,59 +239,8 @@ export default function Home() {
     }
   }
 
-  async function handleGeolocate() {
-    if (!navigator.geolocation) {
-      setError("Geolocation is not supported by your browser");
-      return;
-    }
-
-    setLoading(true);
-    setError(null);
-    setResult(null);
-    setShowSuggestions(false);
-
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-
-        try {
-          const response = await fetch(`/api/lookup?lat=${lat}&lng=${lng}`);
-          const data = await response.json();
-
-          if (!response.ok) {
-            throw new Error(data.error || "Lookup failed");
-          }
-
-          setResult(data);
-          if (typeof data.address_used === "string") {
-            skipAutocomplete.current = true;
-            setAddress(data.address_used);
-          }
-          setShareCoordinates(lat, lng);
-        } catch (err) {
-          setError(err instanceof Error ? err.message : "Something went wrong");
-        } finally {
-          setLoading(false);
-        }
-      },
-      (err) => {
-        setLoading(false);
-        setError("Unable to retrieve your location");
-      },
-      {
-        timeout: 10000,
-        enableHighAccuracy: false,
-      }
-    );
-  }
-
-  async function handleAddressSubmit(e: React.FormEvent) {
-    e.preventDefault();
-
-    if (!address.trim() || loading) {
-      return;
-    }
+  async function submitAddress(addressToSubmit: string) {
+    if (!addressToSubmit.trim()) return;
 
     setLoading(true);
     setError(null);
@@ -305,7 +249,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `/api/lookup?address=${encodeURIComponent(address)}`
+        `/api/lookup?address=${encodeURIComponent(addressToSubmit)}`
       );
       const data = await response.json();
 
@@ -314,12 +258,10 @@ export default function Home() {
       }
 
       setResult(data);
+      setShareCoordinates(data.coordinates.lat, data.coordinates.lng);
       if (typeof data.address_used === "string") {
         skipAutocomplete.current = true;
         setAddress(data.address_used);
-      }
-      if (data.lat != null && data.lng != null) {
-        setShareCoordinates(data.lat, data.lng);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
@@ -328,26 +270,74 @@ export default function Home() {
     }
   }
 
-  // Filter candidates by selected party - use candidates if available, fallback to endorsements
-  const candidatesData = result?.candidates || result?.endorsements || [];
-  const filteredCandidates = candidatesData.filter((candidate) => {
-    if (selectedParty === 'all') return true;
-    return candidate.party === selectedParty;
-  });
+  async function handleAddressSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    await submitAddress(address);
+  }
 
-  // Get party button styling
-  const getPartyButtonClass = (party: Party) => {
-    const isSelected = selectedParty === party;
-    const baseClasses = "px-3 py-1.5 text-xs font-medium transition-all duration-150 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2";
-    
-    if (isSelected) {
-      return `${baseClasses} bg-ink text-white shadow-sm`;
+  async function handleUseLocation() {
+    if (!navigator.geolocation) {
+      setError("Geolocation is not supported by your browser");
+      return;
     }
-    return `${baseClasses} bg-white border border-border text-ink hover:bg-warm`;
-  };
+
+    setLoading(true);
+    setError(null);
+    setResult(null);
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+
+        try {
+          let resolvedAddress: string | null = null;
+          try {
+            const reverseResponse = await fetch(
+              `/api/reverse?lat=${latitude}&lng=${longitude}`
+            );
+            const reverseData = await reverseResponse.json();
+            if (reverseResponse.ok && typeof reverseData.address === "string") {
+              resolvedAddress = reverseData.address;
+            }
+          } catch {
+            // Reverse geocoding failure should not block lookup.
+          }
+
+          const response = await fetch(
+            `/api/lookup?lat=${latitude}&lng=${longitude}`
+          );
+          const data = await response.json();
+
+          if (!response.ok) {
+            throw new Error(data.error || "Lookup failed");
+          }
+
+          if (resolvedAddress) {
+            data.address_used = resolvedAddress;
+          }
+          setResult(data);
+          setShareCoordinates(data.coordinates.lat, data.coordinates.lng);
+          if (typeof data.address_used === "string") {
+            skipAutocomplete.current = true;
+            setAddress(data.address_used);
+          }
+        } catch (err) {
+          setError(
+            err instanceof Error ? err.message : "Something went wrong"
+          );
+        } finally {
+          setLoading(false);
+        }
+      },
+      (err) => {
+        setLoading(false);
+        setError(`Location error: ${err.message}`);
+      }
+    );
+  }
 
   return (
-    <div className="min-h-screen flex flex-col bg-warm">
+    <div className="min-h-screen flex flex-col">
       <header className="bg-ink text-white">
         <div className="max-w-xl mx-auto px-4 py-10 md:py-14 text-center">
           <p className="text-xs uppercase tracking-widest text-white/50 mb-3">
@@ -364,9 +354,12 @@ export default function Home() {
 
       <main className="flex-1 w-full max-w-xl mx-auto px-4 py-8 md:py-10">
         <div className="bg-surface border border-border rounded-sm p-5 md:p-6">
+          <h2 className="font-display text-xl md:text-2xl font-medium text-ink mb-5">
+            Find your ballot
+          </h2>
+
           <button
-            type="button"
-            onClick={handleGeolocate}
+            onClick={handleUseLocation}
             disabled={loading}
             className="w-full bg-brand text-white py-3 px-4 font-body font-semibold text-sm rounded-sm
                        hover:brightness-110 active:brightness-95 transition-all duration-150
@@ -506,127 +499,55 @@ export default function Home() {
             )}
 
             <div className="bg-surface border border-border rounded-sm p-4 md:p-5">
-              <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
-                <h3 className="font-display text-base font-medium text-ink">
-                  Your Ballot
-                </h3>
-                
-                {candidatesData.length > 0 && (
-                  <div className="flex gap-1.5">
-                    <button
-                      onClick={() => setSelectedParty('all')}
-                      className={getPartyButtonClass('all')}
-                      title="Show all parties"
-                    >
-                      All
-                    </button>
-                    <button
-                      onClick={() => setSelectedParty('D')}
-                      className={getPartyButtonClass('D')}
-                      title="Democratic primary only"
-                    >
-                      D
-                    </button>
-                    <button
-                      onClick={() => setSelectedParty('R')}
-                      className={getPartyButtonClass('R')}
-                      title="Republican primary only"
-                    >
-                      R
-                    </button>
-                    <button
-                      onClick={() => setSelectedParty('L')}
-                      className={getPartyButtonClass('L')}
-                      title="Libertarian primary only"
-                    >
-                      L
-                    </button>
-                  </div>
-                )}
-              </div>
+              <h3 className="font-display text-base font-medium text-ink mb-3">
+                Endorsed Slate
+              </h3>
 
-              {filteredCandidates.length > 0 ? (
-                <>
-                  {selectedParty !== 'all' && (
-                    <p className="text-xs text-steel mb-3">
-                      Showing {selectedParty === 'D' ? 'Democratic' : selectedParty === 'R' ? 'Republican' : 'Libertarian'} primary candidates only
-                    </p>
-                  )}
-                  
-                  <div className="border border-border rounded-sm overflow-hidden">
-                    <table className="w-full table-fixed border-collapse">
-                      <thead>
-                        <tr className="bg-warm border-b border-border">
-                          <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[36%]">
-                            Candidate
-                          </th>
-                          <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[42%]">
-                            Race
-                          </th>
-                          <th className="text-center px-2 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[10%]">
-                            Party
-                          </th>
-                          <th className="text-center px-2 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[12%]">
-                            AHIL
-                          </th>
+              {result.endorsements.length > 0 ? (
+                <div className="border border-border rounded-sm overflow-hidden">
+                  <table className="w-full table-fixed border-collapse">
+                    <thead>
+                      <tr className="bg-warm border-b border-border">
+                        <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[42%]">
+                          Candidate
+                        </th>
+                        <th className="text-left px-3 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[46%]">
+                          Race
+                        </th>
+                        <th className="text-center px-2 py-1.5 text-[11px] uppercase tracking-wider text-steel font-body font-medium w-[12%]">
+                          Party
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {result.endorsements.map((endorsement) => (
+                        <tr
+                          key={`${endorsement.race}-${endorsement.candidate}`}
+                          className="border-b border-border/80 last:border-b-0"
+                        >
+                          <td className="px-3 py-1.5 align-top">
+                            <span className="text-sm leading-tight text-ink">
+                              {endorsement.candidate}
+                            </span>
+                          </td>
+                          <td className="px-3 py-1.5 align-top">
+                            <span className="text-xs text-steel leading-tight">
+                              {endorsement.race}
+                            </span>
+                          </td>
+                          <td className="px-2 py-1.5 align-top text-center">
+                            <span className="text-[11px] text-steel-light">
+                              {endorsement.party}
+                            </span>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {filteredCandidates.map((candidate, index) => (
-                          <tr
-                            key={`${candidate.race}-${candidate.candidate}-${index}`}
-                            className="border-b border-border/80 last:border-b-0"
-                          >
-                            <td className="px-3 py-1.5 align-top">
-                              <span className="text-sm leading-tight text-ink">
-                                {candidate.candidate}
-                              </span>
-                              {candidate.website && (
-                                <a
-                                  href={candidate.website}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="ml-1.5 text-brand hover:underline text-xs"
-                                  title="Visit campaign website"
-                                >
-                                  🔗
-                                </a>
-                              )}
-                            </td>
-                            <td className="px-3 py-1.5 align-top">
-                              <span className="text-xs text-steel leading-tight">
-                                {candidate.race}
-                              </span>
-                            </td>
-                            <td className="px-2 py-1.5 align-top text-center">
-                              <span className="text-[11px] text-steel-light">
-                                {candidate.party}
-                              </span>
-                            </td>
-                            <td className="px-2 py-1.5 align-top text-center">
-                              {candidate.endorsed ? (
-                                <span 
-                                  className="inline-block w-5 h-5 rounded-full bg-brand text-white text-xs leading-5"
-                                  title="Endorsed by Abundant Housing IL"
-                                >
-                                  ✓
-                                </span>
-                              ) : (
-                                <span className="text-steel-light text-xs">—</span>
-                              )}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               ) : (
                 <p className="text-steel text-sm">
-                  {selectedParty === 'all' 
-                    ? "No candidates found for your districts."
-                    : `No ${selectedParty === 'D' ? 'Democratic' : selectedParty === 'R' ? 'Republican' : 'Libertarian'} primary candidates found for your districts.`
-                  }
+                  No endorsements found for your districts.
                 </p>
               )}
             </div>

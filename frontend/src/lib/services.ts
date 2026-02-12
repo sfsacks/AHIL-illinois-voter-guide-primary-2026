@@ -16,6 +16,8 @@ import type {
   Endorsement,
   EndorsementConfig,
   EndorsementDistrictRef,
+  Candidate,
+  CandidateConfig,
 } from "./types";
 
 type DistrictGeoJSON = FeatureCollection<Polygon | MultiPolygon>;
@@ -23,6 +25,7 @@ type DistrictGeoJSON = FeatureCollection<Polygon | MultiPolygon>;
 // Cache for loaded data (server-side only)
 let districtsCache: Map<string, DistrictGeoJSON> | null = null;
 let endorsementsCache: EndorsementConfig[] | null = null;
+let candidatesCache: CandidateConfig[] | null = null;
 let jurisdictionBoundaryCache: Feature<Polygon | MultiPolygon> | null = null;
 
 function getDataPath(pathFromDataDir: string): string {
@@ -98,6 +101,22 @@ export function loadEndorsements(): EndorsementConfig[] {
   }
 }
 
+export function loadCandidates(): CandidateConfig[] {
+  if (candidatesCache) return candidatesCache;
+
+  try {
+    const filepath = getDataPath("candidates.yaml");
+    const content = readFileSync(filepath, "utf-8");
+    const data = yaml.parse(content) as { candidates?: CandidateConfig[] } | null;
+    candidatesCache = data?.candidates || [];
+    console.log(`Loaded ${candidatesCache.length} candidates`);
+    return candidatesCache;
+  } catch (error) {
+    console.warn("Warning: Could not load candidates.yaml:", error);
+    return [];
+  }
+}
+
 function loadJurisdictionBoundary(): Feature<Polygon | MultiPolygon> {
   if (jurisdictionBoundaryCache) return jurisdictionBoundaryCache;
 
@@ -161,7 +180,7 @@ export function lookupDistricts(
 }
 
 function normalizeDistrictRef(
-  config: EndorsementConfig
+  config: EndorsementConfig | CandidateConfig
 ): EndorsementDistrictRef | "invalid" | null {
   if (config.district !== undefined) {
     const layer = config.district?.layer;
@@ -183,6 +202,35 @@ function normalizeDistrictRef(
       return { layer: legacyLayer, number: legacyNumber };
     }
     return "invalid";
+  }
+
+  return null;
+}
+
+// Helper function to extract district number from race name
+function extractDistrictFromRace(race: string): { layer: string; number: number } | null {
+  // US House IL-2 -> congressional: 2
+  const houseMatch = race.match(/US House IL-(\d+)/);
+  if (houseMatch) {
+    return { layer: 'congressional', number: parseInt(houseMatch[1]) };
+  }
+
+  // State Senate District 9 -> state_senate: 9
+  const senateMatch = race.match(/State Senate District (\d+)/);
+  if (senateMatch) {
+    return { layer: 'state_senate', number: parseInt(senateMatch[1]) };
+  }
+
+  // State House District 12 -> state_house: 12
+  const houseStateMatch = race.match(/State House District (\d+)/);
+  if (houseStateMatch) {
+    return { layer: 'state_house', number: parseInt(houseStateMatch[1]) };
+  }
+
+  // Cook County Board District 3 -> cook_county: 3
+  const cookMatch = race.match(/Cook County (?:Board (?:Of Commissioners )?)?District (\d+)/);
+  if (cookMatch) {
+    return { layer: 'cook_county', number: parseInt(cookMatch[1]) };
   }
 
   return null;
@@ -219,6 +267,71 @@ export function getEndorsements(
         district_layer: districtRef.layer,
         district_type: districtRef.layer,
       });
+    }
+  }
+
+  return result;
+}
+
+export function getCandidatesWithEndorsements(
+  districts: Districts,
+  candidatesData: CandidateConfig[],
+  endorsementsData: EndorsementConfig[]
+): Candidate[] {
+  const result: Candidate[] = [];
+
+  // Create a Set of endorsed candidates for fast lookup
+  const endorsedSet = new Set<string>();
+  for (const endorsement of endorsementsData) {
+    endorsedSet.add(`${endorsement.race}|${endorsement.candidate}`);
+  }
+
+  for (const candidate of candidatesData) {
+    const { race, candidate: candidateName, party, website } = candidate;
+    
+    // Check if this is a statewide race
+    const isStatewide = race === 'US Senate' || 
+                        race === 'Governor' || 
+                        race === 'Lieutenant Governor' ||
+                        race === 'Attorney General' ||
+                        race === 'Secretary of State' ||
+                        race === 'Comptroller' ||
+                        race === 'Treasurer';
+
+    if (isStatewide) {
+      // Include all statewide candidates
+      const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+      result.push({
+        race,
+        candidate: candidateName,
+        party,
+        website,
+        endorsed: isEndorsed
+      });
+      continue;
+    }
+
+    // For district races, check if candidate's district matches user's district
+    const districtRef = normalizeDistrictRef(candidate);
+    
+    // Try to extract district from race name if not in data
+    const districtFromRace = districtRef === null ? extractDistrictFromRace(race) : null;
+    const finalDistrictRef = districtRef !== "invalid" ? districtRef : districtFromRace;
+
+    if (finalDistrictRef && finalDistrictRef !== "invalid") {
+      const userDistrict = districts[finalDistrictRef.layer];
+      if (userDistrict !== null && userDistrict === finalDistrictRef.number) {
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        result.push({
+          race,
+          candidate: candidateName,
+          party,
+          website,
+          endorsed: isEndorsed,
+          district_layer: finalDistrictRef.layer,
+          district_type: finalDistrictRef.layer,
+        });
+      }
     }
   }
 

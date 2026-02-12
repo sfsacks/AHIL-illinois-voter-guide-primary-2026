@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   loadDistricts,
   loadEndorsements,
+  loadCandidates,
   geocodeAddress,
   checkJurisdiction,
   lookupDistricts,
   getEndorsements,
+  getCandidatesWithEndorsements,
   getDistrictShapes,
 } from "@/lib/services";
 import { LookupResponse } from "@/lib/types";
@@ -63,9 +65,16 @@ export async function GET(request: NextRequest) {
   // Load data and perform lookups
   const districtsData = loadDistricts();
   const endorsementsData = loadEndorsements();
+  const candidatesData = loadCandidates();
 
   const districts = lookupDistricts(lat, lng, districtsData);
+  
+  // Get old-style endorsements for backwards compatibility
   const endorsements = getEndorsements(districts, endorsementsData);
+  
+  // Get ALL candidates for user's districts with endorsement flags
+  const candidates = getCandidatesWithEndorsements(districts, candidatesData, endorsementsData);
+  
   const district_shapes = APP_CONFIG.ui.showDistrictShapes
     ? getDistrictShapes(districts, districtsData)
     : undefined;
@@ -74,7 +83,8 @@ export async function GET(request: NextRequest) {
     address_used: addressUsed,
     coordinates: { lat, lng },
     districts,
-    endorsements,
+    endorsements,  // Keep for backwards compatibility
+    candidates,    // NEW: All candidates with endorsement flags
     district_shapes,
   };
 
