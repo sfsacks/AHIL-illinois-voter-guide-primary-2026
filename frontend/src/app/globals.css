@@ -1,23 +1,26 @@
+/* Import Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
 @theme inline {
-  --color-ink: #1a1a1a;
+  --color-ink: #1A3885;
   --color-ink-soft: #444444;
   --color-steel: #6B7280;
   --color-steel-light: #9CA3AF;
   --color-border: #D1D5DB;
   --color-warm: #F5F5F4;
   --color-surface: #FFFFFF;
-  --color-brand: #B91C1C;
+  --color-brand: #EE5819;
   --color-brand-light: #FEF2F2;
-  --font-display: var(--font-newsreader);
-  --font-body: var(--font-inter);
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
 }
 
 body {
   background-color: #F5F5F4;
   color: #1a1a1a;
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
 }
 
 @keyframes slideDown {

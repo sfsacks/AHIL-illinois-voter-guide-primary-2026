@@ -18,6 +18,7 @@ export interface Endorsement {
   district_type?: string;
   endorsed?: boolean;  // NEW: Flag for whether this candidate is endorsed
   website?: string;    // NEW: Candidate website
+  incumbent?: boolean; // NEW: Whether candidate is incumbent
 }
 
 export interface Candidate {
@@ -28,6 +29,7 @@ export interface Candidate {
   district_type?: string;
   endorsed: boolean;   // NEW: Whether AHIL endorses this candidate
   website?: string;    // NEW: Candidate website
+  incumbent?: boolean; // NEW: Whether candidate is incumbent
 }
 
 export interface LookupResponse {
@@ -54,6 +56,7 @@ export interface CandidateConfig {
   candidate: string;
   party: string;
   website?: string;
+  incumbent?: boolean; // NEW: Whether candidate is incumbent
   district?: EndorsementDistrictRef;
   district_layer?: string;
   district_type?: string;

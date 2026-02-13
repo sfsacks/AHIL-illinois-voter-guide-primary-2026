@@ -233,6 +233,12 @@ function extractDistrictFromRace(race: string): { layer: string; number: number 
     return { layer: 'cook_county', number: parseInt(cookMatch[1]) };
   }
 
+  // Cook County Circuit Court Subcircuit 1 -> cook_county_circuit_court_subcircuits: 1
+  const subcircuitMatch = race.match(/Cook County Circuit Court Subcircuit (\d+)/);
+  if (subcircuitMatch) {
+    return { layer: 'cook_county_circuit_court_subcircuits', number: parseInt(subcircuitMatch[1]) };
+  }
+
   return null;
 }
 
@@ -287,7 +293,7 @@ export function getCandidatesWithEndorsements(
   }
 
   for (const candidate of candidatesData) {
-    const { race, candidate: candidateName, party, website } = candidate;
+    const { race, candidate: candidateName, party, website, incumbent } = candidate;
     
     // Check if this is a statewide race
     const isStatewide = race === 'US Senate' || 
@@ -306,8 +312,40 @@ export function getCandidatesWithEndorsements(
         candidate: candidateName,
         party,
         website,
+        incumbent,
         endorsed: isEndorsed
       });
+      continue;
+    }
+
+    // Check if this is a Cook County-wide race (not district-specific)
+    const isCookCountyWide = race === 'Cook County Board President' ||
+                             race === 'Cook County Assessor' ||
+                             race === 'Cook County Clerk' ||
+                             race === 'Cook County Sheriff' ||
+                             race === 'Cook County Treasurer' ||
+                             race === 'Cook County Circuit Court - Cynthia Cobbs vacancy' ||
+                             race === 'Cook County Circuit Court - Kathleen Burke vacancy' ||
+                             race === 'Cook County Circuit Court - Mary Ellen Coghlan vacancy' ||
+                             race === 'Cook County Circuit Court - Paul Karkula vacancy' ||
+                             race === 'Cook County Circuit Court - William Hooks vacancy';
+
+    if (isCookCountyWide) {
+      // Show to ALL Cook County residents (any district number)
+      const userCookCountyDistrict = districts['cook_county'];
+      if (userCookCountyDistrict !== null) {
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        result.push({
+          race,
+          candidate: candidateName,
+          party,
+          website,
+          incumbent,
+          endorsed: isEndorsed,
+          district_layer: 'cook_county',
+          district_type: 'cook_county',
+        });
+      }
       continue;
     }
 
@@ -327,6 +365,7 @@ export function getCandidatesWithEndorsements(
           candidate: candidateName,
           party,
           website,
+          incumbent,
           endorsed: isEndorsed,
           district_layer: finalDistrictRef.layer,
           district_type: finalDistrictRef.layer,

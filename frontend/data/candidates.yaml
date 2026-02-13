@@ -3,89 +3,114 @@ candidates:
   # US SENATE
   # ============================================
   - race: "US Senate"
+    incumbent: false
     candidate: "Juliana Stratton"
     website: https://Julianastratton.com
     party: D
     endorsed: true
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Robin Kelly"
     website: https://www.robinforsenate.com
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Raja Krishnamoorthi"
     website: https://rajaforIL.com
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: Steve Botsford Jr.
+    website: https://www.botsfordforillinois.com/
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Sean Brown"
+    website: https://www.seanbrownforsenate.com/
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Awisi Bustos"
+    website: https://awisiforussenate.us/
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Jonathan Dean"
+    website: https://www.dean4il.com/
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Bryan Maxwell"
     website: https://maxwell4senate.com
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Kevin Ryan"
+    website: https://www.runwithkev.com/
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Christopher Swann"
     website: https://www.swannforsenate.com
     party: D
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "R. Cary Capparelli"
+    website: https://www.rcarycapparelli.net/
     party: R
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Casey Chlebek"
     website: https://caseyforsenate.com
     party: R
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Jeannie Evans"
+    website: https://www.jeannieevans.com/
     party: R
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Pamela Denise Long"
     website: https://www.longforsenate2026.com
     party: R
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Jimmy Lee Tillman II"
+    website: https://www.jimmylee2dc.com/
     party: R
     endorsed: false
   
   - race: "US Senate"
+    incumbent: false
     candidate: "Don Tracy"
+    website: https://www.dontracyforil.com/
     party: R
     endorsed: false
 
@@ -93,31 +118,37 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 1
   # ============================================
   - race: "US House IL-1"
+    incumbent: true
     district:
       layer: congressional
       number: 1
     candidate: "Jonathan Jackson"
-    website: ""
+    website: https://www.jacksonforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-1"
+    incumbent: false
     district:
       layer: congressional
       number: 1
     candidate: "Jerico Brown"
+    website: https://www.jericobrown.com/
     party: D
     endorsed: false
   
   - race: "US House IL-1"
+    incumbent: false
     district:
       layer: congressional
       number: 1
     candidate: "Marcus Lewis"
+    website: https://marcuslewisforcongress.org/
     party: R
     endorsed: false
   
   - race: "US House IL-1"
+    incumbent: false
     district:
       layer: congressional
       number: 1
@@ -130,6 +161,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 2
   # ============================================
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -139,6 +171,7 @@ candidates:
     endorsed: true
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -148,22 +181,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Jesse L. Jackson, Jr."
+    website: https://www.jessejacksonjrforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Willie Preston"
+    website: https://electpreston.com/
     party: D
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -172,6 +210,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -181,6 +220,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -190,22 +230,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Patrick Keating"
+    website: https://votepjk.com/
     party: D
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Sidney Moore"
+    website: https://www.sidneymooreforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
@@ -215,18 +260,22 @@ candidates:
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Jeremy Young"
+    website: https://jyforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-2"
+    incumbent: false
     district:
       layer: congressional
       number: 2
     candidate: "Mike Noack"
+    website: https://noack4congress.com/
     party: R
     endorsed: false
 
@@ -234,6 +283,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 3
   # ============================================
   - race: "US House IL-3"
+    incumbent: true
     district:
       layer: congressional
       number: 3
@@ -243,14 +293,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-3"
-    district:
-      layer: congressional
-      number: 3
-    candidate: "Mark Pasieka Sr."
-    party: D
-    endorsed: false
-  
-  - race: "US House IL-3"
+    incumbent: false
     district:
       layer: congressional
       number: 3
@@ -263,6 +306,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 4
   # ============================================
   - race: "US House IL-4"
+    incumbent: false
     district:
       layer: congressional
       number: 4
@@ -272,10 +316,12 @@ candidates:
     endorsed: false
   
   - race: "US House IL-4"
+    incumbent: false
     district:
       layer: congressional
       number: 4
     candidate: "Lupe Castillo"
+    website: https://www.dgtro.org/articles/meet-lupe
     party: R
     endorsed: false
 
@@ -283,6 +329,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 5
   # ============================================
   - race: "US House IL-5"
+    incumbent: true
     district:
       layer: congressional
       number: 5
@@ -292,30 +339,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-5"
-    district:
-      layer: congressional
-      number: 5
-    candidate: "Jonathan Bishop"
-    party: D
-    endorsed: false
-  
-  - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
     candidate: "Matthew Conroy"
+    website: https://www.mattconroyforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
     candidate: "Ellen Corley"
+    website: https://www.ellenois.net/
     party: D
     endorsed: false
   
   - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
@@ -325,22 +369,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
     candidate: "Tom Hanson"
+    website: https://votetommyhanson.com/
     party: R
     endorsed: false
   
   - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
     candidate: "Kimball Ladien"
+    website: https://kimladien4congress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-5"
+    incumbent: false
     district:
       layer: congressional
       number: 5
@@ -353,6 +402,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 6
   # ============================================
   - race: "US House IL-6"
+    incumbent: true
     district:
       layer: congressional
       number: 6
@@ -362,14 +412,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-6"
+    incumbent: false
     district:
       layer: congressional
       number: 6
     candidate: "Joseph Ruzevich"
+    website: https://www.joey4congress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-6"
+    incumbent: false
     district:
       layer: congressional
       number: 6
@@ -379,6 +432,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-6"
+    incumbent: false
     district:
       layer: congressional
       number: 6
@@ -391,6 +445,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 7
   # ============================================
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -400,14 +455,17 @@ candidates:
     endorsed: true
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Richard Boykin"
+    website: https://www.richardboykinforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -417,38 +475,47 @@ candidates:
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Melissa Conyears-Ervin"
+    website: https://www.melissaforcongress.org/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "David Ehrlich"
+    website: https://www.ehrlichforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Thomas Fisher"
+    website: https://thomasfisherforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "La Shawn Ford"
+    website: https://fordforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -458,14 +525,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Rory Hoskins"
+    website: https://roryforillinois.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -475,14 +545,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Jazmin Robinson"
+    website: https://www.jazminjrobinson.com/
     party: D
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -492,6 +565,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
@@ -501,18 +575,22 @@ candidates:
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Patricia Easley"
+    website: https://www.praeforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-7"
+    incumbent: false
     district:
       layer: congressional
       number: 7
     candidate: "Chad Koppie"
+    website: https://www.chadkoppie.com/
     party: R
     endorsed: false
 
@@ -520,6 +598,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 8
   # ============================================
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
@@ -529,6 +608,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
@@ -538,14 +618,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Melissa Bean"
+    website: https://www.melissabeanforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
@@ -555,30 +638,37 @@ candidates:
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Neil Khot"
+    website: https://neilforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Kevin Morrison"
+    website: https://www.kevinmorrisonforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Dan Tully"
+    website: https://dantully.com/
     party: D
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
@@ -588,30 +678,37 @@ candidates:
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Kevin Ake"
+    website: https://www.facebook.com/profile.php?id=100081221275237
     party: R
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Jennifer Davis"
+    website: https://www.votejenniferdavis.com/
     party: R
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
     candidate: "Herbert Hebein"
+    website: https://www.electherb.com/
     party: R
     endorsed: false
   
   - race: "US House IL-8"
+    incumbent: false
     district:
       layer: congressional
       number: 8
@@ -624,6 +721,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 9
   # ============================================
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -633,6 +731,7 @@ candidates:
     endorsed: true
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -642,6 +741,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -651,6 +751,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -660,22 +761,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
-    district:
-      layer: congressional
-      number: 9
-    candidate: "Natalie Angelo"
-    party: D
-    endorsed: false
-  
-  - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Patricia Brown"
+    website: https://patriciabrownforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -685,6 +781,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -694,6 +791,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -703,38 +801,47 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Mark Fredrickson"
+    website: https://www.facebook.com/mfredrickson
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Hoan Huynh"
+    website: https://www.hoanfor9.com/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Bethany Johnson"
+    website: https://www.bethanyfordistrictnine.com/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Bruce Leon"
+    website: https://www.bruceleonforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -744,6 +851,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -753,22 +861,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Howard Rosenblum"
+    website: https://www.howardrosenblum.com/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Mike Simmons"
+    website: https://www.mikesimmons.org/
     party: D
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -778,6 +891,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
@@ -787,18 +901,22 @@ candidates:
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Paul Friedman"
+    website: https://pfriedman.github.io/IL-09/
     party: R
     endorsed: false
   
   - race: "US House IL-9"
+    incumbent: false
     district:
       layer: congressional
       number: 9
     candidate: "Mark Su"
+    website: https://site.marksuforcongress.com/
     party: R
     endorsed: false
 
@@ -806,6 +924,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 10
   # ============================================
   - race: "US House IL-10"
+    incumbent: true
     district:
       layer: congressional
       number: 10
@@ -815,6 +934,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-10"
+    incumbent: false
     district:
       layer: congressional
       number: 10
@@ -824,6 +944,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-10"
+    incumbent: false
     district:
       layer: congressional
       number: 10
@@ -835,6 +956,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 11
   # ============================================
   - race: "US House IL-11"
+    incumbent: true
     district:
       layer: congressional
       number: 11
@@ -844,6 +966,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-11"
+    incumbent: false
     district:
       layer: congressional
       number: 11
@@ -853,14 +976,17 @@ candidates:
     endorsed: false
   
   - race: "US House IL-11"
+    incumbent: false
     district:
       layer: congressional
       number: 11
     candidate: "Charlie Kim"
+    website: https://www.charlieincongress.us/
     party: R
     endorsed: false
   
   - race: "US House IL-11"
+    incumbent: false
     district:
       layer: congressional
       number: 11
@@ -869,10 +995,12 @@ candidates:
     endorsed: false
   
   - race: "US House IL-11"
+    incumbent: false
     district:
       layer: congressional
       number: 11
     candidate: "Jeffrey Walter"
+    website: https://www.jeffwalterforcongress.com/
     party: R
     endorsed: false
 
@@ -880,19 +1008,22 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 12
   # ============================================
   - race: "US House IL-12"
+    incumbent: true
     district:
       layer: congressional
       number: 12
     candidate: "Mike Bost"
-    website: ""
+    website: https://bostforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-12"
+    incumbent: false
     district:
       layer: congressional
       number: 12
     candidate: "Julie Fortier"
+    website: https://juliefortier.org/
     party: D
     endorsed: false
 
@@ -900,6 +1031,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 13
   # ============================================
   - race: "US House IL-13"
+    incumbent: false
     district:
       layer: congressional
       number: 13
@@ -909,30 +1041,37 @@ candidates:
     endorsed: true
   
   - race: "US House IL-13"
+    incumbent: true
     district:
       layer: congressional
       number: 13
     candidate: "Nikki Budzinski"
+    website: https://nikkiforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-13"
+    incumbent: false
     district:
       layer: congressional
       number: 13
     candidate: "Emily Lux"
+    website: https://www.drluxforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-13"
+    incumbent: false
     district:
       layer: congressional
       number: 13
     candidate: "Joshua Loyd"
+    website: https://www.loydforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-13"
+    incumbent: false
     district:
       layer: congressional
       number: 13
@@ -945,23 +1084,27 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 14
   # ============================================
   - race: "US House IL-14"
+    incumbent: true
     district:
       layer: congressional
       number: 14
     candidate: "Lauren Underwood"
-    website: ""
+    website: https://underwoodforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-14"
+    incumbent: false
     district:
       layer: congressional
       number: 14
     candidate: "James Marter"
+    website: https://marter4congress.us/
     party: R
     endorsed: false
   
   - race: "US House IL-14"
+    incumbent: false
     district:
       layer: congressional
       number: 14
@@ -974,15 +1117,17 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 15
   # ============================================
   - race: "US House IL-15"
+    incumbent: true
     district:
       layer: congressional
       number: 15
     candidate: "Mary Miller"
-    website: ""
+    website: https://marymillerforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
@@ -992,22 +1137,27 @@ candidates:
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
     candidate: "Ryan Tebrugge"
+    website: https://www.ryantforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
     candidate: "Paul Davis"
+    website: https://www.pauldavisforcongress.com/
     party: D
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
@@ -1017,6 +1167,7 @@ candidates:
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
@@ -1026,10 +1177,12 @@ candidates:
     endorsed: false
   
   - race: "US House IL-15"
+    incumbent: false
     district:
       layer: congressional
       number: 15
     candidate: "Jennifer Todd"
+    website: https://www.jentodd2026.us/
     party: D
     endorsed: false
 
@@ -1037,15 +1190,17 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 16
   # ============================================
   - race: "US House IL-16"
+    incumbent: true
     district:
       layer: congressional
       number: 16
     candidate: "Darin LaHood"
-    website: ""
+    website: https://lahoodforcongress.com/
     party: R
     endorsed: false
   
   - race: "US House IL-16"
+    incumbent: false
     district:
       layer: congressional
       number: 16
@@ -1058,6 +1213,7 @@ candidates:
   # US HOUSE - CONGRESSIONAL DISTRICT 17
   # ============================================
   - race: "US House IL-17"
+    incumbent: true
     district:
       layer: congressional
       number: 17
@@ -1067,26 +1223,22 @@ candidates:
     endorsed: false
   
   - race: "US House IL-17"
-    district:
-      layer: congressional
-      number: 17
-    candidate: "Montez Soliz"
-    party: D
-    endorsed: false
-  
-  - race: "US House IL-17"
+    incumbent: false
     district:
       layer: congressional
       number: 17
     candidate: "Julie Bickelhaupt"
+    website: https://www.julieforillinois.com/
     party: R
     endorsed: false
   
   - race: "US House IL-17"
+    incumbent: false
     district:
       layer: congressional
       number: 17
     candidate: "Dillan Vancil"
+    website: https://www.vancilforcongress.com/
     party: R
     endorsed: false
 
@@ -1094,145 +1246,173 @@ candidates:
   # STATEWIDE OFFICES
   # ============================================
   - race: "Governor"
+    incumbent: true
     candidate: "J.B. Pritzker"
     party: D
+    website: https://jbpritzker.com/
     endorsed: false
   
   - race: "Governor"
-    candidate: "Patricia L. Tillman"
-    party: D
-    endorsed: false
-  
-  - race: "Governor"
+    incumbent: false
     candidate: "Darren Bailey"
     website: https://baileyforillinois.com
     party: R
     endorsed: false
   
   - race: "Governor"
+    incumbent: false
     candidate: "Ted Dabrowski"
     website: https://tedforillinois.com
     party: R
     endorsed: false
   
   - race: "Governor"
+    incumbent: false
     candidate: "Rick Heidner"
+    website: https://rickforillinois.com/
     party: R
     endorsed: false
   
   - race: "Governor"
+    incumbent: false
     candidate: "James Mendrick"
+    website: https://mendrick4governor2026.com/
     party: R
     endorsed: false
   
   - race: "Governor"
-    candidate: "Gregg Moore"
-    party: R
-    endorsed: false
-  
-  - race: "Governor"
+    incumbent: false
     candidate: "Joseph Severino"
+    website: https://www.severinoforgovernor.com/
     party: R
     endorsed: false
   
   - race: "Lieutenant Governor"
+    incumbent: false
     candidate: "Christian Mitchell"
+    website: https://jbpritzker.com/
     party: D
     endorsed: false
   
   - race: "Lieutenant Governor"
+    incumbent: false
     candidate: "Aaron Del Mar"
+    website: https://baileyforillinois.com/
     party: R
     endorsed: false
   
   - race: "Lieutenant Governor"
+    incumbent: false
     candidate: "Carrie Mendoza"
     website: https://tedforillinois.com
     party: R
     endorsed: false
   
   - race: "Lieutenant Governor"
+    incumbent: false
     candidate: "Christina Neitzke-Troike"
+    website: https://rickforillinois.com/
     party: R
     endorsed: false
   
   - race: "Lieutenant Governor"
+    incumbent: false
     candidate: "Robert Renteria"
+    website: https://mendrick4governor2026.com/
     party: R
     endorsed: false
 
   - race: "Attorney General"
+    incumbent: true
     candidate: "Kwame Raoul"
+    website: https://kwameraoul.com/
     party: D
     endorsed: false
   
   - race: "Attorney General"
+    incumbent: false
     candidate: "Bob Fioretti"
+    website: https://www.bobforillinois.com/
     party: R
     endorsed: false
   
   - race: "Attorney General"
+    incumbent: false
     candidate: "Andy Williams Jr."
+    website: https://andywilliamsjr.com/homepage/
     party: R
     endorsed: false
   
   - race: "Secretary of State"
+    incumbent: true
     candidate: "Alexi Giannoulias"
+    website: https://alexiforus.com/
     party: D
     endorsed: false
   
   - race: "Secretary of State"
+    incumbent: false
     candidate: "Walter Adamczyk"
+    website: https://walter2026.com/
     party: R
     endorsed: false
   
   - race: "Secretary of State"
+    incumbent: false
     candidate: "Diane Harris"
+    website: https://www.harrisforsos.com/
     party: R
     endorsed: false
   
   - race: "Comptroller"
+    incumbent: false
     candidate: "Margaret Croke"
+    website: https://crokeforillinois.com/
     party: D
     endorsed: false
   
   - race: "Comptroller"
-    candidate: "George Danos"
-    party: D
-    endorsed: false
-  
-  - race: "Comptroller"
+    incumbent: false
     candidate: "Stephanie Kifowit"
+    website: https://kifowitforcomptroller.com/
     party: D
     endorsed: false
   
   - race: "Comptroller"
+    incumbent: false
     candidate: "Holly Kim"
     website: https://www.voteforhollykim.com
     party: D
     endorsed: false
   
   - race: "Comptroller"
+    incumbent: false
     candidate: "Karina Villa"
+    website: https://karinavilla.com/
     party: D
     endorsed: false
   
   - race: "Comptroller"
+    incumbent: false
     candidate: "Bryan Drew"
     party: R
     endorsed: false
   
   - race: "Treasurer"
+    incumbent: true
     candidate: "Mike Frerichs"
+    website: https://mikeforillinois.com/
     party: D
     endorsed: false
   
   - race: "Treasurer"
+    incumbent: false
     candidate: "Max Solomon"
     party: R
     endorsed: false
   
   - race: "Treasurer"
+    incumbent: false
     candidate: "Max Rice"
     party: R
     endorsed: false
@@ -1241,6 +1421,7 @@ candidates:
   # STATE SENATE - DISTRICT 2
   # ============================================
   - race: "State Senate District 2"
+    incumbent: true
     district:
       layer: state_senate
       number: 2
@@ -1252,6 +1433,7 @@ candidates:
   # STATE SENATE - DISTRICT 3
   # ============================================
   - race: "State Senate District 3"
+    incumbent: true
     district:
       layer: state_senate
       number: 3
@@ -1263,6 +1445,7 @@ candidates:
   # STATE SENATE - DISTRICT 5
   # ============================================
   - race: "State Senate District 5"
+    incumbent: true
     district:
       layer: state_senate
       number: 5
@@ -1272,6 +1455,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 5"
+    incumbent: false
     district:
       layer: state_senate
       number: 5
@@ -1283,6 +1467,7 @@ candidates:
   # STATE SENATE - DISTRICT 6
   # ============================================
   - race: "State Senate District 6"
+    incumbent: true
     district:
       layer: state_senate
       number: 6
@@ -1292,6 +1477,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 6"
+    incumbent: false
     district:
       layer: state_senate
       number: 6
@@ -1304,6 +1490,7 @@ candidates:
   # STATE SENATE - DISTRICT 8
   # ============================================
   - race: "State Senate District 8"
+    incumbent: true
     district:
       layer: state_senate
       number: 8
@@ -1312,6 +1499,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 8"
+    incumbent: false
     district:
       layer: state_senate
       number: 8
@@ -1323,6 +1511,7 @@ candidates:
   # STATE SENATE - DISTRICT 9
   # ============================================
   - race: "State Senate District 9"
+    incumbent: false
     district:
       layer: state_senate
       number: 9
@@ -1332,6 +1521,7 @@ candidates:
     endorsed: true
   
   - race: "State Senate District 9"
+    incumbent: false
     district:
       layer: state_senate
       number: 9
@@ -1341,6 +1531,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 9"
+    incumbent: false
     district:
       layer: state_senate
       number: 9
@@ -1352,6 +1543,7 @@ candidates:
   # STATE SENATE - DISTRICT 11
   # ============================================
   - race: "State Senate District 11"
+    incumbent: true
     district:
       layer: state_senate
       number: 11
@@ -1363,6 +1555,7 @@ candidates:
   # STATE SENATE - DISTRICT 12
   # ============================================
   - race: "State Senate District 12"
+    incumbent: true
     district:
       layer: state_senate
       number: 12
@@ -1374,6 +1567,7 @@ candidates:
   # STATE SENATE - DISTRICT 14
   # ============================================
   - race: "State Senate District 14"
+    incumbent: true
     district:
       layer: state_senate
       number: 14
@@ -1382,6 +1576,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 14"
+    incumbent: false
     district:
       layer: state_senate
       number: 14
@@ -1390,6 +1585,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 14"
+    incumbent: false
     district:
       layer: state_senate
       number: 14
@@ -1398,6 +1594,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 14"
+    incumbent: false
     district:
       layer: state_senate
       number: 14
@@ -1409,6 +1606,7 @@ candidates:
   # STATE SENATE - DISTRICT 15
   # ============================================
   - race: "State Senate District 15"
+    incumbent: true
     district:
       layer: state_senate
       number: 15
@@ -1420,6 +1618,7 @@ candidates:
   # STATE SENATE - DISTRICT 17
   # ============================================
   - race: "State Senate District 17"
+    incumbent: false
     district:
       layer: state_senate
       number: 17
@@ -1428,6 +1627,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 17"
+    incumbent: false
     district:
       layer: state_senate
       number: 17
@@ -1439,6 +1639,7 @@ candidates:
   # STATE SENATE - DISTRICT 18
   # ============================================
   - race: "State Senate District 18"
+    incumbent: false
     district:
       layer: state_senate
       number: 18
@@ -1447,6 +1648,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 18"
+    incumbent: false
     district:
       layer: state_senate
       number: 18
@@ -1458,6 +1660,7 @@ candidates:
   # STATE SENATE - DISTRICT 20
   # ============================================
   - race: "State Senate District 20"
+    incumbent: true
     district:
       layer: state_senate
       number: 20
@@ -1470,6 +1673,7 @@ candidates:
   # STATE SENATE - DISTRICT 21
   # ============================================
   - race: "State Senate District 21"
+    incumbent: true
     district:
       layer: state_senate
       number: 21
@@ -1479,6 +1683,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 21"
+    incumbent: false
     district:
       layer: state_senate
       number: 21
@@ -1490,6 +1695,7 @@ candidates:
   # STATE SENATE - DISTRICT 23
   # ============================================
   - race: "State Senate District 23"
+    incumbent: true
     district:
       layer: state_senate
       number: 23
@@ -1498,6 +1704,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 23"
+    incumbent: false
     district:
       layer: state_senate
       number: 23
@@ -1509,6 +1716,7 @@ candidates:
   # STATE SENATE - DISTRICT 24
   # ============================================
   - race: "State Senate District 24"
+    incumbent: true
     district:
       layer: state_senate
       number: 24
@@ -1517,6 +1725,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 24"
+    incumbent: false
     district:
       layer: state_senate
       number: 24
@@ -1528,6 +1737,7 @@ candidates:
   # STATE SENATE - DISTRICT 26
   # ============================================
   - race: "State Senate District 26"
+    incumbent: false
     district:
       layer: state_senate
       number: 26
@@ -1537,17 +1747,19 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 26"
+    incumbent: true
     district:
       layer: state_senate
       number: 26
     candidate: "Darby Hills"
     party: R
-    endorsed: false
+    endorsed: true
 
   # ============================================
   # STATE SENATE - DISTRICT 27
   # ============================================
   - race: "State Senate District 27"
+    incumbent: false
     district:
       layer: state_senate
       number: 27
@@ -1556,6 +1768,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 27"
+    incumbent: false
     district:
       layer: state_senate
       number: 27
@@ -1567,6 +1780,7 @@ candidates:
   # STATE SENATE - DISTRICT 29
   # ============================================
   - race: "State Senate District 29"
+    incumbent: true
     district:
       layer: state_senate
       number: 29
@@ -1575,6 +1789,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 29"
+    incumbent: false
     district:
       layer: state_senate
       number: 29
@@ -1586,6 +1801,7 @@ candidates:
   # STATE SENATE - DISTRICT 30
   # ============================================
   - race: "State Senate District 30"
+    incumbent: true
     district:
       layer: state_senate
       number: 30
@@ -1597,6 +1813,7 @@ candidates:
   # STATE SENATE - DISTRICT 32
   # ============================================
   - race: "State Senate District 32"
+    incumbent: true
     district:
       layer: state_senate
       number: 32
@@ -1605,6 +1822,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 32"
+    incumbent: false
     district:
       layer: state_senate
       number: 32
@@ -1616,6 +1834,7 @@ candidates:
   # STATE SENATE - DISTRICT 33
   # ============================================
   - race: "State Senate District 33"
+    incumbent: false
     district:
       layer: state_senate
       number: 33
@@ -1625,6 +1844,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 33"
+    incumbent: false
     district:
       layer: state_senate
       number: 33
@@ -1634,6 +1854,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 33"
+    incumbent: false
     district:
       layer: state_senate
       number: 33
@@ -1646,6 +1867,7 @@ candidates:
   # STATE SENATE - DISTRICT 35
   # ============================================
   - race: "State Senate District 35"
+    incumbent: true
     district:
       layer: state_senate
       number: 35
@@ -1654,6 +1876,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 35"
+    incumbent: false
     district:
       layer: state_senate
       number: 35
@@ -1665,6 +1888,7 @@ candidates:
   # STATE SENATE - DISTRICT 36
   # ============================================
   - race: "State Senate District 36"
+    incumbent: true
     district:
       layer: state_senate
       number: 36
@@ -1673,6 +1897,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 36"
+    incumbent: false
     district:
       layer: state_senate
       number: 36
@@ -1681,6 +1906,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 36"
+    incumbent: false
     district:
       layer: state_senate
       number: 36
@@ -1692,6 +1918,7 @@ candidates:
   # STATE SENATE - DISTRICT 38
   # ============================================
   - race: "State Senate District 38"
+    incumbent: true
     district:
       layer: state_senate
       number: 38
@@ -1700,6 +1927,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 38"
+    incumbent: false
     district:
       layer: state_senate
       number: 38
@@ -1711,6 +1939,7 @@ candidates:
   # STATE SENATE - DISTRICT 39
   # ============================================
   - race: "State Senate District 39"
+    incumbent: true
     district:
       layer: state_senate
       number: 39
@@ -1723,6 +1952,7 @@ candidates:
   # STATE SENATE - DISTRICT 41
   # ============================================
   - race: "State Senate District 41"
+    incumbent: true
     district:
       layer: state_senate
       number: 41
@@ -1734,6 +1964,7 @@ candidates:
   # STATE SENATE - DISTRICT 42
   # ============================================
   - race: "State Senate District 42"
+    incumbent: true
     district:
       layer: state_senate
       number: 42
@@ -1743,6 +1974,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 42"
+    incumbent: false
     district:
       layer: state_senate
       number: 42
@@ -1751,6 +1983,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 42"
+    incumbent: false
     district:
       layer: state_senate
       number: 42
@@ -1762,6 +1995,7 @@ candidates:
   # STATE SENATE - DISTRICT 44
   # ============================================
   - race: "State Senate District 44"
+    incumbent: true
     district:
       layer: state_senate
       number: 44
@@ -1773,6 +2007,7 @@ candidates:
   # STATE SENATE - DISTRICT 45
   # ============================================
   - race: "State Senate District 45"
+    incumbent: true
     district:
       layer: state_senate
       number: 45
@@ -1781,6 +2016,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 45"
+    incumbent: false
     district:
       layer: state_senate
       number: 45
@@ -1789,6 +2025,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 45"
+    incumbent: false
     district:
       layer: state_senate
       number: 45
@@ -1800,6 +2037,7 @@ candidates:
   # STATE SENATE - DISTRICT 47
   # ============================================
   - race: "State Senate District 47"
+    incumbent: true
     district:
       layer: state_senate
       number: 47
@@ -1811,6 +2049,7 @@ candidates:
   # STATE SENATE - DISTRICT 48
   # ============================================
   - race: "State Senate District 48"
+    incumbent: true
     district:
       layer: state_senate
       number: 48
@@ -1819,6 +2058,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 48"
+    incumbent: false
     district:
       layer: state_senate
       number: 48
@@ -1830,6 +2070,7 @@ candidates:
   # STATE SENATE - DISTRICT 50
   # ============================================
   - race: "State Senate District 50"
+    incumbent: true
     district:
       layer: state_senate
       number: 50
@@ -1841,6 +2082,7 @@ candidates:
   # STATE SENATE - DISTRICT 51
   # ============================================
   - race: "State Senate District 51"
+    incumbent: true
     district:
       layer: state_senate
       number: 51
@@ -1852,6 +2094,7 @@ candidates:
   # STATE SENATE - DISTRICT 53
   # ============================================
   - race: "State Senate District 53"
+    incumbent: true
     district:
       layer: state_senate
       number: 53
@@ -1863,6 +2106,7 @@ candidates:
   # STATE SENATE - DISTRICT 54
   # ============================================
   - race: "State Senate District 54"
+    incumbent: true
     district:
       layer: state_senate
       number: 54
@@ -1874,6 +2118,7 @@ candidates:
   # STATE SENATE - DISTRICT 56
   # ============================================
   - race: "State Senate District 56"
+    incumbent: true
     district:
       layer: state_senate
       number: 56
@@ -1882,6 +2127,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 56"
+    incumbent: false
     district:
       layer: state_senate
       number: 56
@@ -1890,6 +2136,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 56"
+    incumbent: false
     district:
       layer: state_senate
       number: 56
@@ -1901,6 +2148,7 @@ candidates:
   # STATE SENATE - DISTRICT 57
   # ============================================
   - race: "State Senate District 57"
+    incumbent: true
     district:
       layer: state_senate
       number: 57
@@ -1909,6 +2157,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 57"
+    incumbent: false
     district:
       layer: state_senate
       number: 57
@@ -1920,6 +2169,7 @@ candidates:
   # STATE SENATE - DISTRICT 59
   # ============================================
   - race: "State Senate District 59"
+    incumbent: false
     district:
       layer: state_senate
       number: 59
@@ -1928,6 +2178,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 59"
+    incumbent: false
     district:
       layer: state_senate
       number: 59
@@ -1936,6 +2187,7 @@ candidates:
     endorsed: false
   
   - race: "State Senate District 59"
+    incumbent: false
     district:
       layer: state_senate
       number: 59
@@ -1947,6 +2199,7 @@ candidates:
   # STATE HOUSE - DISTRICT 1
   # ============================================
   - race: "State House District 1"
+    incumbent: false
     district:
       layer: state_house
       number: 1
@@ -1955,6 +2208,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 1"
+    incumbent: true
     district:
       layer: state_house
       number: 1
@@ -1966,6 +2220,7 @@ candidates:
   # STATE HOUSE - DISTRICT 2
   # ============================================
   - race: "State House District 2"
+    incumbent: true
     district:
       layer: state_house
       number: 2
@@ -1974,6 +2229,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 2"
+    incumbent: false
     district:
       layer: state_house
       number: 2
@@ -1985,6 +2241,7 @@ candidates:
   # STATE HOUSE - DISTRICT 3
   # ============================================
   - race: "State House District 3"
+    incumbent: true
     district:
       layer: state_house
       number: 3
@@ -1993,6 +2250,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 3"
+    incumbent: false
     district:
       layer: state_house
       number: 3
@@ -2004,6 +2262,7 @@ candidates:
   # STATE HOUSE - DISTRICT 4
   # ============================================
   - race: "State House District 4"
+    incumbent: true
     district:
       layer: state_house
       number: 4
@@ -2012,6 +2271,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 4"
+    incumbent: false
     district:
       layer: state_house
       number: 4
@@ -2023,6 +2283,7 @@ candidates:
   # STATE HOUSE - DISTRICT 5
   # ============================================
   - race: "State House District 5"
+    incumbent: true
     district:
       layer: state_house
       number: 5
@@ -2034,6 +2295,7 @@ candidates:
   # STATE HOUSE - DISTRICT 6
   # ============================================
   - race: "State House District 6"
+    incumbent: false
     district:
       layer: state_house
       number: 6
@@ -2045,6 +2307,7 @@ candidates:
   # STATE HOUSE - DISTRICT 7
   # ============================================
   - race: "State House District 7"
+    incumbent: false
     district:
       layer: state_house
       number: 7
@@ -2056,6 +2319,7 @@ candidates:
   # STATE HOUSE - DISTRICT 8
   # ============================================
   - race: "State House District 8"
+    incumbent: false
     district:
       layer: state_house
       number: 8
@@ -2064,6 +2328,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 8"
+    incumbent: false
     district:
       layer: state_house
       number: 8
@@ -2072,6 +2337,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 8"
+    incumbent: false
     district:
       layer: state_house
       number: 8
@@ -2080,6 +2346,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 8"
+    incumbent: false
     district:
       layer: state_house
       number: 8
@@ -2091,6 +2358,7 @@ candidates:
   # STATE HOUSE - DISTRICT 9
   # ============================================
   - race: "State House District 9"
+    incumbent: false
     district:
       layer: state_house
       number: 9
@@ -2102,6 +2370,7 @@ candidates:
   # STATE HOUSE - DISTRICT 10
   # ============================================
   - race: "State House District 10"
+    incumbent: false
     district:
       layer: state_house
       number: 10
@@ -2113,6 +2382,7 @@ candidates:
   # STATE HOUSE - DISTRICT 11
   # ============================================
   - race: "State House District 11"
+    incumbent: false
     district:
       layer: state_house
       number: 11
@@ -2124,6 +2394,7 @@ candidates:
   # STATE HOUSE - DISTRICT 12
   # ============================================
   - race: "State House District 12"
+    incumbent: false
     district:
       layer: state_house
       number: 12
@@ -2132,6 +2403,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 12"
+    incumbent: false
     district:
       layer: state_house
       number: 12
@@ -2140,6 +2412,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 12"
+    incumbent: false
     district:
       layer: state_house
       number: 12
@@ -2148,6 +2421,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 12"
+    incumbent: false
     district:
       layer: state_house
       number: 12
@@ -2156,6 +2430,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 12"
+    incumbent: false
     district:
       layer: state_house
       number: 12
@@ -2167,6 +2442,7 @@ candidates:
   # STATE HOUSE - DISTRICT 13
   # ============================================
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2175,6 +2451,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2183,6 +2460,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2191,6 +2469,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2199,6 +2478,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2207,6 +2487,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 13"
+    incumbent: false
     district:
       layer: state_house
       number: 13
@@ -2218,6 +2499,7 @@ candidates:
   # STATE HOUSE - DISTRICT 14
   # ============================================
   - race: "State House District 14"
+    incumbent: false
     district:
       layer: state_house
       number: 14
@@ -2229,6 +2511,7 @@ candidates:
   # STATE HOUSE - DISTRICT 15
   # ============================================
   - race: "State House District 15"
+    incumbent: false
     district:
       layer: state_house
       number: 15
@@ -2240,6 +2523,7 @@ candidates:
   # STATE HOUSE - DISTRICT 16
   # ============================================
   - race: "State House District 16"
+    incumbent: false
     district:
       layer: state_house
       number: 16
@@ -2248,6 +2532,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 16"
+    incumbent: false
     district:
       layer: state_house
       number: 16
@@ -2259,6 +2544,7 @@ candidates:
   # STATE HOUSE - DISTRICT 17
   # ============================================
   - race: "State House District 17"
+    incumbent: false
     district:
       layer: state_house
       number: 17
@@ -2267,6 +2553,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 17"
+    incumbent: false
     district:
       layer: state_house
       number: 17
@@ -2278,6 +2565,7 @@ candidates:
   # STATE HOUSE - DISTRICT 18
   # ============================================
   - race: "State House District 18"
+    incumbent: false
     district:
       layer: state_house
       number: 18
@@ -2286,6 +2574,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 18"
+    incumbent: false
     district:
       layer: state_house
       number: 18
@@ -2297,6 +2586,7 @@ candidates:
   # STATE HOUSE - DISTRICT 19
   # ============================================
   - race: "State House District 19"
+    incumbent: false
     district:
       layer: state_house
       number: 19
@@ -2305,6 +2595,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 19"
+    incumbent: false
     district:
       layer: state_house
       number: 19
@@ -2316,6 +2607,7 @@ candidates:
   # STATE HOUSE - DISTRICT 20
   # ============================================
   - race: "State House District 20"
+    incumbent: false
     district:
       layer: state_house
       number: 20
@@ -2327,6 +2619,7 @@ candidates:
   # STATE HOUSE - DISTRICT 21
   # ============================================
   - race: "State House District 21"
+    incumbent: false
     district:
       layer: state_house
       number: 21
@@ -2335,6 +2628,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 21"
+    incumbent: false
     district:
       layer: state_house
       number: 21
@@ -2346,6 +2640,7 @@ candidates:
   # STATE HOUSE - DISTRICT 22
   # ============================================
   - race: "State House District 22"
+    incumbent: false
     district:
       layer: state_house
       number: 22
@@ -2354,6 +2649,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 22"
+    incumbent: false
     district:
       layer: state_house
       number: 22
@@ -2365,6 +2661,7 @@ candidates:
   # STATE HOUSE - DISTRICT 23
   # ============================================
   - race: "State House District 23"
+    incumbent: false
     district:
       layer: state_house
       number: 23
@@ -2376,6 +2673,7 @@ candidates:
   # STATE HOUSE - DISTRICT 24
   # ============================================
   - race: "State House District 24"
+    incumbent: false
     district:
       layer: state_house
       number: 24
@@ -2384,6 +2682,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 24"
+    incumbent: false
     district:
       layer: state_house
       number: 24
@@ -2395,6 +2694,7 @@ candidates:
   # STATE HOUSE - DISTRICT 25
   # ============================================
   - race: "State House District 25"
+    incumbent: false
     district:
       layer: state_house
       number: 25
@@ -2406,6 +2706,7 @@ candidates:
   # STATE HOUSE - DISTRICT 26
   # ============================================
   - race: "State House District 26"
+    incumbent: false
     district:
       layer: state_house
       number: 26
@@ -2414,6 +2715,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 26"
+    incumbent: false
     district:
       layer: state_house
       number: 26
@@ -2422,6 +2724,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 26"
+    incumbent: false
     district:
       layer: state_house
       number: 26
@@ -2433,6 +2736,7 @@ candidates:
   # STATE HOUSE - DISTRICT 27
   # ============================================
   - race: "State House District 27"
+    incumbent: false
     district:
       layer: state_house
       number: 27
@@ -2444,6 +2748,7 @@ candidates:
   # STATE HOUSE - DISTRICT 28
   # ============================================
   - race: "State House District 28"
+    incumbent: false
     district:
       layer: state_house
       number: 28
@@ -2452,6 +2757,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 28"
+    incumbent: false
     district:
       layer: state_house
       number: 28
@@ -2463,6 +2769,7 @@ candidates:
   # STATE HOUSE - DISTRICT 29
   # ============================================
   - race: "State House District 29"
+    incumbent: false
     district:
       layer: state_house
       number: 29
@@ -2474,6 +2781,7 @@ candidates:
   # STATE HOUSE - DISTRICT 30
   # ============================================
   - race: "State House District 30"
+    incumbent: false
     district:
       layer: state_house
       number: 30
@@ -2485,6 +2793,7 @@ candidates:
   # STATE HOUSE - DISTRICT 31
   # ============================================
   - race: "State House District 31"
+    incumbent: false
     district:
       layer: state_house
       number: 31
@@ -2496,6 +2805,7 @@ candidates:
   # STATE HOUSE - DISTRICT 32
   # ============================================
   - race: "State House District 32"
+    incumbent: false
     district:
       layer: state_house
       number: 32
@@ -2507,6 +2817,7 @@ candidates:
   # STATE HOUSE - DISTRICT 33
   # ============================================
   - race: "State House District 33"
+    incumbent: false
     district:
       layer: state_house
       number: 33
@@ -2518,6 +2829,7 @@ candidates:
   # STATE HOUSE - DISTRICT 34
   # ============================================
   - race: "State House District 34"
+    incumbent: false
     district:
       layer: state_house
       number: 34
@@ -2526,6 +2838,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 34"
+    incumbent: false
     district:
       layer: state_house
       number: 34
@@ -2534,6 +2847,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 34"
+    incumbent: false
     district:
       layer: state_house
       number: 34
@@ -2545,6 +2859,7 @@ candidates:
   # STATE HOUSE - DISTRICT 35
   # ============================================
   - race: "State House District 35"
+    incumbent: false
     district:
       layer: state_house
       number: 35
@@ -2553,6 +2868,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 35"
+    incumbent: false
     district:
       layer: state_house
       number: 35
@@ -2561,6 +2877,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 35"
+    incumbent: false
     district:
       layer: state_house
       number: 35
@@ -2572,6 +2889,7 @@ candidates:
   # STATE HOUSE - DISTRICT 36
   # ============================================
   - race: "State House District 36"
+    incumbent: false
     district:
       layer: state_house
       number: 36
@@ -2580,6 +2898,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 36"
+    incumbent: false
     district:
       layer: state_house
       number: 36
@@ -2591,6 +2910,7 @@ candidates:
   # STATE HOUSE - DISTRICT 37
   # ============================================
   - race: "State House District 37"
+    incumbent: false
     district:
       layer: state_house
       number: 37
@@ -2602,6 +2922,7 @@ candidates:
   # STATE HOUSE - DISTRICT 38
   # ============================================
   - race: "State House District 38"
+    incumbent: false
     district:
       layer: state_house
       number: 38
@@ -2613,6 +2934,7 @@ candidates:
   # STATE HOUSE - DISTRICT 39
   # ============================================
   - race: "State House District 39"
+    incumbent: false
     district:
       layer: state_house
       number: 39
@@ -2621,6 +2943,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 39"
+    incumbent: false
     district:
       layer: state_house
       number: 39
@@ -2632,6 +2955,7 @@ candidates:
   # STATE HOUSE - DISTRICT 40
   # ============================================
   - race: "State House District 40"
+    incumbent: false
     district:
       layer: state_house
       number: 40
@@ -2640,6 +2964,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 40"
+    incumbent: false
     district:
       layer: state_house
       number: 40
@@ -2651,6 +2976,7 @@ candidates:
   # STATE HOUSE - DISTRICT 41
   # ============================================
   - race: "State House District 41"
+    incumbent: false
     district:
       layer: state_house
       number: 41
@@ -2659,6 +2985,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 41"
+    incumbent: false
     district:
       layer: state_house
       number: 41
@@ -2670,6 +2997,7 @@ candidates:
   # STATE HOUSE - DISTRICT 42
   # ============================================
   - race: "State House District 42"
+    incumbent: false
     district:
       layer: state_house
       number: 42
@@ -2678,6 +3006,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 42"
+    incumbent: false
     district:
       layer: state_house
       number: 42
@@ -2686,6 +3015,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 42"
+    incumbent: false
     district:
       layer: state_house
       number: 42
@@ -2697,6 +3027,7 @@ candidates:
   # STATE HOUSE - DISTRICT 43
   # ============================================
   - race: "State House District 43"
+    incumbent: false
     district:
       layer: state_house
       number: 43
@@ -2708,6 +3039,7 @@ candidates:
   # STATE HOUSE - DISTRICT 44
   # ============================================
   - race: "State House District 44"
+    incumbent: false
     district:
       layer: state_house
       number: 44
@@ -2716,6 +3048,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 44"
+    incumbent: false
     district:
       layer: state_house
       number: 44
@@ -2727,6 +3060,7 @@ candidates:
   # STATE HOUSE - DISTRICT 45
   # ============================================
   - race: "State House District 45"
+    incumbent: false
     district:
       layer: state_house
       number: 45
@@ -2735,6 +3069,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 45"
+    incumbent: false
     district:
       layer: state_house
       number: 45
@@ -2746,6 +3081,7 @@ candidates:
   # STATE HOUSE - DISTRICT 46
   # ============================================
   - race: "State House District 46"
+    incumbent: false
     district:
       layer: state_house
       number: 46
@@ -2754,6 +3090,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 46"
+    incumbent: false
     district:
       layer: state_house
       number: 46
@@ -2762,6 +3099,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 46"
+    incumbent: false
     district:
       layer: state_house
       number: 46
@@ -2773,6 +3111,7 @@ candidates:
   # STATE HOUSE - DISTRICT 47
   # ============================================
   - race: "State House District 47"
+    incumbent: false
     district:
       layer: state_house
       number: 47
@@ -2781,6 +3120,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 47"
+    incumbent: false
     district:
       layer: state_house
       number: 47
@@ -2792,6 +3132,7 @@ candidates:
   # STATE HOUSE - DISTRICT 48
   # ============================================
   - race: "State House District 48"
+    incumbent: false
     district:
       layer: state_house
       number: 48
@@ -2800,6 +3141,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 48"
+    incumbent: false
     district:
       layer: state_house
       number: 48
@@ -2811,6 +3153,7 @@ candidates:
   # STATE HOUSE - DISTRICT 49
   # ============================================
   - race: "State House District 49"
+    incumbent: false
     district:
       layer: state_house
       number: 49
@@ -2819,6 +3162,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 49"
+    incumbent: false
     district:
       layer: state_house
       number: 49
@@ -2830,6 +3174,7 @@ candidates:
   # STATE HOUSE - DISTRICT 50
   # ============================================
   - race: "State House District 50"
+    incumbent: false
     district:
       layer: state_house
       number: 50
@@ -2841,6 +3186,7 @@ candidates:
   # STATE HOUSE - DISTRICT 51
   # ============================================
   - race: "State House District 51"
+    incumbent: false
     district:
       layer: state_house
       number: 51
@@ -2849,6 +3195,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 51"
+    incumbent: false
     district:
       layer: state_house
       number: 51
@@ -2860,6 +3207,7 @@ candidates:
   # STATE HOUSE - DISTRICT 52
   # ============================================
   - race: "State House District 52"
+    incumbent: false
     district:
       layer: state_house
       number: 52
@@ -2868,6 +3216,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 52"
+    incumbent: false
     district:
       layer: state_house
       number: 52
@@ -2876,6 +3225,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 52"
+    incumbent: false
     district:
       layer: state_house
       number: 52
@@ -2887,6 +3237,7 @@ candidates:
   # STATE HOUSE - DISTRICT 53
   # ============================================
   - race: "State House District 53"
+    incumbent: false
     district:
       layer: state_house
       number: 53
@@ -2895,6 +3246,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 53"
+    incumbent: false
     district:
       layer: state_house
       number: 53
@@ -2906,6 +3258,7 @@ candidates:
   # STATE HOUSE - DISTRICT 54
   # ============================================
   - race: "State House District 54"
+    incumbent: false
     district:
       layer: state_house
       number: 54
@@ -2914,6 +3267,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 54"
+    incumbent: false
     district:
       layer: state_house
       number: 54
@@ -2925,6 +3279,7 @@ candidates:
   # STATE HOUSE - DISTRICT 55
   # ============================================
   - race: "State House District 55"
+    incumbent: false
     district:
       layer: state_house
       number: 55
@@ -2933,6 +3288,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 55"
+    incumbent: false
     district:
       layer: state_house
       number: 55
@@ -2944,6 +3300,7 @@ candidates:
   # STATE HOUSE - DISTRICT 56
   # ============================================
   - race: "State House District 56"
+    incumbent: false
     district:
       layer: state_house
       number: 56
@@ -2952,6 +3309,7 @@ candidates:
     endorsed: true
   
   - race: "State House District 56"
+    incumbent: false
     district:
       layer: state_house
       number: 56
@@ -2963,6 +3321,7 @@ candidates:
   # STATE HOUSE - DISTRICT 57
   # ============================================
   - race: "State House District 57"
+    incumbent: false
     district:
       layer: state_house
       number: 57
@@ -2971,6 +3330,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 57"
+    incumbent: false
     district:
       layer: state_house
       number: 57
@@ -2982,6 +3342,7 @@ candidates:
   # STATE HOUSE - DISTRICT 58
   # ============================================
   - race: "State House District 58"
+    incumbent: false
     district:
       layer: state_house
       number: 58
@@ -2993,6 +3354,7 @@ candidates:
   # STATE HOUSE - DISTRICT 59
   # ============================================
   - race: "State House District 59"
+    incumbent: false
     district:
       layer: state_house
       number: 59
@@ -3004,6 +3366,7 @@ candidates:
   # STATE HOUSE - DISTRICT 60
   # ============================================
   - race: "State House District 60"
+    incumbent: false
     district:
       layer: state_house
       number: 60
@@ -3015,6 +3378,7 @@ candidates:
   # STATE HOUSE - DISTRICT 61
   # ============================================
   - race: "State House District 61"
+    incumbent: false
     district:
       layer: state_house
       number: 61
@@ -3023,6 +3387,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 61"
+    incumbent: false
     district:
       layer: state_house
       number: 61
@@ -3034,6 +3399,7 @@ candidates:
   # STATE HOUSE - DISTRICT 62
   # ============================================
   - race: "State House District 62"
+    incumbent: false
     district:
       layer: state_house
       number: 62
@@ -3045,6 +3411,7 @@ candidates:
   # STATE HOUSE - DISTRICT 63
   # ============================================
   - race: "State House District 63"
+    incumbent: false
     district:
       layer: state_house
       number: 63
@@ -3053,6 +3420,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 63"
+    incumbent: false
     district:
       layer: state_house
       number: 63
@@ -3064,6 +3432,7 @@ candidates:
   # STATE HOUSE - DISTRICT 64
   # ============================================
   - race: "State House District 64"
+    incumbent: false
     district:
       layer: state_house
       number: 64
@@ -3072,6 +3441,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 64"
+    incumbent: false
     district:
       layer: state_house
       number: 64
@@ -3083,6 +3453,7 @@ candidates:
   # STATE HOUSE - DISTRICT 65
   # ============================================
   - race: "State House District 65"
+    incumbent: false
     district:
       layer: state_house
       number: 65
@@ -3091,6 +3462,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 65"
+    incumbent: false
     district:
       layer: state_house
       number: 65
@@ -3102,6 +3474,7 @@ candidates:
   # STATE HOUSE - DISTRICT 66
   # ============================================
   - race: "State House District 66"
+    incumbent: false
     district:
       layer: state_house
       number: 66
@@ -3110,6 +3483,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 66"
+    incumbent: false
     district:
       layer: state_house
       number: 66
@@ -3121,6 +3495,7 @@ candidates:
   # STATE HOUSE - DISTRICT 67
   # ============================================
   - race: "State House District 67"
+    incumbent: false
     district:
       layer: state_house
       number: 67
@@ -3132,6 +3507,7 @@ candidates:
   # STATE HOUSE - DISTRICT 68
   # ============================================
   - race: "State House District 68"
+    incumbent: false
     district:
       layer: state_house
       number: 68
@@ -3140,6 +3516,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 68"
+    incumbent: false
     district:
       layer: state_house
       number: 68
@@ -3151,6 +3528,7 @@ candidates:
   # STATE HOUSE - DISTRICT 69
   # ============================================
   - race: "State House District 69"
+    incumbent: false
     district:
       layer: state_house
       number: 69
@@ -3159,6 +3537,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 69"
+    incumbent: false
     district:
       layer: state_house
       number: 69
@@ -3170,6 +3549,7 @@ candidates:
   # STATE HOUSE - DISTRICT 70
   # ============================================
   - race: "State House District 70"
+    incumbent: false
     district:
       layer: state_house
       number: 70
@@ -3178,6 +3558,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 70"
+    incumbent: false
     district:
       layer: state_house
       number: 70
@@ -3189,6 +3570,7 @@ candidates:
   # STATE HOUSE - DISTRICT 71
   # ============================================
   - race: "State House District 71"
+    incumbent: false
     district:
       layer: state_house
       number: 71
@@ -3197,6 +3579,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 71"
+    incumbent: false
     district:
       layer: state_house
       number: 71
@@ -3208,6 +3591,7 @@ candidates:
   # STATE HOUSE - DISTRICT 72
   # ============================================
   - race: "State House District 72"
+    incumbent: false
     district:
       layer: state_house
       number: 72
@@ -3219,6 +3603,7 @@ candidates:
   # STATE HOUSE - DISTRICT 73
   # ============================================
   - race: "State House District 73"
+    incumbent: false
     district:
       layer: state_house
       number: 73
@@ -3227,6 +3612,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 73"
+    incumbent: false
     district:
       layer: state_house
       number: 73
@@ -3238,6 +3624,7 @@ candidates:
   # STATE HOUSE - DISTRICT 74
   # ============================================
   - race: "State House District 74"
+    incumbent: false
     district:
       layer: state_house
       number: 74
@@ -3246,6 +3633,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 74"
+    incumbent: false
     district:
       layer: state_house
       number: 74
@@ -3257,6 +3645,7 @@ candidates:
   # STATE HOUSE - DISTRICT 75
   # ============================================
   - race: "State House District 75"
+    incumbent: false
     district:
       layer: state_house
       number: 75
@@ -3265,6 +3654,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 75"
+    incumbent: false
     district:
       layer: state_house
       number: 75
@@ -3276,6 +3666,7 @@ candidates:
   # STATE HOUSE - DISTRICT 76
   # ============================================
   - race: "State House District 76"
+    incumbent: false
     district:
       layer: state_house
       number: 76
@@ -3284,6 +3675,7 @@ candidates:
     endorsed: false
     
   - race: "State House District 76"
+    incumbent: false
     district:
       layer: state_house
       number: 76
@@ -3292,6 +3684,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 76"
+    incumbent: false
     district:
       layer: state_house
       number: 76
@@ -3303,6 +3696,7 @@ candidates:
   # STATE HOUSE - DISTRICT 77
   # ============================================
   - race: "State House District 77"
+    incumbent: false
     district:
       layer: state_house
       number: 77
@@ -3311,6 +3705,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 77"
+    incumbent: false
     district:
       layer: state_house
       number: 77
@@ -3322,6 +3717,7 @@ candidates:
   # STATE HOUSE - DISTRICT 78
   # ============================================
   - race: "State House District 78"
+    incumbent: false
     district:
       layer: state_house
       number: 78
@@ -3330,6 +3726,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 78"
+    incumbent: false
     district:
       layer: state_house
       number: 78
@@ -3341,6 +3738,7 @@ candidates:
   # STATE HOUSE - DISTRICT 79
   # ============================================
   - race: "State House District 79"
+    incumbent: false
     district:
       layer: state_house
       number: 79
@@ -3349,6 +3747,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 79"
+    incumbent: false
     district:
       layer: state_house
       number: 79
@@ -3360,6 +3759,7 @@ candidates:
   # STATE HOUSE - DISTRICT 80
   # ============================================
   - race: "State House District 80"
+    incumbent: false
     district:
       layer: state_house
       number: 80
@@ -3368,6 +3768,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 80"
+    incumbent: false
     district:
       layer: state_house
       number: 80
@@ -3379,6 +3780,7 @@ candidates:
   # STATE HOUSE - DISTRICT 81
   # ============================================
   - race: "State House District 81"
+    incumbent: false
     district:
       layer: state_house
       number: 81
@@ -3387,6 +3789,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 81"
+    incumbent: false
     district:
       layer: state_house
       number: 81
@@ -3398,6 +3801,7 @@ candidates:
   # STATE HOUSE - DISTRICT 82
   # ============================================
   - race: "State House District 82"
+    incumbent: false
     district:
       layer: state_house
       number: 82
@@ -3409,6 +3813,7 @@ candidates:
   # STATE HOUSE - DISTRICT 83
   # ============================================
   - race: "State House District 83"
+    incumbent: false
     district:
       layer: state_house
       number: 83
@@ -3417,6 +3822,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 83"
+    incumbent: false
     district:
       layer: state_house
       number: 83
@@ -3428,6 +3834,7 @@ candidates:
   # STATE HOUSE - DISTRICT 84
   # ============================================
   - race: "State House District 84"
+    incumbent: false
     district:
       layer: state_house
       number: 84
@@ -3436,6 +3843,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 84"
+    incumbent: false
     district:
       layer: state_house
       number: 84
@@ -3444,6 +3852,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 84"
+    incumbent: false
     district:
       layer: state_house
       number: 84
@@ -3455,6 +3864,7 @@ candidates:
   # STATE HOUSE - DISTRICT 85
   # ============================================
   - race: "State House District 85"
+    incumbent: false
     district:
       layer: state_house
       number: 85
@@ -3463,6 +3873,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 85"
+    incumbent: false
     district:
       layer: state_house
       number: 85
@@ -3474,6 +3885,7 @@ candidates:
   # STATE HOUSE - DISTRICT 86
   # ============================================
   - race: "State House District 86"
+    incumbent: false
     district:
       layer: state_house
       number: 86
@@ -3485,6 +3897,7 @@ candidates:
   # STATE HOUSE - DISTRICT 87
   # ============================================
   - race: "State House District 87"
+    incumbent: false
     district:
       layer: state_house
       number: 87
@@ -3496,6 +3909,7 @@ candidates:
   # STATE HOUSE - DISTRICT 88
   # ============================================
   - race: "State House District 88"
+    incumbent: false
     district:
       layer: state_house
       number: 88
@@ -3507,6 +3921,7 @@ candidates:
   # STATE HOUSE - DISTRICT 89
   # ============================================
   - race: "State House District 89"
+    incumbent: false
     district:
       layer: state_house
       number: 89
@@ -3515,6 +3930,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 89"
+    incumbent: false
     district:
       layer: state_house
       number: 89
@@ -3526,6 +3942,7 @@ candidates:
   # STATE HOUSE - DISTRICT 90
   # ============================================
   - race: "State House District 90"
+    incumbent: false
     district:
       layer: state_house
       number: 90
@@ -3534,6 +3951,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 90"
+    incumbent: false
     district:
       layer: state_house
       number: 90
@@ -3542,6 +3960,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 90"
+    incumbent: false
     district:
       layer: state_house
       number: 90
@@ -3553,6 +3972,7 @@ candidates:
   # STATE HOUSE - DISTRICT 91
   # ============================================
   - race: "State House District 91"
+    incumbent: false
     district:
       layer: state_house
       number: 91
@@ -3564,6 +3984,7 @@ candidates:
   # STATE HOUSE - DISTRICT 92
   # ============================================
   - race: "State House District 92"
+    incumbent: false
     district:
       layer: state_house
       number: 92
@@ -3575,6 +3996,7 @@ candidates:
   # STATE HOUSE - DISTRICT 93
   # ============================================
   - race: "State House District 93"
+    incumbent: false
     district:
       layer: state_house
       number: 93
@@ -3583,6 +4005,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 93"
+    incumbent: false
     district:
       layer: state_house
       number: 93
@@ -3594,6 +4017,7 @@ candidates:
   # STATE HOUSE - DISTRICT 94
   # ============================================
   - race: "State House District 94"
+    incumbent: false
     district:
       layer: state_house
       number: 94
@@ -3602,6 +4026,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 94"
+    incumbent: false
     district:
       layer: state_house
       number: 94
@@ -3613,6 +4038,7 @@ candidates:
   # STATE HOUSE - DISTRICT 95
   # ============================================
   - race: "State House District 95"
+    incumbent: false
     district:
       layer: state_house
       number: 95
@@ -3624,6 +4050,7 @@ candidates:
   # STATE HOUSE - DISTRICT 96
   # ============================================
   - race: "State House District 96"
+    incumbent: false
     district:
       layer: state_house
       number: 96
@@ -3635,6 +4062,7 @@ candidates:
   # STATE HOUSE - DISTRICT 97
   # ============================================
   - race: "State House District 97"
+    incumbent: false
     district:
       layer: state_house
       number: 97
@@ -3643,6 +4071,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 97"
+    incumbent: false
     district:
       layer: state_house
       number: 97
@@ -3654,6 +4083,7 @@ candidates:
   # STATE HOUSE - DISTRICT 98
   # ============================================
   - race: "State House District 98"
+    incumbent: false
     district:
       layer: state_house
       number: 98
@@ -3662,6 +4092,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 98"
+    incumbent: false
     district:
       layer: state_house
       number: 98
@@ -3673,6 +4104,7 @@ candidates:
   # STATE HOUSE - DISTRICT 99
   # ============================================
   - race: "State House District 99"
+    incumbent: false
     district:
       layer: state_house
       number: 99
@@ -3684,6 +4116,7 @@ candidates:
   # STATE HOUSE - DISTRICT 100
   # ============================================
   - race: "State House District 100"
+    incumbent: false
     district:
       layer: state_house
       number: 100
@@ -3695,6 +4128,7 @@ candidates:
   # STATE HOUSE - DISTRICT 101
   # ============================================
   - race: "State House District 101"
+    incumbent: false
     district:
       layer: state_house
       number: 101
@@ -3703,6 +4137,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 101"
+    incumbent: false
     district:
       layer: state_house
       number: 101
@@ -3714,6 +4149,7 @@ candidates:
   # STATE HOUSE - DISTRICT 102
   # ============================================
   - race: "State House District 102"
+    incumbent: false
     district:
       layer: state_house
       number: 102
@@ -3725,6 +4161,7 @@ candidates:
   # STATE HOUSE - DISTRICT 103
   # ============================================
   - race: "State House District 103"
+    incumbent: false
     district:
       layer: state_house
       number: 103
@@ -3736,6 +4173,7 @@ candidates:
   # STATE HOUSE - DISTRICT 104
   # ============================================
   - race: "State House District 104"
+    incumbent: false
     district:
       layer: state_house
       number: 104
@@ -3744,6 +4182,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 104"
+    incumbent: false
     district:
       layer: state_house
       number: 104
@@ -3755,6 +4194,7 @@ candidates:
   # STATE HOUSE - DISTRICT 105
   # ============================================
   - race: "State House District 105"
+    incumbent: false
     district:
       layer: state_house
       number: 105
@@ -3766,6 +4206,7 @@ candidates:
   # STATE HOUSE - DISTRICT 106
   # ============================================
   - race: "State House District 106"
+    incumbent: false
     district:
       layer: state_house
       number: 106
@@ -3777,6 +4218,7 @@ candidates:
   # STATE HOUSE - DISTRICT 107
   # ============================================
   - race: "State House District 107"
+    incumbent: false
     district:
       layer: state_house
       number: 107
@@ -3785,6 +4227,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 107"
+    incumbent: false
     district:
       layer: state_house
       number: 107
@@ -3796,6 +4239,7 @@ candidates:
   # STATE HOUSE - DISTRICT 108
   # ============================================
   - race: "State House District 108"
+    incumbent: false
     district:
       layer: state_house
       number: 108
@@ -3807,6 +4251,7 @@ candidates:
   # STATE HOUSE - DISTRICT 109
   # ============================================
   - race: "State House District 109"
+    incumbent: false
     district:
       layer: state_house
       number: 109
@@ -3815,6 +4260,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 109"
+    incumbent: false
     district:
       layer: state_house
       number: 109
@@ -3826,6 +4272,7 @@ candidates:
   # STATE HOUSE - DISTRICT 110
   # ============================================
   - race: "State House District 110"
+    incumbent: false
     district:
       layer: state_house
       number: 110
@@ -3837,6 +4284,7 @@ candidates:
   # STATE HOUSE - DISTRICT 111
   # ============================================
   - race: "State House District 111"
+    incumbent: false
     district:
       layer: state_house
       number: 111
@@ -3845,6 +4293,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 111"
+    incumbent: false
     district:
       layer: state_house
       number: 111
@@ -3856,6 +4305,7 @@ candidates:
   # STATE HOUSE - DISTRICT 112
   # ============================================
   - race: "State House District 112"
+    incumbent: false
     district:
       layer: state_house
       number: 112
@@ -3864,6 +4314,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 112"
+    incumbent: false
     district:
       layer: state_house
       number: 112
@@ -3875,6 +4326,7 @@ candidates:
   # STATE HOUSE - DISTRICT 113
   # ============================================
   - race: "State House District 113"
+    incumbent: false
     district:
       layer: state_house
       number: 113
@@ -3886,6 +4338,7 @@ candidates:
   # STATE HOUSE - DISTRICT 114
   # ============================================
   - race: "State House District 114"
+    incumbent: false
     district:
       layer: state_house
       number: 114
@@ -3897,6 +4350,7 @@ candidates:
   # STATE HOUSE - DISTRICT 115
   # ============================================
   - race: "State House District 115"
+    incumbent: false
     district:
       layer: state_house
       number: 115
@@ -3908,6 +4362,7 @@ candidates:
   # STATE HOUSE - DISTRICT 116
   # ============================================
   - race: "State House District 116"
+    incumbent: false
     district:
       layer: state_house
       number: 116
@@ -3916,6 +4371,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 116"
+    incumbent: false
     district:
       layer: state_house
       number: 116
@@ -3927,6 +4383,7 @@ candidates:
   # STATE HOUSE - DISTRICT 117
   # ============================================
   - race: "State House District 117"
+    incumbent: false
     district:
       layer: state_house
       number: 117
@@ -3938,6 +4395,7 @@ candidates:
   # STATE HOUSE - DISTRICT 118
   # ============================================
   - race: "State House District 118"
+    incumbent: false
     district:
       layer: state_house
       number: 118
@@ -3946,6 +4404,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 118"
+    incumbent: false
     district:
       layer: state_house
       number: 118
@@ -3954,6 +4413,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 118"
+    incumbent: false
     district:
       layer: state_house
       number: 118
@@ -3962,6 +4422,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 118"
+    incumbent: false
     district:
       layer: state_house
       number: 118
@@ -3970,6 +4431,7 @@ candidates:
     endorsed: false
   
   - race: "State House District 118"
+    incumbent: false
     district:
       layer: state_house
       number: 118
@@ -3981,16 +4443,22 @@ candidates:
   # COOK COUNTY - BOARD PRESIDENT
   # ============================================
   - race: "Cook County Board President"
+    incumbent: true
+    county: cook_county
     candidate: "Toni Preckwinkle"
     party: D
     endorsed: false
   
   - race: "Cook County Board President"
+    incumbent: false
+    county: cook_county
     candidate: "Brendan Reilly"
     party: D
     endorsed: false
   
   - race: "Cook County Board President"
+    incumbent: false
+    county: cook_county
     candidate: "Michael Murphy"
     party: L
     endorsed: false
@@ -3999,16 +4467,22 @@ candidates:
   # COOK COUNTY - ASSESSOR
   # ============================================
   - race: "Cook County Assessor"
+    incumbent: true
+    county: cook_county
     candidate: "Frederick Kaegi"
     party: D
     endorsed: false
   
   - race: "Cook County Assessor"
+    incumbent: false
+    county: cook_county
     candidate: "Pat Hynes"
     party: D
     endorsed: false
   
   - race: "Cook County Assessor"
+    incumbent: false
+    county: cook_county
     candidate: "Nico Tsatsoulis"
     party: L
     endorsed: false
@@ -4017,11 +4491,15 @@ candidates:
   # COOK COUNTY - CLERK
   # ============================================
   - race: "Cook County Clerk"
+    incumbent: true
+    county: cook_county
     candidate: "Monica Gordon"
     party: D
     endorsed: false
   
   - race: "Cook County Clerk"
+    incumbent: false
+    county: cook_county
     candidate: "Hontas Farmer"
     party: L
     endorsed: false
@@ -4030,11 +4508,15 @@ candidates:
   # COOK COUNTY - SHERIFF
   # ============================================
   - race: "Cook County Sheriff"
+    incumbent: true
+    county: cook_county
     candidate: "Thomas Dart"
     party: D
     endorsed: false
   
   - race: "Cook County Sheriff"
+    incumbent: false
+    county: cook_county
     candidate: "Brad Sandefur"
     party: L
     endorsed: false
@@ -4043,6 +4525,8 @@ candidates:
   # COOK COUNTY - TREASURER
   # ============================================
   - race: "Cook County Treasurer"
+    incumbent: true
+    county: cook_county
     candidate: "Maria Pappas"
     party: D
     endorsed: false
@@ -4051,8 +4535,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 1
   # ============================================
   - race: "Cook County Board Of Commissioners District 1"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 1
     candidate: "Tara Stamps"
     party: D
@@ -4062,16 +4547,18 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 2
   # ============================================
   - race: "Cook County Board Of Commissioners District 2"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 2
     candidate: "Michael Scott Jr."
     party: D
     endorsed: false
 
   - race: "Cook County Board Of Commissioners District 2"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 2
     candidate: "Andre Smith"
     party: D
@@ -4081,8 +4568,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 3
   # ============================================
   - race: "Cook County Board Of Commissioners District 3"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 3
     candidate: "Bill Lowry"
     party: D
@@ -4092,8 +4580,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 4
   # ============================================
   - race: "Cook County Board Of Commissioners District 4"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 4
     candidate: "Stanley S. Moore"
     party: D
@@ -4103,24 +4592,27 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 5
   # ============================================
   - race: "Cook County Board Of Commissioners District 5"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 5
     candidate: "Kisha E. McCaskill"
     party: D
     endorsed: false
   
   - race: "Cook County Board Of Commissioners District 5"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 5
     candidate: "Kiana Belcher"
     party: D
     endorsed: false
   
   - race: "Cook County Board Of Commissioners District 5"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 5
     candidate: "Richard Nolan"
     party: R
@@ -4130,32 +4622,36 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 6
   # ============================================
   - race: "Cook County Board Of Commissioners District 6"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 6
     candidate: "Patricia Joan Murphy"
     party: D
     endorsed: false
   
   - race: "Cook County Board Of Commissioners District 6"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 6
     candidate: "Wesam J. Shahed"
     party: D
     endorsed: false
 
   - race: "Cook County Board Of Commissioners District 6"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 6
     candidate: "Antoine Bass"
     party: D
     endorsed: false
   
   - race: "Cook County Board Of Commissioners District 6"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 6
     candidate: "Sylvester Fulcher"
     party: D
@@ -4165,8 +4661,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 7
   # ============================================
   - race: "Cook County Board Of Commissioners District 7"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 7
     candidate: "Alma E. Anaya"
     party: D
@@ -4176,16 +4673,18 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 8
   # ============================================
   - race: "Cook County Board Of Commissioners District 8"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 8
     candidate: "Nicholas Cade"
     party: D
     endorsed: true
   
   - race: "Cook County Board Of Commissioners District 8"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 8
     candidate: "Jessica Vasquez"
     party: D
@@ -4195,16 +4694,18 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 9
   # ============================================
   - race: "Cook County Board Of Commissioners District 9"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 9
     candidate: "Maggie Trevor"
     party: D
     endorsed: false
 
   - race: "Cook County Board Of Commissioners District 9"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 9
     candidate: "Ammie Kessem"
     party: R
@@ -4214,16 +4715,18 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 10
   # ============================================
   - race: "Cook County Board Of Commissioners District 10"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 10
     candidate: "Drake Warren"
     party: D
     endorsed: true
   
   - race: "Cook County Board Of Commissioners District 10"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 10
     candidate: "Bridget Gainer"
     party: D
@@ -4233,8 +4736,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 11
   # ============================================
   - race: "Cook County Board Of Commissioners District 11"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 11
     candidate: "John P. Daley"
     party: D
@@ -4244,16 +4748,18 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 12
   # ============================================
   - race: "Cook County Board Of Commissioners District 12"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 12
     candidate: "Isaiah White"
     party: D
     endorsed: true
   
   - race: "Cook County Board Of Commissioners District 12"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 12
     candidate: "Elizabeth Granato"
     party: D
@@ -4261,16 +4767,18 @@ candidates:
   
   
   - race: "Cook County Board Of Commissioners District 12"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 12
     candidate: "José Wilson"
     party: D
     endorsed: false
   
   - race: "Cook County Board Of Commissioners District 12"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 12
     candidate: "Xiaoli Hu"
     party: R
@@ -4280,8 +4788,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 13
   # ============================================
   - race: "Cook County Board Of Commissioners District 13"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 13
     candidate: "Josina Morita"
     party: D
@@ -4290,8 +4799,9 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 14
   # ============================================
   - race: "Cook County Board of Commissioners District 14"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 14
     candidate: "Scott Britton"
     party: D
@@ -4301,24 +4811,27 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 15
   # ============================================
   - race: "Cook County Board of Commissioners District 15"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 15
     candidate: "Ted Mason"
     party: D
     endorsed: false
   
   - race: "Cook County Board of Commissioners District 15"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 15
     candidate: "Gabriella Hoxie"
     party: R
     endorsed: false
   
   - race: "Cook County Board of Commissioners District 15"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 15
     candidate: "Daniel Lee"
     party: R
@@ -4328,24 +4841,27 @@ candidates:
   # COOK COUNTY BOARD OF COMMISSIONERS - DISTRICT 16
   # ============================================
   - race: "Cook County Board of Commissioners District 16"
+    incumbent: true
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 16
     candidate: "Frank J. Aguilar"
     party: D
     endorsed: false
   
   - race: "Cook County Board of Commissioners District 16"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 16
     candidate: "Miranda E. Hernandez"
     party: D
     endorsed: false
  
   - race: "Cook County Board of Commissioners District 16"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 16
     candidate: "Leticia Garcia"
     party: D
@@ -4356,16 +4872,18 @@ candidates:
   # ============================================
 
   - race: "Cook County Board of Commissioners District 17"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 17
     candidate: "Elyse Hoffenberg"
     party: D
     endorsed: false
   
   - race: "Cook County Board of Commissioners District 17"
+    incumbent: false
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 17
     candidate: "Elizabeth Doody Gorman"
     party: R
@@ -4375,6 +4893,7 @@ candidates:
   # COOK COUNTY - BOARD OF REVIEW DISTRICT 1
   # ============================================
   - race: "Cook County Board of Review District 1"
+    incumbent: true
     district:
       layer: cook_county_board_of_review
       number: 1
@@ -4383,6 +4902,7 @@ candidates:
     endorsed: false
   
   - race: "Cook County Board of Review District 1"
+    incumbent: false
     district:
       layer: cook_county_board_of_review
       number: 1
@@ -4394,6 +4914,7 @@ candidates:
   # COOK COUNTY - BOARD OF REVIEW DISTRICT 2
   # ============================================
   - race: "Cook County Board of Review District 2"
+    incumbent: true
     district:
       layer: cook_county_board_of_review
       number: 2
@@ -4402,6 +4923,7 @@ candidates:
     endorsed: false
   
   - race: "Cook County Board of Review District 2"
+    incumbent: false
     district:
       layer: cook_county_board_of_review
       number: 2
@@ -4413,31 +4935,55 @@ candidates:
   # METROPOLITAN WATER RECLAMATION DISTRICT
   # ============================================
   - race: "Metropolitan Water Reclamation District (2-year term)"
+    incumbent: true
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Cameron Davis"
     party: D
     endorsed: false
   
   - race: "Metropolitan Water Reclamation District (6-year term)"
+    incumbent: true
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Precious Brady-Davis"
     party: D
     endorsed: false
   
   - race: "Metropolitan Water Reclamation District (6-year term)"
+    incumbent: true
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Eira Corral Sepulveda"
     party: D
     endorsed: false
   
   - race: "Metropolitan Water Reclamation District (6-year term)"
+    incumbent: true
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Beth McElroy Kirkwood"
     party: D
     endorsed: false
   
   - race: "Metropolitan Water Reclamation District (6-year term)"
+    incumbent: false
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Sarah Bury"
     party: D
     endorsed: false
   
   - race: "Metropolitan Water Reclamation District (6-year term)"
+    incumbent: false
+    district:
+      layer: metropolitan_water_reclamation_district
+      number: 1
     candidate: "Frank Rowder"
     party: R
     endorsed: false
@@ -4446,37 +4992,51 @@ candidates:
   # COOK COUNTY CIRCUIT COURT (Countywide)
   # ============================================
   - race: "Cook County Circuit Court - Cynthia Cobbs vacancy"
+    incumbent: true
+    county: cook_county
     candidate: "Linda Sackey"
     party: D
     website: https://www.judgelindasackey.com
     endorsed: false
   
   - race: "Cook County Circuit Court - Cynthia Cobbs vacancy"
+    incumbent: false
+    county: cook_county
     candidate: "Luz Maria Toledo"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court - Kathleen Burke vacancy"
+    incumbent: false
+    county: cook_county
     candidate: "Steven McKenzie"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court - Mary Ellen Coghlan vacancy"
+    incumbent: true
+    county: cook_county
     candidate: "Michael Cabonargi"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court - Mary Ellen Coghlan vacancy"
+    incumbent: false
+    county: cook_county
     candidate: "Ashonta Rice"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court - Paul Karkula vacancy"
+    incumbent: true
+    county: cook_county
     candidate: "D'Anthony Thedford"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court - William Hooks vacancy"
+    incumbent: false
+    county: cook_county
     candidate: "Ava George Stewart"
     party: D
     endorsed: false
@@ -4485,27 +5045,47 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 1
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 1
     candidate: "Ginger Odom"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 1
     candidate: "Tiffany Brooks"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 1 - Carl Walker vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 1
     candidate: "Ashley Greer Shambley"
     website: https://ashleygreershambleyforjudge.com
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 1 - Robert Balanoff vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 1
     candidate: "Natalie Howse"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 1 - Robert Balanoff vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 1
     candidate: "Radiance Ward"
     website: https://radiancewardforjudge.com
     party: D
@@ -4515,16 +5095,28 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 3
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 3 - Patrick Sherlock vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 3
     candidate: "Rachel Marrello"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 3 - Patrick Sherlock vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 3
     candidate: "Martin Reggi"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 3 - Thomas Murphy vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 3
     candidate: "John Carroll"
     party: D
     endorsed: false
@@ -4533,6 +5125,10 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 5
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 5 - Dominique Ross vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 5
     candidate: "Stephanie Kelly"
     party: D
     endorsed: false
@@ -4541,32 +5137,56 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 8
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Kathleen Cunniff Ori"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Elizabeth Dibler"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 8 - Celia Gamrath vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Garson Fischer"
     website: https://garsonforjudge.com
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Lester Finkle"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Dan Balanoff"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 8 - Mary Mikva vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 8
     candidate: "Katherine Morrison"
     party: D
     endorsed: false
@@ -4575,16 +5195,28 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 11
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 11 - Mary Roberts vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 11
     candidate: "Kim Przekota"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 11 - Pamela McLean Meyerson vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 11
     candidate: "John Carrozza"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 11 - Pamela McLean Meyerson vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 11
     candidate: "Jarrett Knox"
     website: https://knoxforjudge.com
     party: D
@@ -4594,21 +5226,37 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 13
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 13 - John Curry Jr. vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 13
     candidate: "Robert Groebner"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 13 - Martin Kelley vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 13
     candidate: "Brittany Pedersen"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 13 - Shannon O'Malley vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 13
     candidate: "Dan Naranjo"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 13 - Thomas Kelley vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 13
     candidate: "William Kelley"
     party: D
     endorsed: false
@@ -4617,12 +5265,20 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 16
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 16 - Callie Baird vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 16
     candidate: "Julian Sanchez Crozier"
     website: https://jscforjudge.com
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 16 - Patricia Mendoza vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 16
     candidate: "Jessica Velez"
     party: D
     endorsed: false
@@ -4631,28 +5287,48 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 17
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 17
     candidate: "Bianca Brown"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 17
     candidate: "Amari Dawson"
     website: https://amari4judge.com
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 17 - James Carroll vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 17
     candidate: "Andre Thapedi"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 17 - Lloyd Brooks vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 17
     candidate: "Natalia Moore"
     website: https://Natalia4judge.com
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 17 - Lloyd Brooks vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 17
     candidate: "Meridth Vanae Hammer"
     party: D
     endorsed: false
@@ -4661,11 +5337,19 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 18
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 18 - Frank Andreou vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 18
     candidate: "Samuel Bae"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 18 - Jeffrey Chrones vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 18
     candidate: "Juan Ponce de Leon"
     website: https://juan4judge.com
     party: D
@@ -4675,21 +5359,37 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 19
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 19 - John Fairman vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 19
     candidate: "Sara McGann"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 19
     candidate: "Dave Condron"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 19
     candidate: "John Harkins"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 19 - Michael Kane vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 19
     candidate: "Monica Somerville"
     party: D
     endorsed: false
@@ -4698,16 +5398,72 @@ candidates:
   # COOK COUNTY CIRCUIT COURT SUBCIRCUIT 20
   # ============================================
   - race: "Cook County Circuit Court Subcircuit 20 - David Haracz vacancy"
+    incumbent: true
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 20
     candidate: "Michael Zink"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 20 - Stephanie Miller vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 20
     candidate: "Belle Katubig"
     party: D
     endorsed: false
   
   - race: "Cook County Circuit Court Subcircuit 20 - Stephanie Miller vacancy"
+    incumbent: false
+    district:
+      layer: cook_county_circuit_court_subcircuits
+      number: 20
     candidate: "Jon Stromsta"
     party: D
+    endorsed: false
+
+  # ============================================
+  # ILLINOIS APPELLATE COURT
+  # ============================================
+  
+  - race: "Illinois 1st Appellate Court - Hoffman Vacancy"
+    incumbent: false
+    county: cook_county
+    website: https://judgerice.com/
+    candidate: "Judith C. Rice"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    incumbent: false
+    county: dupage_county; will_county
+    website: https://www.pavichforjustice.com/
+    candidate: "John Pavich"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    incumbent: false
+    county: dupage_county; will_county
+    website: https://www.judgeoconnell.com/
+    candidate: "Margaret \"Peggy\" O'Connell"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    incumbent: false
+    county: dupage_county; will_county
+    website: ""
+    candidate: "Jason A. Helland"
+    party: R
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    incumbent: false
+    county: dupage_county; will_county
+    website: ""
+    candidate: "Mark Senak"
+    party: R
     endorsed: false

@@ -118,6 +118,12 @@ export const APP_CONFIG: AppConfig = {
           numberProperty: "DISTRICT_INT",
           numberPropertyAliases: ["district_int"],
         },
+        cook_county_circuit_court_subcircuits: {
+          label: "Cook County Circuit Court Subcircuits",
+          path: `${DISTRICT_MAP_ROOT}/cook_county_circuit_court_subcircuits/districts.geojson`,
+          numberProperty: "SUBCIRCUIT",
+          numberPropertyAliases: ["subcircuit", "Subcircuit", "SUBCIRCUIT_NUM"],
+        },
       },
     },
   },
