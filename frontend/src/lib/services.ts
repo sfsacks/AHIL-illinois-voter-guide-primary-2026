@@ -190,19 +190,20 @@ export function lookupDistricts(
 function normalizeDistrictRef(
   config: EndorsementConfig | CandidateConfig
 ): DistrictRef {
-  // Check for county-wide races first
-  if (config.county !== undefined) {
-    if (typeof config.county === "string" && config.county.length > 0) {
-      return "county-wide"; // Special marker for county-wide races
-    }
-    return "invalid";
-  }
-
+  // Check for district field FIRST (most specific)
   if (config.district !== undefined) {
     const layer = config.district?.layer;
     const number = Number(config.district?.number);
     if (typeof layer === "string" && layer.length > 0 && Number.isFinite(number)) {
       return { layer, number };
+    }
+    return "invalid";
+  }
+
+  // Check for county-wide races SECOND
+  if (config.county !== undefined) {
+    if (typeof config.county === "string" && config.county.length > 0) {
+      return "county-wide"; // Special marker for county-wide races
     }
     return "invalid";
   }
@@ -243,10 +244,16 @@ function extractDistrictFromRace(race: string): { layer: string; number: number 
     return { layer: 'state_house', number: parseInt(houseStateMatch[1]) };
   }
 
-  // Cook County Board District 3 -> cook_county: 3
-  const cookMatch = race.match(/Cook County (?:Board (?:Of Commissioners )?)?District (\d+)/);
-  if (cookMatch) {
-    return { layer: 'cook_county', number: parseInt(cookMatch[1]) };
+  // Cook County Board Of Commissioners District 3 -> cook_county_commissioner: 3
+  const cookCommissionerMatch = race.match(/Cook County Board (?:Of Commissioners )?District (\d+)/);
+  if (cookCommissionerMatch) {
+    return { layer: 'cook_county_commissioner', number: parseInt(cookCommissionerMatch[1]) };
+  }
+
+  // Cook County Board of Review District 1 -> cook_county_board_of_review: 1
+  const boardOfReviewMatch = race.match(/Cook County Board of Review District (\d+)/);
+  if (boardOfReviewMatch) {
+    return { layer: 'cook_county_board_of_review', number: parseInt(boardOfReviewMatch[1]) };
   }
 
   // Cook County Circuit Court Subcircuit 1 -> cook_county_circuit_court_subcircuits: 1
@@ -260,6 +267,12 @@ function extractDistrictFromRace(race: string): { layer: string; number: number 
   const appellateMatch = race.match(/Illinois (\d+)(?:st|nd|rd|th) Appellate Court/);
   if (appellateMatch) {
     return { layer: 'illinois_appellate_court', number: parseInt(appellateMatch[1]) };
+  }
+
+  // Metropolitan Water Reclamation District -> metropolitan_water_reclamation_district: 1
+  // Matches both "Metropolitan Water Reclamation District" and variations with term lengths
+  if (race.includes('Metropolitan Water Reclamation District')) {
+    return { layer: 'metropolitan_water_reclamation_district', number: 1 };
   }
 
   return null;
@@ -416,7 +429,8 @@ export function getCandidatesWithEndorsements(
     
     // Try to extract district from race name if not in data
     const districtFromRace = districtRef === null ? extractDistrictFromRace(race) : null;
-    const finalDistrictRef = districtRef !== "invalid" ? districtRef : districtFromRace;
+    // Use YAML district if valid, otherwise use extracted from race name
+    const finalDistrictRef = (districtRef && districtRef !== "invalid") ? districtRef : districtFromRace;
 
     if (finalDistrictRef && typeof finalDistrictRef !== "string") {
       const userDistrict = districts[finalDistrictRef.layer];

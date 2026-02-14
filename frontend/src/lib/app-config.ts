@@ -118,17 +118,35 @@ export const APP_CONFIG: AppConfig = {
           numberProperty: "county",  // Special: this is a string property, not a number
           numberPropertyAliases: ["COUNTY", "County"],
         },
+        cook_county_commissioner: {
+          label: "Cook County Board of Commissioners",
+          path: `${DISTRICT_MAP_ROOT}/cook_county_commissioner/districts.geojson`,
+          numberProperty: "DISTRICT_INT",
+          numberPropertyAliases: ["district_int", "DISTRICT"],
+        },
+        cook_county_board_of_review: {
+          label: "Cook County Board of Review",
+          path: `${DISTRICT_MAP_ROOT}/cook_county_board_of_review/districts.geojson`,
+          numberProperty: "district_n",
+          numberPropertyAliases: ["DISTRICT_N", "District_N", "district_num"],
+        },
         cook_county_circuit_court_subcircuits: {
           label: "Cook County Circuit Court Subcircuits",
           path: `${DISTRICT_MAP_ROOT}/cook_county_circuit_court_subcircuits/districts.geojson`,
-          numberProperty: "SUBCIRCUIT",
+          numberProperty: "number",
           numberPropertyAliases: ["subcircuit", "Subcircuit", "SUBCIRCUIT_NUM"],
         },
         illinois_appellate_court: {
           label: "Illinois Appellate Court Districts",
           path: `${DISTRICT_MAP_ROOT}/illinois_appellate_court/districts.geojson`,
           numberProperty: "number",
-          numberPropertyAliases: ["Number", "NUMBER", "district", "District", "DISTRICT"],
+          numberPropertyAliases: ["Number", "NUMBER"],  // Removed DISTRICT from aliases
+        },
+        metropolitan_water_reclamation_district: {
+          label: "Metropolitan Water Reclamation District",
+          path: `${DISTRICT_MAP_ROOT}/metropolitan_water_reclamation_district/districts.geojson`,
+          numberProperty: "number",
+          numberPropertyAliases: ["Number", "NUMBER", "DISTRICT"],
         },
       },
     },

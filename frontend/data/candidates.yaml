@@ -4448,7 +4448,6 @@ candidates:
       layer: illinois_appellate_court
       number: 1  
     incumbent: false
-    county: cook_county
     website: https://judgerice.com/
     candidate: "Judith C. Rice"
     party: D
@@ -4459,7 +4458,6 @@ candidates:
       layer: illinois_appellate_court
       number: 3  
     incumbent: false
-    county: dupage_county; will_county
     website: https://www.pavichforjustice.com/
     candidate: "John Pavich"
     party: D
@@ -4470,7 +4468,6 @@ candidates:
       layer: illinois_appellate_court
       number: 3  
     incumbent: false
-    county: dupage_county; will_county
     website: https://www.judgeoconnell.com/
     candidate: "Margaret \"Peggy\" O'Connell"
     party: D
@@ -4481,7 +4478,6 @@ candidates:
       layer: illinois_appellate_court
       number: 3
     incumbent: false
-    county: dupage_county; will_county
     website: ""
     candidate: "Jason A. Helland"
     party: R
@@ -4492,7 +4488,6 @@ candidates:
       layer: illinois_appellate_court
       number: 3
     incumbent: false
-    county: dupage_county; will_county
     website: ""
     candidate: "Mark Senak"
     party: R
