@@ -649,7 +649,7 @@ export default function Home() {
                 alt="The rent is too damn high"
                 width={360}
                 height={280}
-                className="mx-auto mb-6 rounded-sm"
+                className="mx-auto mt-4 mb-6 rounded-sm"
               />
             </h1>
             <p className="text-base md:text-lg text-steel mb-8 leading-relaxed">

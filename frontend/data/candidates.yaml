@@ -4438,6 +4438,65 @@ candidates:
     candidate: "Harold Visser"
     party: R
     endorsed: false
+
+  # ============================================
+  # ILLINOIS APPELLATE COURT
+  # ============================================
+  
+  - race: "Illinois 1st Appellate Court - Hoffman Vacancy"
+    district:
+      layer: illinois_appellate_court
+      number: 1  
+    incumbent: false
+    county: cook_county
+    website: https://judgerice.com/
+    candidate: "Judith C. Rice"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    district:
+      layer: illinois_appellate_court
+      number: 3  
+    incumbent: false
+    county: dupage_county; will_county
+    website: https://www.pavichforjustice.com/
+    candidate: "John Pavich"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    district:
+      layer: illinois_appellate_court
+      number: 3  
+    incumbent: false
+    county: dupage_county; will_county
+    website: https://www.judgeoconnell.com/
+    candidate: "Margaret \"Peggy\" O'Connell"
+    party: D
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    district:
+      layer: illinois_appellate_court
+      number: 3
+    incumbent: false
+    county: dupage_county; will_county
+    website: ""
+    candidate: "Jason A. Helland"
+    party: R
+    endorsed: false
+
+  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
+    district:
+      layer: illinois_appellate_court
+      number: 3
+    incumbent: false
+    county: dupage_county; will_county
+    website: ""
+    candidate: "Mark Senak"
+    party: R
+    endorsed: false
   
   # ============================================
   # COOK COUNTY - BOARD PRESIDENT
@@ -5422,48 +5481,4 @@ candidates:
       number: 20
     candidate: "Jon Stromsta"
     party: D
-    endorsed: false
-
-  # ============================================
-  # ILLINOIS APPELLATE COURT
-  # ============================================
-  
-  - race: "Illinois 1st Appellate Court - Hoffman Vacancy"
-    incumbent: false
-    county: cook_county
-    website: https://judgerice.com/
-    candidate: "Judith C. Rice"
-    party: D
-    endorsed: false
-
-  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
-    incumbent: false
-    county: dupage_county; will_county
-    website: https://www.pavichforjustice.com/
-    candidate: "John Pavich"
-    party: D
-    endorsed: false
-
-  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
-    incumbent: false
-    county: dupage_county; will_county
-    website: https://www.judgeoconnell.com/
-    candidate: "Margaret \"Peggy\" O'Connell"
-    party: D
-    endorsed: false
-
-  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
-    incumbent: false
-    county: dupage_county; will_county
-    website: ""
-    candidate: "Jason A. Helland"
-    party: R
-    endorsed: false
-
-  - race: "Illinois 3rd Appellate Court - McDade Vacancy"
-    incumbent: false
-    county: dupage_county; will_county
-    website: ""
-    candidate: "Mark Senak"
-    party: R
     endorsed: false

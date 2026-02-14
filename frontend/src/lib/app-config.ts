@@ -115,14 +115,20 @@ export const APP_CONFIG: AppConfig = {
         cook_county: {
           label: "Cook County",
           path: `${DISTRICT_MAP_ROOT}/cook_county/districts.geojson`,
-          numberProperty: "DISTRICT_INT",
-          numberPropertyAliases: ["district_int"],
+          numberProperty: "county",  // Special: this is a string property, not a number
+          numberPropertyAliases: ["COUNTY", "County"],
         },
         cook_county_circuit_court_subcircuits: {
           label: "Cook County Circuit Court Subcircuits",
           path: `${DISTRICT_MAP_ROOT}/cook_county_circuit_court_subcircuits/districts.geojson`,
           numberProperty: "SUBCIRCUIT",
           numberPropertyAliases: ["subcircuit", "Subcircuit", "SUBCIRCUIT_NUM"],
+        },
+        illinois_appellate_court: {
+          label: "Illinois Appellate Court Districts",
+          path: `${DISTRICT_MAP_ROOT}/illinois_appellate_court/districts.geojson`,
+          numberProperty: "number",
+          numberPropertyAliases: ["Number", "NUMBER", "district", "District", "DISTRICT"],
         },
       },
     },

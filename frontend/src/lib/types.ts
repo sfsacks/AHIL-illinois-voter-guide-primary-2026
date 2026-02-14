@@ -10,6 +10,9 @@ export interface EndorsementDistrictRef {
   number: number;
 }
 
+// Type for normalizeDistrictRef return value
+export type DistrictRef = EndorsementDistrictRef | "invalid" | "county-wide" | null;
+
 export interface Endorsement {
   race: string;
   candidate: string;
@@ -49,6 +52,7 @@ export interface EndorsementConfig {
   district_layer?: string;
   district_type?: string;
   district_number?: number;
+  county?: string; // NEW: County identifier for county-wide races
 }
 
 export interface CandidateConfig {
@@ -61,6 +65,7 @@ export interface CandidateConfig {
   district_layer?: string;
   district_type?: string;
   district_number?: number;
+  county?: string; // NEW: County identifier for county-wide races
 }
 
 export interface AutocompleteSuggestion {

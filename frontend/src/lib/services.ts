@@ -16,6 +16,7 @@ import type {
   Endorsement,
   EndorsementConfig,
   EndorsementDistrictRef,
+  DistrictRef,
   Candidate,
   CandidateConfig,
 } from "./types";
@@ -55,6 +56,13 @@ function getDistrictNumberFromFeatureProperties(
   for (const col of columns) {
     if (col in props) {
       const val = props[col];
+      
+      // Special case for cook_county: the property value is "cook_county" string
+      // We return 1 as a dummy number to indicate "in Cook County"
+      if (layerId === 'cook_county' && String(val) === 'cook_county') {
+        return 1; // Dummy value - just means "in Cook County"
+      }
+      
       const parsed = parseInt(String(val), 10);
       if (!Number.isNaN(parsed)) {
         return parsed;
@@ -181,7 +189,15 @@ export function lookupDistricts(
 
 function normalizeDistrictRef(
   config: EndorsementConfig | CandidateConfig
-): EndorsementDistrictRef | "invalid" | null {
+): DistrictRef {
+  // Check for county-wide races first
+  if (config.county !== undefined) {
+    if (typeof config.county === "string" && config.county.length > 0) {
+      return "county-wide"; // Special marker for county-wide races
+    }
+    return "invalid";
+  }
+
   if (config.district !== undefined) {
     const layer = config.district?.layer;
     const number = Number(config.district?.number);
@@ -239,6 +255,13 @@ function extractDistrictFromRace(race: string): { layer: string; number: number 
     return { layer: 'cook_county_circuit_court_subcircuits', number: parseInt(subcircuitMatch[1]) };
   }
 
+  // Illinois 1st Appellate Court -> illinois_appellate_court: 1
+  // Also handles: Illinois 3rd Appellate Court, etc.
+  const appellateMatch = race.match(/Illinois (\d+)(?:st|nd|rd|th) Appellate Court/);
+  if (appellateMatch) {
+    return { layer: 'illinois_appellate_court', number: parseInt(appellateMatch[1]) };
+  }
+
   return null;
 }
 
@@ -263,16 +286,35 @@ export function getEndorsements(
       continue;
     }
 
+    // Handle county-wide endorsements (using county field)
+    if (districtRef === "county-wide" && endorsement.county) {
+      // Check if user is in the specified county
+      const userCountyDistrict = districts[endorsement.county];
+      if (userCountyDistrict !== null) {
+        result.push({
+          race,
+          candidate,
+          party,
+          district_layer: endorsement.county,
+          district_type: endorsement.county,
+        });
+      }
+      continue;
+    }
+
     // District-specific endorsement
-    const userDistrict = districts[districtRef.layer];
-    if (userDistrict !== null && userDistrict === districtRef.number) {
-      result.push({
-        race,
-        candidate,
-        party,
-        district_layer: districtRef.layer,
-        district_type: districtRef.layer,
-      });
+    // TypeScript now knows districtRef must be EndorsementDistrictRef here
+    if (typeof districtRef !== "string") {
+      const userDistrict = districts[districtRef.layer];
+      if (userDistrict !== null && userDistrict === districtRef.number) {
+        result.push({
+          race,
+          candidate,
+          party,
+          district_layer: districtRef.layer,
+          district_type: districtRef.layer,
+        });
+      }
     }
   }
 
@@ -352,11 +394,31 @@ export function getCandidatesWithEndorsements(
     // For district races, check if candidate's district matches user's district
     const districtRef = normalizeDistrictRef(candidate);
     
+    // Handle county-wide races (using county field)
+    if (districtRef === "county-wide" && candidate.county) {
+      // Check if user is in the specified county
+      const userCountyDistrict = districts[candidate.county];
+      if (userCountyDistrict !== null) {
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        result.push({
+          race,
+          candidate: candidateName,
+          party,
+          website,
+          incumbent,
+          endorsed: isEndorsed,
+          district_layer: candidate.county,
+          district_type: candidate.county,
+        });
+      }
+      continue;
+    }
+    
     // Try to extract district from race name if not in data
     const districtFromRace = districtRef === null ? extractDistrictFromRace(race) : null;
     const finalDistrictRef = districtRef !== "invalid" ? districtRef : districtFromRace;
 
-if (finalDistrictRef && typeof finalDistrictRef !== "string") {
+    if (finalDistrictRef && typeof finalDistrictRef !== "string") {
       const userDistrict = districts[finalDistrictRef.layer];
       if (userDistrict !== null && userDistrict === finalDistrictRef.number) {
         const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
