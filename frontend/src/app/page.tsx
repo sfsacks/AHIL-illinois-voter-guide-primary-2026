@@ -54,6 +54,29 @@ export default function Home() {
   const abortControllerRef = useRef<AbortController | null>(null);
   const hydratedFromUrl = useRef(false);
 
+  // Categorize races into Federal, State, and Local
+  function categorizeRace(raceName: string): 'federal' | 'state' | 'local' {
+    const lowerRace = raceName.toLowerCase();
+    
+    // Federal races
+    if (lowerRace.includes('us senate') || lowerRace.includes('u.s. senate') ||
+        lowerRace.includes('us house') || lowerRace.includes('u.s. house')) {
+      return 'federal';
+    }
+    
+    // State races
+    if (lowerRace.includes('governor') || lowerRace.includes('lieutenant governor') ||
+        lowerRace.includes('secretary of state') || lowerRace.includes('attorney general') ||
+        lowerRace.includes('comptroller') || lowerRace.includes('treasurer') ||
+        lowerRace.includes('state senate') || lowerRace.includes('state house') ||
+        lowerRace.includes('appellate court')) {
+      return 'state';
+    }
+    
+    // Everything else is local
+    return 'local';
+  }
+
   function setShareCoordinates(lat: number, lng: number) {
     if (typeof window === "undefined") return;
 
@@ -377,6 +400,23 @@ export default function Home() {
     return acc;
   }, {} as Record<string, typeof filteredCandidates>);
 
+  // Group races by category
+  const racesByCategory = Object.keys(candidatesByRace).reduce((acc, race) => {
+    const category = categorizeRace(race);
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(race);
+    return acc;
+  }, {} as Record<'federal' | 'state' | 'local', string[]>);
+
+  const categoryOrder: ('federal' | 'state' | 'local')[] = ['federal', 'state', 'local'];
+  const categoryLabels = {
+    federal: 'FEDERAL',
+    state: 'STATE OF ILLINOIS',
+    local: 'LOCAL'
+  };
+
   // Auto-select endorsed candidates when results change
   useEffect(() => {
     if (result?.candidates) {
@@ -414,10 +454,18 @@ export default function Home() {
 
   // Select a candidate for a race
   const selectCandidate = (race: string, candidateName: string) => {
-    setSelectedCandidates(prev => ({
-      ...prev,
-      [race]: candidateName
-    }));
+    setSelectedCandidates(prev => {
+      // If clicking the already selected candidate, deselect it
+      if (prev[race] === candidateName) {
+        const { [race]: _, ...rest } = prev;
+        return rest;
+      }
+      // Otherwise, select the new candidate
+      return {
+        ...prev,
+        [race]: candidateName
+      };
+    });
   };
 
   // Toggle candidate details expansion
@@ -475,6 +523,10 @@ export default function Home() {
     const displayMinutes = minutes.toString().padStart(2, '0');
     const timestamp = `${displayHours}:${displayMinutes} ${ampm}`;
     
+    // TODO: Replace this placeholder with actual base64 of ahil-logo.png
+    // You can get this by running: cat ahil-logo.png | base64
+    const logoBase64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAbwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE5SURBVDiNpZO9SgNBFIW/2U0MmBTBQrAQsbGwsBULwUKwsRDs7K3Ey1jZWthY+ABWPoGVhY2FjY2FjY2NjZWNhY1gI5hNzO7OeCEQE7Mmu3Dh3pk558ydmSuqSl00AAtYBhaAJtAAPgEX6AHdKIoi1dQfABfYBJaBJWAeaAA94Bx4Ah6BGFWlDmwBe0ALmAVc4Ah4BB6ACFVNYBvYBxaBeWAGeAfugQfgFYhRVQe2gUNgEZgDpoE34A64A56BCFWdBHaBY2AJmAOmgFfgFrgBXoAYVXWBPeAEWAbmgEngGbgGboFnIEJVHeAQOAVWgAYwDjwC18AV8AxEqKoNHACnwCowBowBD8AlcAm8ABGqagEHwDmwBowCw8A9cAFcAC9AhKpawCFwAawDI8AQ0AYugHPgFYhQ1X/5AYTCeXxqv4UaAAAAAElFTkSuQmCC';
+    
     let html = `
 <!DOCTYPE html>
 <html>
@@ -519,64 +571,80 @@ export default function Home() {
     .content {
       padding: 24px;
     }
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
     .meta {
       background: #F5F5F4;
-      padding: 16px;
+      padding: 12px 16px;
       border-radius: 4px;
       margin-bottom: 24px;
       font-size: 14px;
       color: #6B7280;
     }
-    .race {
-      margin-bottom: 24px;
-      border-bottom: 1px solid #E5E7EB;
-      padding-bottom: 16px;
-    }
-    .race:last-child {
-      border-bottom: none;
-    }
-    .race-title {
-      font-size: 16px;
+    .category-header {
+      background: #E5E7EB;
+      padding: 8px 12px;
+      margin: 20px 0 12px 0;
+      font-size: 13px;
       font-weight: 600;
-      color: #1A3885;
+      color: #1a1a1a;
+      letter-spacing: 0.5px;
+    }
+    .category-header:first-of-type {
+      margin-top: 0;
+    }
+    .race {
+      margin-bottom: 12px;
+    }
+    .candidate-card {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 6px;
+      padding: 14px 16px;
       margin-bottom: 8px;
     }
-    .candidate {
+    .race-title {
+      font-size: 13px;
+      font-weight: 400;
+      color: #6B7280;
+      margin-bottom: 8px;
+      text-transform: capitalize;
+    }
+    .candidate-info {
       display: flex;
       align-items: center;
-      padding: 12px;
-      background: #F9FAFB;
-      border-radius: 4px;
-      margin-top: 8px;
-    }
-    .candidate.selected {
-      background: #FEF2F2;
-      border: 2px solid #EE5819;
-    }
-    .checkbox {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: 2px solid #D1D5DB;
-      margin-right: 12px;
-      flex-shrink: 0;
-    }
-    .checkbox.checked {
-      background: #EE5819;
-      border-color: #EE5819;
+      gap: 6px;
+      flex: 1;
     }
     .candidate-name {
       font-weight: 500;
-      flex: 1;
+      font-size: 15px;
+      color: #1a1a1a;
     }
-    .endorsed-badge {
-      background: #EE5819;
-      color: white;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-size: 11px;
-      font-weight: 500;
-      margin-left: 8px;
+    .incumbent-indicator {
+      font-size: 12px;
+      color: #6B7280;
+    }
+    .ahil-logo {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .party-badge {
+      font-size: 12px;
+      color: #6B7280;
+      background: #F5F5F4;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(209, 213, 219, 0.5);
+      flex-shrink: 0;
     }
     .footer {
       text-align: center;
@@ -584,6 +652,13 @@ export default function Home() {
       font-size: 12px;
       color: #6B7280;
       border-top: 1px solid #E5E7EB;
+    }
+    .footnote {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #E5E7EB;
+      font-size: 12px;
+      color: #6B7280;
     }
     @media print {
       body { background: white; }
@@ -599,30 +674,62 @@ export default function Home() {
     </div>
     <div class="content">
       <div class="meta">
-        <strong>Your Address:</strong> ${result?.address_used || 'Not specified'}<br>
         <strong>Saved:</strong> ${date} at ${timestamp}
       </div>
+      <h2 class="section-title">Your Selections</h2>
 `;
 
-    // Add each race with selections
+    // Group selections by category
+    const selectionsByCategory: Record<string, Array<{race: string, candidates: Candidate[]}>> = {
+      federal: [],
+      state: [],
+      local: []
+    };
+
     Object.entries(candidatesByRace).forEach(([race, candidates]) => {
-      html += `<div class="race"><div class="race-title">${race}</div>`;
+      const selectedCandidate = selectedCandidates[race];
+      if (selectedCandidate) {
+        const category = categorizeRace(race);
+        selectionsByCategory[category].push({ race, candidates });
+      }
+    });
+
+    // Add each category with its races
+    categoryOrder.forEach(category => {
+      const races = selectionsByCategory[category];
+      if (races.length === 0) return; // Skip empty categories
       
-      candidates.forEach(candidate => {
-        const isSelected = selectedCandidates[race] === candidate.candidate;
-        html += `
-          <div class="candidate ${isSelected ? 'selected' : ''}">
-            <div class="checkbox ${isSelected ? 'checked' : ''}"></div>
-            <div class="candidate-name">${candidate.candidate}</div>
-            ${candidate.endorsed ? '<span class="endorsed-badge">AHIL</span>' : ''}
+      html += `<div class="category-header">${categoryLabels[category]}</div>`;
+      
+      races.forEach(({ race, candidates }) => {
+        const selectedCandidate = selectedCandidates[race];
+        html += `<div class="race">`;
+        
+        candidates.forEach(candidate => {
+          const isSelected = selectedCandidate === candidate.candidate;
+          if (!isSelected) return;
+          
+          html += `
+          <div class="candidate-card">
+            <div class="race-title">${race}</div>
+            <div class="candidate-info">
+              <span class="candidate-name">${candidate.candidate}</span>
+              ${candidate.incumbent ? '<span class="incumbent-indicator">(i)</span>' : ''}
+              ${candidate.endorsed ? `<img src="${logoBase64}" alt="AHIL Endorsed" class="ahil-logo" />` : ''}
+              <span class="party-badge">${candidate.party}</span>
+            </div>
           </div>
-        `;
+          `;
+        });
+        
+        html += `</div>`;
       });
-      
-      html += `</div>`;
     });
 
     html += `
+      <div class="footnote">
+        (i) = Incumbent
+      </div>
       <div class="footer">
         Generated by Abundant Housing Illinois Voter Guide<br>
         abundanthousingillinois.org
@@ -725,10 +832,7 @@ export default function Home() {
               onClick={() => setOnboardingStep(0)}
               className="w-full mt-6 text-steel hover:text-ink text-sm transition-colors flex items-center justify-center gap-1"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back
+              ← Back
             </button>
           </div>
         </div>
@@ -878,9 +982,9 @@ export default function Home() {
         <>
           <header className="bg-ink text-white">
             <div className="w-full px-4 md:px-6 py-3">
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-6xl mx-auto text-center">
                 <h1 className="font-display text-xl font-medium">
-                  {APP_CONFIG.branding.orgName}
+                  <span className="italic">The Rent is Too Damn High!</span> Voter Guide
                 </h1>
                 <p className="text-xs text-white/80 mt-0.5">
                   {APP_CONFIG.branding.headerSubtitle}
@@ -1026,201 +1130,221 @@ export default function Home() {
                     </button>
                   </div>
                   
-                  <div className="space-y-2">
-                    {Object.entries(candidatesByRace).map(([race, candidates]) => {
-                      const isExpanded = expandedRaces.has(race);
-                      const endorsedCount = candidates.filter(c => c.endorsed).length;
+                  <div className="space-y-4">
+                    {categoryOrder.map(category => {
+                      const racesInCategory = racesByCategory[category] || [];
+                      if (racesInCategory.length === 0) return null;
                       
                       return (
-                        <div key={race} className="border border-border rounded-sm overflow-hidden">
-                          {/* Race Header - Clickable */}
-                          <button
-                            onClick={() => toggleRace(race)}
-                            className="w-full px-4 py-3 bg-warm hover:bg-warm/70 transition-colors flex items-center justify-between text-left"
-                          >
-                            <div className="flex-1">
-                              <h4 className="font-medium text-ink text-sm">{race}</h4>
-                              <p className="text-xs text-steel mt-0.5">
-                                {candidates.length} candidate{candidates.length !== 1 ? 's' : ''}
-                                {endorsedCount > 0 && (
-                                  <span className="ml-2">
-                                    • {endorsedCount} endorsed
-                                  </span>
-                                )}
-                              </p>
-                            </div>
-                            
-                            <div className="flex items-center gap-2">
-                              {/* Checkmark if user has selected a candidate */}
-                              {selectedCandidates[race] && (
-                                <span 
-                                  className="inline-block w-5 h-5 rounded-full bg-brand text-white text-xs leading-5 text-center"
-                                  title="You've made a selection"
-                                >
-                                  ✓
-                                </span>
-                              )}
+                        <div key={category}>
+                          {/* Category Header */}
+                          <div className="bg-[#E5E7EB] py-2.5 px-4 mb-3">
+                            <h3 className="text-sm font-semibold text-black tracking-wide uppercase">
+                              {categoryLabels[category]}
+                            </h3>
+                          </div>
+                          
+                          {/* Races in this category */}
+                          <div className="space-y-2">
+                            {racesInCategory.map(race => {
+                              const candidates = candidatesByRace[race];
+                              const isExpanded = expandedRaces.has(race);
+                              const endorsedCount = candidates.filter(c => c.endorsed).length;
                               
-                              {/* Chevron */}
-                              <svg
-                                className={`w-5 h-5 text-steel transition-transform ${isExpanded ? 'rotate-180' : ''}`}
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                              </svg>
-                            </div>
-                          </button>
-
-                          {/* Candidates List - Shown when expanded */}
-                          {isExpanded && (
-                            <div className="border-t border-border bg-surface">
-                              <div className="divide-y divide-border/50">
-                                {candidates.map((candidate, index) => {
-                                  const candidateKey = `${race}-${candidate.candidate}`;
-                                  const isSelected = selectedCandidates[race] === candidate.candidate;
-                                  const isDetailsExpanded = expandedCandidates.has(candidateKey);
-                                  
-                                  return (
-                                    <div key={candidateKey} className="hover:bg-warm/30 transition-colors">
-                                      {/* Candidate Row */}
-                                      <div
-                                        onClick={() => selectCandidate(race, candidate.candidate)}
-                                        className="w-full px-4 py-3 flex items-center gap-3 cursor-pointer"
-                                      >
-                                        {/* Candidate Info */}
-                                        <div className="flex-1 min-w-0">
-                                          <div className="flex items-center gap-2">
-                                            <span className="font-medium text-ink text-sm">
-                                              {candidate.candidate}
-                                            </span>
-                                            {/* Incumbent Indicator - MOVED BETWEEN NAME AND LOGO */}
-                                            {candidate.incumbent && (
-                                              <span className="text-xs text-steel">(i)</span>
-                                            )}
-                                            {/* AHIL Logo (if endorsed) */}
-                                            {candidate.endorsed && (
-                                              <div className="flex-shrink-0 w-4 h-4 relative" title="Endorsed by Abundant Housing IL">
-                                                <Image
-                                                  src="/ahil-logo.png"
-                                                  alt="AHIL Endorsed"
-                                                  width={16}
-                                                  height={16}
-                                                  className="object-contain"
-                                                />
-                                              </div>
-                                            )}
-                                          </div>
-                                          <div className="flex items-center gap-2 mt-0.5">
-                                            <button
-                                              onClick={(e) => {
-                                                e.stopPropagation();
-                                                toggleCandidateDetails(candidateKey);
-                                              }}
-                                              className="text-xs text-steel hover:text-brand flex items-center gap-1"
-                                            >
-                                              View details
-                                              <svg
-                                                className={`w-3 h-3 transition-transform ${isDetailsExpanded ? 'rotate-180' : ''}`}
-                                                fill="none"
-                                                viewBox="0 0 24 24"
-                                                stroke="currentColor"
-                                              >
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                              </svg>
-                                            </button>
-                                          </div>
-                                        </div>
-
-                                        {/* Party Badge - Removed Incumbent Indicator */}
-                                        <div className="flex-shrink-0">
-                                          <span className="text-xs text-steel px-2 py-1 bg-warm rounded border border-border/50">
-                                            {candidate.party}
+                              return (
+                                <div key={race} className="border border-border rounded-sm overflow-hidden">
+                                  {/* Race Header - Clickable */}
+                                  <button
+                                    onClick={() => toggleRace(race)}
+                                    className="w-full px-4 py-3 bg-warm hover:bg-warm/70 transition-colors flex items-center justify-between text-left"
+                                  >
+                                    <div className="flex-1">
+                                      <h4 className="font-medium text-ink text-sm">{race}</h4>
+                                      <p className="text-xs text-steel mt-0.5">
+                                        {candidates.length} candidate{candidates.length !== 1 ? 's' : ''}
+                                        {endorsedCount > 0 && (
+                                          <span className="ml-2">
+                                            • {endorsedCount} endorsed
                                           </span>
-                                        </div>
+                                        )}
+                                      </p>
+                                    </div>
+                                    
+                                    <div className="flex items-center gap-2">
+                                      {/* Checkmark if user has selected a candidate */}
+                                      {selectedCandidates[race] && (
+                                        <span 
+                                          className="inline-block w-5 h-5 rounded-full bg-brand text-white text-xs leading-5 text-center"
+                                          title="You've made a selection"
+                                        >
+                                          ✓
+                                        </span>
+                                      )}
+                                      
+                                      {/* Chevron */}
+                                      <svg
+                                        className={`w-5 h-5 text-steel transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                      >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                      </svg>
+                                    </div>
+                                  </button>
 
-                                        {/* Radio Button */}
-                                        <div className="flex-shrink-0">
-                                          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                                            isSelected 
-                                              ? 'border-brand bg-brand' 
-                                              : 'border-steel/40 bg-white'
-                                          }`}>
-                                          </div>
-                                        </div>
-                                      </div>
-
-                                      {/* Expanded Details Section */}
-                                      {isDetailsExpanded && (
-                                        <div className="px-4 pb-4 pl-12 space-y-3 bg-warm/20 border-t border-border/30">
-                                          {/* Campaign Website */}
-                                          {candidate.website && (
-                                            <div className="pt-3">
-                                              <a
-                                                href={candidate.website}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-xs text-brand hover:underline inline-flex items-center gap-1"
-                                                onClick={(e) => e.stopPropagation()}
+                                  {/* Candidates List - Shown when expanded */}
+                                  {isExpanded && (
+                                    <div className="border-t border-border bg-surface">
+                                      <div className="divide-y divide-border/50">
+                                        {candidates.map((candidate, index) => {
+                                          const candidateKey = `${race}-${candidate.candidate}`;
+                                          const isSelected = selectedCandidates[race] === candidate.candidate;
+                                          const isDetailsExpanded = expandedCandidates.has(candidateKey);
+                                          
+                                          return (
+                                            <div key={candidateKey} className="hover:bg-warm/30 transition-colors">
+                                              {/* Candidate Row */}
+                                              <div
+                                                onClick={() => selectCandidate(race, candidate.candidate)}
+                                                className="w-full px-4 py-3 flex items-center gap-3 cursor-pointer"
                                               >
-                                                🔗 Campaign Website
-                                              </a>
-                                            </div>
-                                          )}
+                                                {/* Candidate Info */}
+                                                <div className="flex-1 min-w-0">
+                                                  <div className="flex items-center gap-2">
+                                                    <span className="font-medium text-ink text-sm">
+                                                      {candidate.candidate}
+                                                    </span>
+                                                    {/* Incumbent Indicator - MOVED BETWEEN NAME AND LOGO */}
+                                                    {candidate.incumbent && (
+                                                      <span className="text-xs text-steel">(i)</span>
+                                                    )}
+                                                    {/* AHIL Logo (if endorsed) */}
+                                                    {candidate.endorsed && (
+                                                      <div className="flex-shrink-0 w-4 h-4 relative" title="Endorsed by Abundant Housing IL">
+                                                        <Image
+                                                          src="/ahil-logo.png"
+                                                          alt="AHIL Endorsed"
+                                                          width={16}
+                                                          height={16}
+                                                          className="object-contain"
+                                                        />
+                                                      </div>
+                                                    )}
+                                                  </div>
+                                                  <div className="flex items-center gap-2 mt-0.5">
+                                                    <button
+                                                      onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        toggleCandidateDetails(candidateKey);
+                                                      }}
+                                                      className="text-xs text-steel hover:text-brand flex items-center gap-1"
+                                                    >
+                                                      View details
+                                                      <svg
+                                                        className={`w-3 h-3 transition-transform ${isDetailsExpanded ? 'rotate-180' : ''}`}
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                      >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                      </svg>
+                                                    </button>
+                                                  </div>
+                                                </div>
 
-                                          {/* Issue Positions */}
-                                          <div>
-                                            <div className="flex items-center gap-2 mb-2">
-                                              <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                              </svg>
-                                              <h6 className="font-medium text-ink text-xs uppercase tracking-wide">Issue Positions</h6>
-                                            </div>
-                                            <div className="space-y-2 pl-6">
-                                              {/* Placeholder for future issue data */}
-                                              <div className="bg-surface rounded px-3 py-2 border border-border/30">
-                                                <p className="text-xs text-steel italic">
-                                                  Issue position data coming soon
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-
-                                          {/* Other Endorsements */}
-                                          <div>
-                                            <div className="flex items-center gap-2 mb-2">
-                                              <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                                              </svg>
-                                              <h6 className="font-medium text-ink text-xs uppercase tracking-wide">Endorsed By</h6>
-                                            </div>
-                                            <div className="pl-6">
-                                              {/* Placeholder for future endorsement data */}
-                                              {candidate.endorsed ? (
-                                                <div className="flex flex-wrap gap-1.5">
-                                                  <span className="inline-block text-xs bg-brand/10 text-brand px-2 py-1 rounded border border-brand/20">
-                                                    Abundant Housing IL
-                                                  </span>
-                                                  <span className="text-xs text-steel italic px-2 py-1">
-                                                    Additional endorsements coming soon
+                                                {/* Party Badge - Removed Incumbent Indicator */}
+                                                <div className="flex-shrink-0">
+                                                  <span className="text-xs text-steel px-2 py-1 bg-warm rounded border border-border/50">
+                                                    {candidate.party}
                                                   </span>
                                                 </div>
-                                              ) : (
-                                                <p className="text-xs text-steel italic">
-                                                  Endorsement data coming soon
-                                                </p>
+
+                                                {/* Radio Button */}
+                                                <div className="flex-shrink-0">
+                                                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                                                    isSelected 
+                                                      ? 'border-brand bg-brand' 
+                                                      : 'border-steel/40 bg-white'
+                                                  }`}>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              {/* Expanded Details Section */}
+                                              {isDetailsExpanded && (
+                                                <div className="px-4 pb-4 pl-12 space-y-3 bg-warm/20 border-t border-border/30">
+                                                  {/* Campaign Website */}
+                                                  {candidate.website && (
+                                                    <div className="pt-3">
+                                                      <a
+                                                        href={candidate.website}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-xs text-brand hover:underline inline-flex items-center gap-1"
+                                                        onClick={(e) => e.stopPropagation()}
+                                                      >
+                                                        🔗 Campaign Website
+                                                      </a>
+                                                    </div>
+                                                  )}
+
+                                                  {/* Issue Positions */}
+                                                  <div>
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                      <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                                      </svg>
+                                                      <h6 className="font-medium text-ink text-xs uppercase tracking-wide">Issue Positions</h6>
+                                                    </div>
+                                                    <div className="space-y-2 pl-6">
+                                                      {/* Placeholder for future issue data */}
+                                                      <div className="bg-surface rounded px-3 py-2 border border-border/30">
+                                                        <p className="text-xs text-steel italic">
+                                                          Issue position data coming soon
+                                                        </p>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  {/* Other Endorsements */}
+                                                  <div>
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                      <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                      </svg>
+                                                      <h6 className="font-medium text-ink text-xs uppercase tracking-wide">Endorsed By</h6>
+                                                    </div>
+                                                    <div className="pl-6">
+                                                      {/* Placeholder for future endorsement data */}
+                                                      {candidate.endorsed ? (
+                                                        <div className="flex flex-wrap gap-1.5">
+                                                          <span className="inline-block text-xs bg-brand/10 text-brand px-2 py-1 rounded border border-brand/20">
+                                                            Abundant Housing IL
+                                                          </span>
+                                                          <span className="text-xs text-steel italic px-2 py-1">
+                                                            Additional endorsements coming soon
+                                                          </span>
+                                                        </div>
+                                                      ) : (
+                                                        <p className="text-xs text-steel italic">
+                                                          Endorsement data coming soon
+                                                        </p>
+                                                      )}
+                                                    </div>
+                                                  </div>
+                                                </div>
                                               )}
                                             </div>
-                                          </div>
-                                        </div>
-                                      )}
+                                          );
+                                        })}
+                                      </div>
                                     </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          )}
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
                       );
                     })}
@@ -1231,6 +1355,16 @@ export default function Home() {
                     <p className="text-xs text-steel">
                       (i) = Incumbent
                     </p>
+                  </div>
+                  
+                  {/* Back button */}
+                  <div className="mt-6 text-center">
+                    <button
+                      onClick={() => setOnboardingStep(2)}
+                      className="text-steel hover:text-ink text-sm transition-colors"
+                    >
+                      ← Back
+                    </button>
                   </div>
                 </>
               ) : (
