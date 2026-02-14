@@ -356,7 +356,7 @@ export function getCandidatesWithEndorsements(
     const districtFromRace = districtRef === null ? extractDistrictFromRace(race) : null;
     const finalDistrictRef = districtRef !== "invalid" ? districtRef : districtFromRace;
 
-    if (finalDistrictRef && finalDistrictRef !== "invalid") {
+if (finalDistrictRef && typeof finalDistrictRef !== "string") {
       const userDistrict = districts[finalDistrictRef.layer];
       if (userDistrict !== null && userDistrict === finalDistrictRef.number) {
         const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
