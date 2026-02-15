@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { LookupResponse } from "@/lib/types";
+import { LookupResponse, Candidate } from "@/lib/types";
 import { APP_CONFIG } from "@/lib/app-config";
 
 interface Suggestion {
@@ -12,15 +12,6 @@ interface Suggestion {
 }
 
 type Party = 'D' | 'R' | 'L' | 'all';
-
-interface Candidate {
-  candidate: string;
-  party: Party;
-  race: string;
-  endorsed?: boolean;
-  incumbent?: boolean;
-  website?: string;
-}
 
 function Spinner() {
   return (
@@ -40,6 +31,7 @@ export default function Home() {
   const [expandedRaces, setExpandedRaces] = useState<Set<string>>(new Set());
   const [selectedCandidates, setSelectedCandidates] = useState<Record<string, string>>({});
   const [expandedCandidates, setExpandedCandidates] = useState<Set<string>>(new Set());
+  const [showEndorsedOnly, setShowEndorsedOnly] = useState(false);
 
   // Onboarding state
   const [onboardingStep, setOnboardingStep] = useState(0);
@@ -385,10 +377,11 @@ export default function Home() {
   }
 
   // Filter candidates by selected party - use candidates if available, fallback to endorsements
-  const candidatesData = result?.candidates || result?.endorsements || [];
+  const candidatesData: Candidate[] = result?.candidates || result?.endorsements?.map(e => ({ ...e, endorsed: e.endorsed ?? true })) || [];
   const filteredCandidates = candidatesData.filter((candidate) => {
-    if (selectedParty === 'all') return true;
-    return candidate.party === selectedParty;
+    if (selectedParty !== 'all' && candidate.party !== selectedParty) return false;
+    if (showEndorsedOnly && !candidate.endorsed) return false;
+    return true;
   });
 
   // Group candidates by race
@@ -776,6 +769,19 @@ export default function Home() {
 
       {/* Step 2: Primary Selection */}
       {onboardingStep === 1 && (
+        <>
+        <header className="bg-ink text-white">
+          <div className="w-full px-4 md:px-6 py-3">
+            <div className="max-w-6xl mx-auto text-center">
+              <h1 className="font-display text-xl font-medium">
+                <span className="italic">The Rent is Too Damn High!</span> Voter Guide
+              </h1>
+              <p className="text-xs text-white/80 mt-0.5">
+                {APP_CONFIG.branding.headerSubtitle}
+              </p>
+            </div>
+          </div>
+        </header>
         <div className="flex-1 flex flex-col items-center justify-center p-8">
           <div className="max-w-md w-full bg-surface border border-border rounded-sm p-8 shadow-sm">
             <h2 className="font-display text-xl font-medium text-ink mb-3">
@@ -836,10 +842,42 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <footer className="bg-ink text-white/40 py-6">
+          <div className="max-w-xl mx-auto px-4 text-center">
+            <p className="text-xs font-body">
+              {APP_CONFIG.branding.orgName} &mdash; {APP_CONFIG.branding.footerBlurb}
+            </p>
+            <p className="text-xs font-body mt-1.5">
+              Maintained by{" "}
+              <a
+                href={APP_CONFIG.branding.attributionUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors duration-150 underline underline-offset-2"
+              >
+                {APP_CONFIG.branding.attributionName}
+              </a>
+            </p>
+          </div>
+        </footer>
+        </>
       )}
 
       {/* Step 3: Address Entry */}
       {onboardingStep === 2 && (
+        <>
+        <header className="bg-ink text-white">
+          <div className="w-full px-4 md:px-6 py-3">
+            <div className="max-w-6xl mx-auto text-center">
+              <h1 className="font-display text-xl font-medium">
+                <span className="italic">The Rent is Too Damn High!</span> Voter Guide
+              </h1>
+              <p className="text-xs text-white/80 mt-0.5">
+                {APP_CONFIG.branding.headerSubtitle}
+              </p>
+            </div>
+          </div>
+        </header>
         <div className="flex-1 flex flex-col items-center justify-center p-8">
           <div className="max-w-md w-full bg-surface border border-border rounded-sm p-8 shadow-sm">
             <h2 className="font-display text-2xl font-medium text-ink mb-3">
@@ -975,6 +1013,25 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <footer className="bg-ink text-white/40 py-6">
+          <div className="max-w-xl mx-auto px-4 text-center">
+            <p className="text-xs font-body">
+              {APP_CONFIG.branding.orgName} &mdash; {APP_CONFIG.branding.footerBlurb}
+            </p>
+            <p className="text-xs font-body mt-1.5">
+              Maintained by{" "}
+              <a
+                href={APP_CONFIG.branding.attributionUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors duration-150 underline underline-offset-2"
+              >
+                {APP_CONFIG.branding.attributionName}
+              </a>
+            </p>
+          </div>
+        </footer>
+        </>
       )}
 
       {/* Step 4: Main Ballot View */}
@@ -1024,64 +1081,9 @@ export default function Home() {
                       Your Ballot
                     </h3>
                     <p className="text-xs text-steel mb-4">
-                      Tap to select candidates. Your choices are automatically saved.
+                      Tap to select candidates. These candidates are on your specific ballot based on where you live. Your choices are automatically saved.
                     </p>
 
-                    {/* Action Buttons */}
-                    <div className="flex gap-2 mb-4">
-                      <button
-                        onClick={() => {
-                          // Generate and open PDF
-                          const pdfContent = generateBallotPDF();
-                          const blob = new Blob([pdfContent], { type: 'text/html' });
-                          const url = URL.createObjectURL(blob);
-                        window.open(url, '_blank');
-                      }}
-                      className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
-                                 hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      Save PDF
-                    </button>
-                    <button
-                      onClick={() => {
-                        if (navigator.share) {
-                          navigator.share({
-                            title: 'My Ballot - Illinois Primary 2026',
-                            text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
-                            url: window.location.href
-                          }).catch(() => {});
-                        } else {
-                          // Fallback: copy to clipboard
-                          navigator.clipboard.writeText(window.location.href);
-                          alert('Link copied to clipboard!');
-                        }
-                      }}
-                      className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
-                                 hover:bg-warm transition-colors flex items-center justify-center gap-2"
-                    >
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                      </svg>
-                      Share
-                    </button>
-                  </div>
-
-                  <button
-                    onClick={() => {
-                      if (confirm('Are you sure you want to clear all your selections?')) {
-                        setSelectedCandidates({});
-                      }
-                    }}
-                    className="w-full text-steel hover:text-ink text-sm py-2 transition-colors flex items-center justify-center gap-1"
-                  >
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                    Clear All
-                  </button>
                 </div>
 
                 {/* Progress Bar */}
@@ -1114,19 +1116,48 @@ export default function Home() {
                     </p>
                   )}
 
-                  <div className="flex gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-4">
                     <button
                       onClick={expandAll}
-                      className="text-xs text-brand hover:underline"
+                      className="inline-flex items-center text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
                     >
                       Expand All
                     </button>
-                    <span className="text-xs text-steel">|</span>
                     <button
                       onClick={collapseAll}
-                      className="text-xs text-brand hover:underline"
+                      className="inline-flex items-center text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
                     >
                       Collapse All
+                    </button>
+                    <button
+                      onClick={() => setShowEndorsedOnly(!showEndorsedOnly)}
+                      className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border transition-colors duration-150 ${
+                        showEndorsedOnly
+                          ? 'bg-brand text-white border-brand'
+                          : 'bg-white text-steel border-border hover:border-brand hover:text-brand'
+                      }`}
+                      title={showEndorsedOnly ? "Show all candidates" : "Show endorsed candidates only"}
+                    >
+                      {/* Hamburger/filter icon */}
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round">
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                      </svg>
+                      AHIL Endorsed
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (confirm('Are you sure you want to clear all your selections?')) {
+                          setSelectedCandidates({});
+                        }
+                      }}
+                      className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      Clear All
                     </button>
                   </div>
                   
@@ -1215,18 +1246,18 @@ export default function Home() {
                                                     <span className="font-medium text-ink text-sm">
                                                       {candidate.candidate}
                                                     </span>
-                                                    {/* Incumbent Indicator - MOVED BETWEEN NAME AND LOGO */}
+                                                    {/* Incumbent Indicator */}
                                                     {candidate.incumbent && (
                                                       <span className="text-xs text-steel">(i)</span>
                                                     )}
-                                                    {/* AHIL Logo (if endorsed) */}
+                                                    {/* AHIL Logo (if endorsed) - overflow-visible wrapper so 32px logo doesn't affect row height */}
                                                     {candidate.endorsed && (
-                                                      <div className="flex-shrink-0 w-4 h-4 relative" title="Endorsed by Abundant Housing IL">
+                                                      <div className="flex-shrink-0 h-[1.25rem] flex items-center overflow-visible" title="Endorsed by Abundant Housing IL">
                                                         <Image
                                                           src="/ahil-logo.png"
                                                           alt="AHIL Endorsed"
-                                                          width={16}
-                                                          height={16}
+                                                          width={32}
+                                                          height={32}
                                                           className="object-contain"
                                                         />
                                                       </div>
@@ -1253,7 +1284,7 @@ export default function Home() {
                                                   </div>
                                                 </div>
 
-                                                {/* Party Badge - Removed Incumbent Indicator */}
+                                                {/* Party Badge */}
                                                 <div className="flex-shrink-0">
                                                   <span className="text-xs text-steel px-2 py-1 bg-warm rounded border border-border/50">
                                                     {candidate.party}
@@ -1263,8 +1294,8 @@ export default function Home() {
                                                 {/* Radio Button */}
                                                 <div className="flex-shrink-0">
                                                   <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                                                    isSelected 
-                                                      ? 'border-brand bg-brand' 
+                                                    isSelected
+                                                      ? 'border-brand bg-brand'
                                                       : 'border-steel/40 bg-white'
                                                   }`}>
                                                   </div>
@@ -1356,7 +1387,49 @@ export default function Home() {
                       (i) = Incumbent
                     </p>
                   </div>
-                  
+
+                  {/* Action Buttons */}
+                  <div className="bg-surface border border-border rounded-sm p-4 md:p-5 mt-6">
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => {
+                          const pdfContent = generateBallotPDF();
+                          const blob = new Blob([pdfContent], { type: 'text/html' });
+                          const url = URL.createObjectURL(blob);
+                          window.open(url, '_blank');
+                        }}
+                        className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
+                                   hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Save PDF
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (navigator.share) {
+                            navigator.share({
+                              title: 'My Ballot - Illinois Primary 2026',
+                              text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
+                              url: window.location.href
+                            }).catch(() => {});
+                          } else {
+                            navigator.clipboard.writeText(window.location.href);
+                            alert('Link copied to clipboard!');
+                          }
+                        }}
+                        className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
+                                   hover:bg-warm transition-colors flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                        Share
+                      </button>
+                    </div>
+                  </div>
+
                   {/* Back button */}
                   <div className="mt-6 text-center">
                     <button
