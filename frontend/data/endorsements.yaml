@@ -99,30 +99,30 @@ endorsements:
     party: D
 
   # Cook County Board
-  - race: "Cook County Board District 3"
+  - race: "Cook County Board of Commissioners District 3"
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 3
     candidate: "Bill Lowry"
     party: D
 
-  - race: "Cook County Board District 8"
+  - race: "Cook County Board of Commissioners District 8"
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 8
     candidate: "Nicholas Cade"
     party: D
 
-  - race: "Cook County Board District 10"
+  - race: "Cook County Board of Commissioners District 10"
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 10
     candidate: "Drake Warren"
     party: D
 
-  - race: "Cook County Board District 12"
+  - race: "Cook County Board of Commissioners District 12"
     district:
-      layer: cook_county
+      layer: cook_county_commissioner
       number: 12
     candidate: "Isaiah White"
     party: D

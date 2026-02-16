@@ -341,10 +341,10 @@ export function getCandidatesWithEndorsements(
 ): Candidate[] {
   const result: Candidate[] = [];
 
-  // Create a Set of endorsed candidates for fast lookup
+  // Create a Set of endorsed candidates for fast lookup (case-insensitive)
   const endorsedSet = new Set<string>();
   for (const endorsement of endorsementsData) {
-    endorsedSet.add(`${endorsement.race}|${endorsement.candidate}`);
+    endorsedSet.add(`${endorsement.race}|${endorsement.candidate}`.toLowerCase());
   }
 
   for (const candidate of candidatesData) {
@@ -361,7 +361,7 @@ export function getCandidatesWithEndorsements(
 
     if (isStatewide) {
       // Include all statewide candidates
-      const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+      const isEndorsed = endorsedSet.has(`${race}|${candidateName}`.toLowerCase());
       result.push({
         race,
         candidate: candidateName,
@@ -389,7 +389,7 @@ export function getCandidatesWithEndorsements(
       // Show to ALL Cook County residents (any district number)
       const userCookCountyDistrict = districts['cook_county'];
       if (userCookCountyDistrict !== null) {
-        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`.toLowerCase());
         result.push({
           race,
           candidate: candidateName,
@@ -412,7 +412,7 @@ export function getCandidatesWithEndorsements(
       // Check if user is in the specified county
       const userCountyDistrict = districts[candidate.county];
       if (userCountyDistrict !== null) {
-        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`.toLowerCase());
         result.push({
           race,
           candidate: candidateName,
@@ -435,7 +435,7 @@ export function getCandidatesWithEndorsements(
     if (finalDistrictRef && typeof finalDistrictRef !== "string") {
       const userDistrict = districts[finalDistrictRef.layer];
       if (userDistrict !== null && userDistrict === finalDistrictRef.number) {
-        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`);
+        const isEndorsed = endorsedSet.has(`${race}|${candidateName}`.toLowerCase());
         result.push({
           race,
           candidate: candidateName,

@@ -45,6 +45,8 @@ export default function Home() {
   const skipAutocomplete = useRef(false);
   const abortControllerRef = useRef<AbortController | null>(null);
   const hydratedFromUrl = useRef(false);
+  const ballotBoxRef = useRef<HTMLDivElement>(null);
+  const [showStickyProgress, setShowStickyProgress] = useState(false);
 
   // Categorize races into Federal, State, and Local
   function categorizeRace(raceName: string): 'federal' | 'state' | 'local' {
@@ -209,6 +211,7 @@ export default function Home() {
         }
 
         setResult(data);
+        setOnboardingStep(4); // Jump straight to ballot view
         if (typeof data.address_used === "string") {
           skipAutocomplete.current = true;
           setAddress(data.address_used);
@@ -410,6 +413,23 @@ export default function Home() {
     local: 'LOCAL'
   };
 
+  // Ballot page configuration for multi-page flow
+  const stepToCategory: Record<number, 'federal' | 'state' | 'local'> = {
+    4: 'federal', 5: 'state', 6: 'local'
+  };
+  const ballotPageConfig: Record<number, {
+    backStep: number; backLabel: string;
+    nextStep: number | null; nextLabel: string | null;
+    showSavePdfShare: boolean;
+  }> = {
+    4: { backStep: 2, backLabel: '← Back', nextStep: 5, nextLabel: 'Go to State of Illinois', showSavePdfShare: false },
+    5: { backStep: 4, backLabel: '← Back to Federal', nextStep: 6, nextLabel: 'Go to Local', showSavePdfShare: false },
+    6: { backStep: 5, backLabel: '← Back to State of Illinois', nextStep: null, nextLabel: null, showSavePdfShare: true },
+  };
+  const activeCategory = stepToCategory[onboardingStep] ?? null;
+  const isBallotStep = onboardingStep >= 4 && onboardingStep <= 6;
+  const activePageRaces = activeCategory ? (racesByCategory[activeCategory] || []) : [];
+
   // Auto-select endorsed candidates when results change
   useEffect(() => {
     if (result?.candidates) {
@@ -431,6 +451,20 @@ export default function Home() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
+
+  // Show sticky progress bar when "Your Ballot" box scrolls out of view
+  useEffect(() => {
+    const el = ballotBoxRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyProgress(!entry.isIntersecting);
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [onboardingStep, result]);
 
   // Toggle race expansion
   const toggleRace = (race: string) => {
@@ -474,14 +508,23 @@ export default function Home() {
     });
   };
 
-  // Expand all races
+  // Expand all races on current page
   const expandAll = () => {
-    setExpandedRaces(new Set(Object.keys(candidatesByRace)));
+    setExpandedRaces(prev => {
+      const newSet = new Set(prev);
+      activePageRaces.forEach(race => newSet.add(race));
+      return newSet;
+    });
   };
 
-  // Collapse all races
+  // Collapse all races on current page
   const collapseAll = () => {
-    setExpandedRaces(new Set());
+    const racesOnPage = new Set(activePageRaces);
+    setExpandedRaces(prev => {
+      const newSet = new Set(prev);
+      racesOnPage.forEach(race => newSet.delete(race));
+      return newSet;
+    });
   };
 
   // Calculate progress
@@ -1035,7 +1078,7 @@ export default function Home() {
       )}
 
       {/* Step 4: Main Ballot View */}
-      {onboardingStep === 4 && result && (
+      {isBallotStep && result && (
         <>
           <header className="bg-ink text-white">
             <div className="w-full px-4 md:px-6 py-3">
@@ -1050,6 +1093,28 @@ export default function Home() {
             </div>
           </header>
 
+          {/* Sticky progress bar - appears when Your Ballot box scrolls out of view */}
+          {showStickyProgress && totalRaces > 0 && (
+            <div className="sticky top-0 z-30 bg-surface border-b border-border shadow-sm px-4 md:px-6 py-3">
+              <div className="max-w-6xl mx-auto">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs text-steel">
+                    {completedRaces} of {totalRaces} completed
+                  </span>
+                  <span className="text-xs font-medium text-ink bg-surface border border-border rounded px-2 py-0.5">
+                    {progressPercentage}%
+                  </span>
+                </div>
+                <div className="w-full bg-border/30 rounded-full h-2 overflow-hidden">
+                  <div
+                    className="bg-brand h-full transition-all duration-300 ease-out rounded-full"
+                    style={{ width: `${progressPercentage}%` }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+
           <main className="flex-1 w-full px-4 md:px-6 py-6">
             <div className="max-w-6xl mx-auto">
               {/* Address display and change button */}
@@ -1063,6 +1128,9 @@ export default function Home() {
                     onClick={() => {
                       setOnboardingStep(2); // Go back to address entry
                       setResult(null);
+                      skipAutocomplete.current = true;
+                      setAddress("");
+                      clearShareCoordinates();
                     }}
                     className="text-sm text-brand hover:underline flex items-center gap-1"
                   >
@@ -1074,14 +1142,19 @@ export default function Home() {
                 </div>
               )}
 
-              <div className="bg-surface border border-border rounded-sm p-4 md:p-5">
+              <div ref={ballotBoxRef} className="bg-surface border border-border rounded-sm p-4 md:p-5">
                 <div className="mb-4">
                   <div className="mb-4">
                     <h3 className="font-display text-base font-medium text-ink mb-1">
                       Your Ballot
                     </h3>
+                    {activeCategory && (
+                      <p className="text-sm font-semibold text-ink uppercase tracking-wide mb-1">
+                        {categoryLabels[activeCategory]}
+                      </p>
+                    )}
                     <p className="text-xs text-steel mb-4">
-                      Tap to select candidates. These candidates are on your specific ballot based on where you live. Your choices are automatically saved.
+                      Tap to select candidates. Your choices are automatically saved.
                     </p>
 
                 </div>
@@ -1161,23 +1234,9 @@ export default function Home() {
                     </button>
                   </div>
                   
-                  <div className="space-y-4">
-                    {categoryOrder.map(category => {
-                      const racesInCategory = racesByCategory[category] || [];
-                      if (racesInCategory.length === 0) return null;
-                      
-                      return (
-                        <div key={category}>
-                          {/* Category Header */}
-                          <div className="bg-[#E5E7EB] py-2.5 px-4 mb-3">
-                            <h3 className="text-sm font-semibold text-black tracking-wide uppercase">
-                              {categoryLabels[category]}
-                            </h3>
-                          </div>
-                          
-                          {/* Races in this category */}
-                          <div className="space-y-2">
-                            {racesInCategory.map(race => {
+                  <div className="space-y-2">
+                    {activePageRaces.length > 0 ? (
+                      activePageRaces.map(race => {
                               const candidates = candidatesByRace[race];
                               const isExpanded = expandedRaces.has(race);
                               const endorsedCount = candidates.filter(c => c.endorsed).length;
@@ -1374,13 +1433,14 @@ export default function Home() {
                                   )}
                                 </div>
                               );
-                            })}
-                          </div>
-                        </div>
-                      );
-                    })}
+                    })
+                    ) : (
+                      <p className="text-steel text-sm py-4">
+                        No {activeCategory ? categoryLabels[activeCategory] : ''} races found for your districts.
+                      </p>
+                    )}
                   </div>
-                  
+
                   {/* Footnote for incumbent indicator */}
                   <div className="mt-6 pt-4 border-t border-border">
                     <p className="text-xs text-steel">
@@ -1388,55 +1448,82 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="bg-surface border border-border rounded-sm p-4 md:p-5 mt-6">
-                    <div className="flex gap-2">
+                  {/* Go to Next Section button */}
+                  {ballotPageConfig[onboardingStep]?.nextStep && (
+                    <div className="mt-4">
                       <button
                         onClick={() => {
-                          const pdfContent = generateBallotPDF();
-                          const blob = new Blob([pdfContent], { type: 'text/html' });
-                          const url = URL.createObjectURL(blob);
-                          window.open(url, '_blank');
+                          setOnboardingStep(ballotPageConfig[onboardingStep].nextStep!);
+                          window.scrollTo({ top: 0 });
                         }}
-                        className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
-                                   hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
+                        className="w-full bg-brand text-white py-3 px-4 rounded-sm font-medium text-sm
+                                   hover:brightness-110 active:brightness-95 transition-all duration-150
+                                   flex items-center justify-center gap-2"
                       >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        Save PDF
-                      </button>
-                      <button
-                        onClick={() => {
-                          if (navigator.share) {
-                            navigator.share({
-                              title: 'My Ballot - Illinois Primary 2026',
-                              text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
-                              url: window.location.href
-                            }).catch(() => {});
-                          } else {
-                            navigator.clipboard.writeText(window.location.href);
-                            alert('Link copied to clipboard!');
-                          }
-                        }}
-                        className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
-                                   hover:bg-warm transition-colors flex items-center justify-center gap-2"
-                      >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                        </svg>
-                        Share
+                        {ballotPageConfig[onboardingStep].nextLabel}
+                        <span>→</span>
                       </button>
                     </div>
-                  </div>
+                  )}
+
+                  {/* Action Buttons - only on Local page */}
+                  {ballotPageConfig[onboardingStep]?.showSavePdfShare && (
+                    <div className="bg-surface border border-border rounded-sm p-4 md:p-5 mt-6">
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => {
+                            const pdfContent = generateBallotPDF();
+                            const blob = new Blob([pdfContent], { type: 'text/html' });
+                            const url = URL.createObjectURL(blob);
+                            window.open(url, '_blank');
+                          }}
+                          className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
+                                     hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Save PDF
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (navigator.share) {
+                              navigator.share({
+                                title: 'My Ballot - Illinois Primary 2026',
+                                text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
+                                url: window.location.href
+                              }).catch(() => {});
+                            } else {
+                              navigator.clipboard.writeText(window.location.href);
+                              alert('Link copied to clipboard!');
+                            }
+                          }}
+                          className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
+                                     hover:bg-warm transition-colors flex items-center justify-center gap-2"
+                        >
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                          </svg>
+                          Share
+                        </button>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Back button */}
                   <div className="mt-6 text-center">
                     <button
-                      onClick={() => setOnboardingStep(2)}
+                      onClick={() => {
+                        const backStep = ballotPageConfig[onboardingStep]?.backStep ?? 2;
+                        if (backStep === 2) {
+                          setResult(null);
+                        }
+                        setOnboardingStep(backStep);
+                        window.scrollTo({ top: 0 });
+                      }}
                       className="text-steel hover:text-ink text-sm transition-colors"
                     >
-                      ← Back
+                      {ballotPageConfig[onboardingStep]?.backLabel ?? '← Back'}
                     </button>
                   </div>
                 </>

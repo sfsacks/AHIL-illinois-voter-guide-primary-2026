@@ -40,3 +40,4 @@ npm-debug.log*
 # Legacy address database (no longer used)
 frontend/data/addresses.db
 
+.claude/

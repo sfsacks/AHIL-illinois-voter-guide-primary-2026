@@ -54,7 +54,8 @@ describe("getEndorsements", () => {
     state_senate: 9,
     state_house: 1,
     city_ward: 42,
-    cook_county: 10,
+    cook_county: 1,
+    cook_county_commissioner: 10,
   };
 
   it("returns statewide endorsements for any districts", () => {
@@ -101,7 +102,7 @@ describe("getEndorsements", () => {
   it("returns Cook County Commissioner endorsement for matching district", () => {
     const results = getEndorsements(sampleDistricts, endorsementsData);
     const races = results.map((e) => e.race);
-    expect(races).toContain("Cook County Board District 10");
+    expect(races).toContain("Cook County Board of Commissioners District 10");
   });
 
   it("matches endorsement using modern district.layer schema", () => {
@@ -226,7 +227,8 @@ describe("getDistrictShapes", () => {
       state_senate: 3,
       state_house: 6,
       city_ward: 42,
-      cook_county: 10,
+      cook_county: 1,
+      cook_county_commissioner: 10,
     };
     const shapes = getDistrictShapes(districts, districtsData);
     expect(shapes).toHaveProperty("congressional");

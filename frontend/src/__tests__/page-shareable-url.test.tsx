@@ -24,6 +24,13 @@ describe("Shareable URL Behavior", () => {
   beforeEach(() => {
     vi.restoreAllMocks();
     window.history.replaceState({}, "", "/");
+
+    // jsdom does not implement IntersectionObserver
+    global.IntersectionObserver = class {
+      observe() {}
+      unobserve() {}
+      disconnect() {}
+    } as unknown as typeof IntersectionObserver;
   });
 
   it("does not auto-run lookup when URL has no lat/lng params", async () => {
@@ -53,7 +60,7 @@ describe("Shareable URL Behavior", () => {
     expect(await screen.findByText("141 W Randolph St, Sample City, IL 60602")).toBeTruthy();
   });
 
-  it("clears url and resets shown location details when Clear Location is clicked", async () => {
+  it("clears url and resets shown location details when Change Address is clicked", async () => {
     window.history.replaceState({}, "", "/?lat=41.8844&lng=-87.633");
 
     const fetchMock = vi.fn().mockResolvedValue({
@@ -66,8 +73,8 @@ describe("Shareable URL Behavior", () => {
 
     await screen.findByText("141 W Randolph St, Sample City, IL 60602");
 
-    const clearButton = screen.getByRole("button", { name: "Clear Location" });
-    fireEvent.click(clearButton);
+    const changeButton = screen.getByRole("button", { name: /Change Address/i });
+    fireEvent.click(changeButton);
 
     await waitFor(() => {
       expect(window.location.search).toBe("");
