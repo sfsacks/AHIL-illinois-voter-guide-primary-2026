@@ -29,7 +29,7 @@ export default function Home() {
   const [result, setResult] = useState<LookupResponse | null>(null);
   const [selectedParty, setSelectedParty] = useState<Party>('all');
   const [expandedRaces, setExpandedRaces] = useState<Set<string>>(new Set());
-  const [selectedCandidates, setSelectedCandidates] = useState<Record<string, string>>({});
+  const [selectedCandidates, setSelectedCandidates] = useState<Record<string, string | string[]>>({});
   const [expandedCandidates, setExpandedCandidates] = useState<Set<string>>(new Set());
   const [showEndorsedOnly, setShowEndorsedOnly] = useState(false);
 
@@ -422,23 +422,40 @@ export default function Home() {
     nextStep: number | null; nextLabel: string | null;
     showSavePdfShare: boolean;
   }> = {
-    4: { backStep: 2, backLabel: '← Back', nextStep: 5, nextLabel: 'Go to State of Illinois', showSavePdfShare: false },
-    5: { backStep: 4, backLabel: '← Back to Federal', nextStep: 6, nextLabel: 'Go to Local', showSavePdfShare: false },
-    6: { backStep: 5, backLabel: '← Back to State of Illinois', nextStep: null, nextLabel: null, showSavePdfShare: true },
+    4: { backStep: 2, backLabel: '← Back', nextStep: 5, nextLabel: 'Go to State of Illinois Races', showSavePdfShare: false },
+    5: { backStep: 4, backLabel: '← Back to Federal', nextStep: 6, nextLabel: 'Go to Local Races', showSavePdfShare: false },
+    6: { backStep: 5, backLabel: '← Back to State of Illinois', nextStep: 7, nextLabel: 'Finalize My Ballot', showSavePdfShare: false },
+    7: { backStep: 6, backLabel: '← Back to Local', nextStep: null, nextLabel: null, showSavePdfShare: true },
   };
+  // Races that allow selecting multiple candidates (key = race name, value = max selections)
+  const multiSelectRaces: Record<string, number> = {
+    "Metropolitan Water Reclamation District (6-year term)": 3,
+  };
+
   const activeCategory = stepToCategory[onboardingStep] ?? null;
-  const isBallotStep = onboardingStep >= 4 && onboardingStep <= 6;
+  const isBallotStep = onboardingStep >= 4 && onboardingStep <= 7;
+  const isFinalizeStep = onboardingStep === 7;
   const activePageRaces = activeCategory ? (racesByCategory[activeCategory] || []) : [];
 
   // Auto-select endorsed candidates when results change
   useEffect(() => {
     if (result?.candidates) {
-      const endorsedSelections: Record<string, string> = {};
+      const endorsedSelections: Record<string, string | string[]> = {};
+      // Collect endorsed candidates by race
+      const endorsedByRace: Record<string, string[]> = {};
       result.candidates.forEach(candidate => {
         if (candidate.endorsed) {
-          // Only auto-select if user hasn't made a selection for this race yet
-          if (!selectedCandidates[candidate.race]) {
-            endorsedSelections[candidate.race] = candidate.candidate;
+          if (!endorsedByRace[candidate.race]) endorsedByRace[candidate.race] = [];
+          endorsedByRace[candidate.race].push(candidate.candidate);
+        }
+      });
+      // Apply, respecting multi-select limits
+      Object.entries(endorsedByRace).forEach(([race, names]) => {
+        if (!selectedCandidates[race]) {
+          if (multiSelectRaces[race]) {
+            endorsedSelections[race] = names.slice(0, multiSelectRaces[race]);
+          } else {
+            endorsedSelections[race] = names[0]; // Single-select: take first
           }
         }
       });
@@ -481,18 +498,44 @@ export default function Home() {
 
   // Select a candidate for a race
   const selectCandidate = (race: string, candidateName: string) => {
-    setSelectedCandidates(prev => {
-      // If clicking the already selected candidate, deselect it
-      if (prev[race] === candidateName) {
-        const { [race]: _, ...rest } = prev;
-        return rest;
-      }
-      // Otherwise, select the new candidate
-      return {
-        ...prev,
-        [race]: candidateName
-      };
-    });
+    const maxSelections = multiSelectRaces[race];
+
+    if (maxSelections) {
+      // Multi-select race
+      setSelectedCandidates(prev => {
+        const current = Array.isArray(prev[race]) ? prev[race] as string[] : prev[race] ? [prev[race] as string] : [];
+        if (current.includes(candidateName)) {
+          // Deselect
+          const updated = current.filter(c => c !== candidateName);
+          if (updated.length === 0) {
+            const { [race]: _, ...rest } = prev;
+            return rest;
+          }
+          return { ...prev, [race]: updated };
+        } else if (current.length < maxSelections) {
+          // Add selection
+          return { ...prev, [race]: [...current, candidateName] };
+        }
+        // At max — don't add
+        return prev;
+      });
+    } else {
+      // Single-select race (existing behavior)
+      setSelectedCandidates(prev => {
+        if (prev[race] === candidateName) {
+          const { [race]: _, ...rest } = prev;
+          return rest;
+        }
+        return { ...prev, [race]: candidateName };
+      });
+    }
+  };
+
+  // Check if a candidate is selected (works for both single and multi-select races)
+  const isCandidateSelected = (race: string, candidateName: string): boolean => {
+    const sel = selectedCandidates[race];
+    if (Array.isArray(sel)) return sel.includes(candidateName);
+    return sel === candidateName;
   };
 
   // Toggle candidate details expansion
@@ -723,8 +766,9 @@ export default function Home() {
     };
 
     Object.entries(candidatesByRace).forEach(([race, candidates]) => {
-      const selectedCandidate = selectedCandidates[race];
-      if (selectedCandidate) {
+      const selection = selectedCandidates[race];
+      const selectedNames = Array.isArray(selection) ? selection : selection ? [selection] : [];
+      if (selectedNames.length > 0) {
         const category = categorizeRace(race);
         selectionsByCategory[category].push({ race, candidates });
       }
@@ -734,15 +778,16 @@ export default function Home() {
     categoryOrder.forEach(category => {
       const races = selectionsByCategory[category];
       if (races.length === 0) return; // Skip empty categories
-      
+
       html += `<div class="category-header">${categoryLabels[category]}</div>`;
-      
+
       races.forEach(({ race, candidates }) => {
-        const selectedCandidate = selectedCandidates[race];
+        const selection = selectedCandidates[race];
+        const selectedNames = Array.isArray(selection) ? selection : selection ? [selection] : [];
         html += `<div class="race">`;
-        
+
         candidates.forEach(candidate => {
-          const isSelected = selectedCandidate === candidate.candidate;
+          const isSelected = selectedNames.includes(candidate.candidate);
           if (!isSelected) return;
           
           html += `
@@ -783,19 +828,19 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-warm">
       {/* Step 1: Welcome Screen */}
       {onboardingStep === 0 && (
-        <div className="flex-1 flex flex-col items-center justify-center p-8">
+        <div className="flex-1 flex flex-col items-center justify-start pt-8 md:justify-center md:pt-0 p-4 md:p-8">
           <div className="max-w-md w-full text-center">
-            <h1 className="text-3xl md:text-4xl font-medium italic text-ink mb-6">
+            <h1 className="text-2xl md:text-4xl font-medium italic text-ink mb-3 md:mb-6">
               The Rent is Too Damn High!
               <Image
                 src="/jimmy-mcmillan-too-damn-high.gif"
                 alt="The rent is too damn high"
                 width={360}
                 height={280}
-                className="mx-auto mt-4 mb-6 rounded-sm"
+                className="mx-auto mt-2 mb-3 md:mt-4 md:mb-6 rounded-sm"
               />
             </h1>
-            <p className="text-base md:text-lg text-steel mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-steel mb-4 md:mb-8 leading-relaxed">
               And you can change that! This voter guide, powered by Abundant Housing Illinois, makes it easy to pick candidates in the March 17, 2026 primary election who want to help you afford your rent.
             </p>
             <button
@@ -816,7 +861,7 @@ export default function Home() {
         <header className="bg-ink text-white">
           <div className="w-full px-4 md:px-6 py-3">
             <div className="max-w-6xl mx-auto text-center">
-              <h1 className="font-display text-xl font-medium">
+              <h1 className="font-display text-base md:text-xl font-medium">
                 <span className="italic">The Rent is Too Damn High!</span> Voter Guide
               </h1>
               <p className="text-xs text-white/80 mt-0.5">
@@ -912,7 +957,7 @@ export default function Home() {
         <header className="bg-ink text-white">
           <div className="w-full px-4 md:px-6 py-3">
             <div className="max-w-6xl mx-auto text-center">
-              <h1 className="font-display text-xl font-medium">
+              <h1 className="font-display text-base md:text-xl font-medium">
                 <span className="italic">The Rent is Too Damn High!</span> Voter Guide
               </h1>
               <p className="text-xs text-white/80 mt-0.5">
@@ -1083,7 +1128,7 @@ export default function Home() {
           <header className="bg-ink text-white">
             <div className="w-full px-4 md:px-6 py-3">
               <div className="max-w-6xl mx-auto text-center">
-                <h1 className="font-display text-xl font-medium">
+                <h1 className="font-display text-base md:text-xl font-medium">
                   <span className="italic">The Rent is Too Damn High!</span> Voter Guide
                 </h1>
                 <p className="text-xs text-white/80 mt-0.5">
@@ -1094,7 +1139,7 @@ export default function Home() {
           </header>
 
           {/* Sticky progress bar - appears when Your Ballot box scrolls out of view */}
-          {showStickyProgress && totalRaces > 0 && (
+          {showStickyProgress && totalRaces > 0 && !isFinalizeStep && (
             <div className="sticky top-0 z-30 bg-surface border-b border-border shadow-sm px-4 md:px-6 py-3">
               <div className="max-w-6xl mx-auto">
                 <div className="flex items-center justify-between mb-2">
@@ -1148,14 +1193,11 @@ export default function Home() {
                     <h3 className="font-display text-base font-medium text-ink mb-1">
                       Your Ballot
                     </h3>
-                    {activeCategory && (
-                      <p className="text-sm font-semibold text-ink uppercase tracking-wide mb-1">
-                        {categoryLabels[activeCategory]}
+                    {!isFinalizeStep && (
+                      <p className="text-xs text-steel mb-4">
+                        Tap to select candidates. Your choices are automatically saved.
                       </p>
                     )}
-                    <p className="text-xs text-steel mb-4">
-                      Tap to select candidates. Your choices are automatically saved.
-                    </p>
 
                 </div>
 
@@ -1181,7 +1223,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {Object.keys(candidatesByRace).length > 0 ? (
+              {!isFinalizeStep && (Object.keys(candidatesByRace).length > 0 ? (
                 <>
                   {selectedParty !== 'all' && (
                     <p className="text-xs text-steel mb-3">
@@ -1189,33 +1231,36 @@ export default function Home() {
                     </p>
                   )}
 
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-1.5 md:gap-2 mt-4 mb-4">
                     <button
                       onClick={expandAll}
-                      className="inline-flex items-center text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
+                      className="inline-flex items-center text-[10px] md:text-xs px-1.5 md:px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
                     >
                       Expand All
                     </button>
                     <button
                       onClick={collapseAll}
-                      className="inline-flex items-center text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
+                      className="inline-flex items-center text-[10px] md:text-xs px-1.5 md:px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
                     >
                       Collapse All
                     </button>
                     <button
                       onClick={() => setShowEndorsedOnly(!showEndorsedOnly)}
-                      className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border transition-colors duration-150 ${
+                      className={`inline-flex items-center gap-1 md:gap-1.5 text-[10px] md:text-xs px-1.5 md:px-2.5 py-1 rounded-full border transition-colors duration-150 ${
                         showEndorsedOnly
                           ? 'bg-brand text-white border-brand'
                           : 'bg-white text-steel border-border hover:border-brand hover:text-brand'
                       }`}
                       title={showEndorsedOnly ? "Show all candidates" : "Show endorsed candidates only"}
                     >
-                      {/* Hamburger/filter icon */}
-                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round">
+                      {/* Slider/filter icon */}
+                      <svg className="w-3 h-3 md:w-3.5 md:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
                         <line x1="4" y1="6" x2="20" y2="6" />
+                        <circle cx="16" cy="6" r="2" fill="currentColor" />
                         <line x1="4" y1="12" x2="20" y2="12" />
+                        <circle cx="8" cy="12" r="2" fill="currentColor" />
                         <line x1="4" y1="18" x2="20" y2="18" />
+                        <circle cx="12" cy="18" r="2" fill="currentColor" />
                       </svg>
                       AHIL Endorsed
                     </button>
@@ -1225,15 +1270,24 @@ export default function Home() {
                           setSelectedCandidates({});
                         }
                       }}
-                      className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
+                      className="inline-flex items-center gap-1 md:gap-1.5 text-[10px] md:text-xs px-1.5 md:px-2.5 py-1 rounded-full border bg-white text-steel border-border hover:border-brand hover:text-brand transition-colors duration-150"
                     >
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-3 h-3 md:w-3.5 md:h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                       </svg>
                       Clear All
                     </button>
                   </div>
-                  
+
+                  {/* Category label box */}
+                  {activeCategory && (
+                    <div className="bg-surface border border-border rounded-sm px-4 py-3 mb-4">
+                      <h3 className="font-semibold text-ink uppercase tracking-wide text-sm">
+                        {categoryLabels[activeCategory]}
+                      </h3>
+                    </div>
+                  )}
+
                   <div className="space-y-2">
                     {activePageRaces.length > 0 ? (
                       activePageRaces.map(race => {
@@ -1258,16 +1312,21 @@ export default function Home() {
                                           </span>
                                         )}
                                       </p>
+                                      {multiSelectRaces[race] && (
+                                        <p className="text-xs text-steel mt-0.5">
+                                          Vote for up to {multiSelectRaces[race] === 3 ? 'three' : multiSelectRaces[race]}
+                                        </p>
+                                      )}
                                     </div>
                                     
                                     <div className="flex items-center gap-2">
                                       {/* Checkmark if user has selected a candidate */}
                                       {selectedCandidates[race] && (
-                                        <span 
+                                        <span
                                           className="inline-block w-5 h-5 rounded-full bg-brand text-white text-xs leading-5 text-center"
                                           title="You've made a selection"
                                         >
-                                          ✓
+                                          {Array.isArray(selectedCandidates[race]) ? (selectedCandidates[race] as string[]).length : '✓'}
                                         </span>
                                       )}
                                       
@@ -1289,7 +1348,7 @@ export default function Home() {
                                       <div className="divide-y divide-border/50">
                                         {candidates.map((candidate, index) => {
                                           const candidateKey = `${race}-${candidate.candidate}`;
-                                          const isSelected = selectedCandidates[race] === candidate.candidate;
+                                          const isSelected = isCandidateSelected(race, candidate.candidate);
                                           const isDetailsExpanded = expandedCandidates.has(candidateKey);
                                           
                                           return (
@@ -1350,14 +1409,28 @@ export default function Home() {
                                                   </span>
                                                 </div>
 
-                                                {/* Radio Button */}
+                                                {/* Selection indicator: checkbox for multi-select, radio for single */}
                                                 <div className="flex-shrink-0">
-                                                  <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                                                    isSelected
-                                                      ? 'border-brand bg-brand'
-                                                      : 'border-steel/40 bg-white'
-                                                  }`}>
-                                                  </div>
+                                                  {multiSelectRaces[race] ? (
+                                                    <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
+                                                      isSelected
+                                                        ? 'border-brand bg-brand'
+                                                        : 'border-steel/40 bg-white'
+                                                    }`}>
+                                                      {isSelected && (
+                                                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                      )}
+                                                    </div>
+                                                  ) : (
+                                                    <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                                                      isSelected
+                                                        ? 'border-brand bg-brand'
+                                                        : 'border-steel/40 bg-white'
+                                                    }`}>
+                                                    </div>
+                                                  )}
                                                 </div>
                                               </div>
 
@@ -1466,50 +1539,6 @@ export default function Home() {
                     </div>
                   )}
 
-                  {/* Action Buttons - only on Local page */}
-                  {ballotPageConfig[onboardingStep]?.showSavePdfShare && (
-                    <div className="bg-surface border border-border rounded-sm p-4 md:p-5 mt-6">
-                      <div className="flex gap-2">
-                        <button
-                          onClick={() => {
-                            const pdfContent = generateBallotPDF();
-                            const blob = new Blob([pdfContent], { type: 'text/html' });
-                            const url = URL.createObjectURL(blob);
-                            window.open(url, '_blank');
-                          }}
-                          className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
-                                     hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
-                        >
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                          </svg>
-                          Save PDF
-                        </button>
-                        <button
-                          onClick={() => {
-                            if (navigator.share) {
-                              navigator.share({
-                                title: 'My Ballot - Illinois Primary 2026',
-                                text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
-                                url: window.location.href
-                              }).catch(() => {});
-                            } else {
-                              navigator.clipboard.writeText(window.location.href);
-                              alert('Link copied to clipboard!');
-                            }
-                          }}
-                          className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
-                                     hover:bg-warm transition-colors flex items-center justify-center gap-2"
-                        >
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                          </svg>
-                          Share
-                        </button>
-                      </div>
-                    </div>
-                  )}
-
                   {/* Back button */}
                   <div className="mt-6 text-center">
                     <button
@@ -1529,11 +1558,104 @@ export default function Home() {
                 </>
               ) : (
                 <p className="text-steel text-sm">
-                  {selectedParty === 'all' 
+                  {selectedParty === 'all'
                     ? "No candidates found for your districts."
                     : `No ${selectedParty === 'D' ? 'Democratic' : selectedParty === 'R' ? 'Republican' : 'Libertarian'} primary candidates found for your districts.`
                   }
                 </p>
+              ))}
+
+              {/* Step 7: Finalize My Ballot */}
+              {isFinalizeStep && (
+                <>
+                  <div className="bg-surface border border-border rounded-sm p-4 md:p-5 mt-4">
+                    {/* Export Ballot and Share buttons */}
+                    <div className="flex gap-2 mb-6">
+                      <button
+                        onClick={() => {
+                          const pdfContent = generateBallotPDF();
+                          const blob = new Blob([pdfContent], { type: 'text/html' });
+                          const url = URL.createObjectURL(blob);
+                          window.open(url, '_blank');
+                        }}
+                        className="flex-1 bg-ink text-white py-3 px-4 rounded-sm font-medium text-sm
+                                   hover:bg-ink-soft transition-colors flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Export Ballot
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (navigator.share) {
+                            navigator.share({
+                              title: 'My Ballot - Illinois Primary 2026',
+                              text: `I've completed my ballot for the ${userPrimaryChoice === 'D' ? 'Democratic' : userPrimaryChoice === 'R' ? 'Republican' : 'Libertarian'} primary!`,
+                              url: window.location.href
+                            }).catch(() => {});
+                          } else {
+                            navigator.clipboard.writeText(window.location.href);
+                            alert('Link copied to clipboard!');
+                          }
+                        }}
+                        className="flex-1 bg-white border border-border text-ink py-3 px-4 rounded-sm font-medium text-sm
+                                   hover:bg-warm transition-colors flex items-center justify-center gap-2"
+                      >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                        Share
+                      </button>
+                    </div>
+
+                    {/* Voter resources links */}
+                    <div className="space-y-3 mb-6">
+                      <a
+                        href="https://ova.elections.il.gov/registrationlookup.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-brand hover:underline"
+                      >
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Check Your Voter Registration Status
+                      </a>
+                      <a
+                        href="https://ova.elections.il.gov/pollingplacelookup.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-brand hover:underline"
+                      >
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Find Your Polling Place
+                      </a>
+                    </div>
+
+                    {/* Key election dates */}
+                    <div className="border-t border-border pt-4">
+                      <p className="text-sm text-steel leading-relaxed text-center">
+                        Early Voting Starts <span className="text-ink font-medium">February 17</span> | Deadline to Apply to Vote by Mail <span className="text-ink font-medium">March 12</span> | Election Day <span className="text-ink font-medium">March 17</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Back button */}
+                  <div className="mt-6 text-center">
+                    <button
+                      onClick={() => {
+                        setOnboardingStep(6);
+                        window.scrollTo({ top: 0 });
+                      }}
+                      className="text-steel hover:text-ink text-sm transition-colors"
+                    >
+                      ← Back to Local
+                    </button>
+                  </div>
+                </>
               )}
               </div>
       </main>
